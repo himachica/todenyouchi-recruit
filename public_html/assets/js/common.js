@@ -149,36 +149,38 @@ $(function() {
     }
 
     // ====================================== pageLink
-    $('a[href^="#"]').on('click', pageLink);
-    function pageLink() {
-        headerH = $header.outerHeight();
-        var href           = $(this).attr('href'),
-            target         = $(href == '#' || href == '' ? 'html' : href),
-            targetPosition = target.offset().top;
-            position       = targetPosition - headerH;
-        if (position > wrapperH - windowH) {
-            position = wrapperH - windowH;
-        }
-        $('html, body').animate({ scrollTop : position }, 1000, 'easeOutQuart');
-        return false;
-    }
-    $('a').on('click', function(e) {
-        var href = $(this).attr('href');
-        if(href.indexOf('#') > -1) {
-            var split    = href.split('#'),
-                linkPath = split[0],
-                linkPath = linkPath.replace(url, '');
-            if(path == linkPath) {
-                e.preventDefault();
-                var target   = '#' + split[1],
-                    position = $(target).offset().top - headerH;
-                if (position > wrapperH - windowH) {
-                    position = wrapperH - windowH;
-                }
-                $('html, body').animate({ scrollTop : position }, 1000, 'easeOutQuart');
-                return false;
+    $(document).on('click', 'a[href*="#"]:not([data-no-smooth])', function(e) {
+        const a = this;
+
+        // 外部 or 別ページは対象外
+        if (a.hostname !== location.hostname || a.pathname.replace(/\/+$/,'') !== location.pathname.replace(/\/+$/,'')) return;
+
+        const hash = a.hash; // 例: "#a-gyo"
+        if (!hash || hash === '#') return; // トップへ等は任意でスルー
+
+        const targetEl = document.getElementById(decodeURIComponent(hash.slice(1)));
+        if (!targetEl) return; // ターゲットが無い
+
+        e.preventDefault();
+
+        // クリック時点の最新値で毎回計算
+        const headerH = $header.length ? $header.outerHeight() : 0;
+        const $win = $(window), $doc = $(document);
+
+        // レイアウトが動きやすいので rAF 後に測る
+        requestAnimationFrame(() => {
+            const targetTop = $(targetEl).offset().top;
+            const maxScroll = $doc.height() - $win.height();
+            let to = Math.max(0, Math.min(targetTop - headerH, maxScroll));
+
+            //ブラウザ幅がSPの幅 + header内のナビをクリックした場合の判別
+            if(windowW <= breakpoint01 && $(this).parents($headerNav).length) {
+                $headerSpMenuItemMenu.click();
+                $('html, body').stop(true).animate({ scrollTop: to }, 1000, 'easeOutQuart');
+            } else {
+                $('html, body').stop(true).animate({ scrollTop: to }, 1000, 'easeOutQuart');
             }
-        }
+        });
     });
 
     // ====================================== anotherPageLink

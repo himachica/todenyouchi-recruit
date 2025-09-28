@@ -1,3 +1,60 @@
 @use "setting" as *;
 
 /* ====================================== header */
+#header {
+  width: 100%;
+  height: 100px;
+  background: $wh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .header-inner {
+    height: 100%;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .logo {
+      font-size: 0;
+      line-height: 0;
+      > a {
+        img {
+          max-width: 400px;
+        }
+      }
+    }
+    .nav {
+      flex: 1;
+      .nav-contents {
+        .nav-inner {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          .nav-list {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            > li {
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 1.5;
+              > a {
+                transition: color $speed01 $easing01;
+                &:hover {
+                  color: $color01;
+                }
+              }
+            }
+          }
+          .entry {
+            > a {
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
