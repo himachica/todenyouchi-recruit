@@ -1,0 +1,108 @@
+/* margin padding */
+@for $value from 1 through 20 {
+  .mt#{$value * 5} {
+    margin-top: 5px * $value;
+  }
+  .mr#{$value * 5} {
+    margin-right: 5px * $value;
+  }
+  .mb#{$value * 5} {
+    margin-bottom: 5px * $value;
+  }
+  .ml#{$value * 5} {
+    margin-left: 5px * $value;
+  }
+  .pt#{$value * 5} {
+    padding-top: 5px * $value;
+  }
+  .pr#{$value * 5} {
+    padding-right: 5px * $value;
+  }
+  .pb#{$value * 5} {
+    padding-bottom: 5px * $value;
+  }
+  .pl#{$value * 5} {
+    padding-left: 5px * $value;
+  }
+}
+
+/* clearfix */
+.clearfix:after {
+  display: block;
+  clear: both;content:"";
+}
+.clearfix {
+  zoom: 1;
+}
+
+/* float */
+.float-l {
+  float: left;
+}
+.float-r {
+  float: right;
+}
+.float-c {
+  clear: both;
+}
+
+/* text */
+.ta-c {
+  text-align: center;
+}
+.ta-l {
+  text-align: left;
+}
+.ta-r {
+  text-align: right;
+}
+
+/* none */
+.none {
+  text-indent: -9999px;
+  height: 0px;
+  overflow: hidden;
+}
+
+/* display */
+.dsp-bk {
+  display:  block;
+}
+.dsp-in {
+  display: inline;
+}
+.dsp-none {
+  display:   none;
+}
+
+/* font */
+@for $value from 1 through 100 {
+  .fs#{$value * 1} {
+    font-size: 1px * $value;
+  }
+}
+.fw-bold {
+  font-weight: bold;
+}
+.fw-normal {
+  font-weight: normal;
+}
+
+/* indent */
+.note {
+  margin-left: 1em;
+}
+.note .mark {
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+ul.notes li {
+  margin-left: 1em;
+}
+ul.notes li .mark {
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+

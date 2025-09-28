@@ -1,0 +1,96 @@
+@use "setting" as *;
+
+/* ====================================== temp */
+.dsp-pc {
+  display: block;
+  @media screen and (max-width: $VIEWPOINT01) {
+    display: none;
+  }
+}
+.dsp-sp {
+  display: none;
+  @media screen and (max-width: $VIEWPOINT01) {
+    display: block;
+  }
+}
+a {
+  text-decoration: none;
+  color: $base-color;
+}
+input, button, textarea, select {
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+}
+select {
+  &::-ms-expand {
+    display: none;
+  }
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ====================================== common */
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+  font-weight: 500;
+  color: $base-color;
+  &.fixed {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
+}
+
+/* ====================================== wrapper */
+#wrapper {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ====================================== contents */
+#contents {
+  box-sizing: border-box;
+}
+
+/* ====================================== inner */
+.inner {
+  width: 100%;
+  max-width: $MIN-WIDTH;
+  margin: 0 auto;
+  padding: 0 50px;
+  box-sizing: border-box;
+  @media screen and (max-width: $VIEWPOINT01) {
+    max-width: 640px;
+    padding: 0 20px;
+  }
+}
+
+/* ====================================== bk */
+#bk {
+  width: 100%;
+  height: 100%;
+  background: $bk;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.3;
+  z-index: 1;
+}
