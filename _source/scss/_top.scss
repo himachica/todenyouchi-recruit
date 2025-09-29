@@ -1,1 +1,173 @@
 @use "setting" as *;
+
+/* ====================================== kv */
+#kv {
+  .contents {
+    padding: 40px 50px;
+    .contents-inner {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      .copy {
+        flex: 1;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+      .entry {
+        width: 240px;
+        padding: 20px;
+        border: 1px solid $color01;
+        border-radius: 5px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        .entry-head {
+          @extend %font01;
+          font-size: 14px;
+          font-weight: 700;
+          writing-mode: vertical-rl;
+          color: $color01;
+        }
+        .entry-nav {
+          flex: 1;
+          .entry-nav-list {
+            > li {
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 1.5;
+              > a {
+                padding-right: 21px;
+                display: block;
+                position: relative;
+                color: $color03;
+                transition: color $speed01 $easing01;
+                &:before, &:after {
+                  content: "";
+                  width: 16px;
+                  height: 11px;
+                  margin: auto;
+                  background: {
+                    repeat: no-repeat;
+                    size: contain;
+                    position: center center;
+                  }
+                  display: block;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
+                  transition: right $speed01 $easing01, opacity $speed01 $easing01;
+                }
+                &:before {
+                  background: {
+                    image: url(#{$IMGPATH}arw02-r.svg);
+                  }
+                }
+                &:after {
+                  background: {
+                    image: url(#{$IMGPATH}arw02-r-grn.svg);
+                  }
+                  opacity: 0;
+                }
+                &:hover {
+                  color: $color01;
+                  &:before, &:after {
+                    right: -5px;
+                  }
+                  &:before {
+                    opacity: 0;
+                  }
+                  &:after {
+                    opacity: 1;
+                  }
+                }
+              }
+              &:not(:first-child) {
+                margin-top: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .loop-slider {
+    position: relative;
+    &:before, &:after {
+      content: "";
+      width: 100%;
+      height: 1.944vw;
+      background: {
+        repeat: no-repeat;
+        size: 100% auto;
+      }
+      display: block;
+      position: absolute;
+      left: 0;
+      z-index: 1;
+    }
+    &:before {
+      background: {
+        image: url(#{$IMGPATH}wave01.svg);
+        position: top center;
+      }
+      top: 0;
+    }
+    &:after {
+      background: {
+        image: url(#{$IMGPATH}wave02.svg);
+        position: bottom center;
+      }
+      bottom: 0;
+    }
+    .slider {
+      .list {
+        > li {
+          width: 1800px;
+          height: 648px;
+          margin: 0 4px;
+          position: relative;
+          .kv-swiper {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .swiper-wrapper {
+              .swiper-slide {
+                .kv-swiper-contents {
+                  .kv-swiper-block {
+                    display: flex;
+                    gap: 8px;
+                    .kv-swiper-img {
+                      @extend %img01;
+                      border-radius: 5px;
+                      font-size: 0;
+                      line-height: 0;
+                      &.-type01 {
+                        width: 320px;
+                        aspect-ratio: 1 / 1;
+                      }
+                      &.-type02 {
+                        width: 160px;
+                        aspect-ratio: 1 / 2;
+                      }
+                    }
+                    &.-bottom {
+                      margin-top: 8px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

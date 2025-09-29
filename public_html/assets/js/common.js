@@ -3,12 +3,19 @@ var loadStatus = false;
 $(function() {
 
     // ====================================== contents
-    var $window   = $(window),
-        $body     = $('body'),
-        $wrapper  = $('#wrapper'),
-        $header   = $('#header'),
-        $contents = $('#contents'),
-        $footer   = $('#footer');
+    var $window         = $(window),
+        $body           = $('body'),
+        $wrapper        = $('#wrapper'),
+        $header         = $('#header'),
+        $contents       = $('#contents'),
+        $footer         = $('#footer');
+
+    var $kv             = $('#kv'),
+        $kvLoopSlider   = $kv.find('.loop-slider'),
+        $kvSlider       = $kvLoopSlider.find('.slider'),
+        $kvSliderList   = $kvSlider.find('.list'),
+        $kvSliderListLi = $kvSliderList.children('li'),
+        $kvSwiper       = $kvSliderListLi.find('.kv-swiper');
 
     // ====================================== data
     var windowW;
@@ -142,6 +149,27 @@ $(function() {
         }
     });
 
+    // ====================================== kv
+    function kvSwiperStart() {
+        if($kvSwiper.length) {
+            const kvSwiper = new Swiper('.kv-swiper', {
+                direction: 'vertical',
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                loop: true,
+                simulateTouch: false,
+                slidesPerView: 'auto',
+                speed: 2000,
+            });
+        }
+    }
+
     // ====================================== pagetop
     $("#pagetop").on("click", toTop);
     function toTop(){
@@ -236,6 +264,7 @@ $(function() {
         contentsH();
         animationContentsCheck();
         loopSlider();
+        kvSwiperStart();
     }
     $window.on('load', function() {
         loadAction();

@@ -31,6 +31,7 @@
           display: flex;
           justify-content: flex-end;
           align-items: center;
+          gap: 40px;
           .nav-list {
             display: flex;
             align-items: center;
@@ -49,8 +50,47 @@
           }
           .entry {
             > a {
+              width: 156px;
+              height: 44px;
+              padding: 5px 44px 5px 15px;
+              background: $color01;
+              border-radius: 9999px;
+              box-sizing: border-box;
               display: flex;
+              justify-content: center;
               align-items: center;
+              position: relative;
+              text-align: center;
+              color: $wh;
+              transition: background-color $speed01 $easing01, color $speed01 $easing01;
+              &:after {
+                content: "";
+                width: 34px;
+                height: 34px;
+                margin: auto;
+                background: {
+                  color: $wh;
+                  image: url(#{$IMGPATH}arw01-r.svg);
+                  repeat: no-repeat;
+                  size: 51.47% auto;
+                  position: center center;
+                }
+                border-radius: 50%;
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 5px;
+                bottom: 0;
+              }
+              > span {
+                @extend %font01;
+                font-size: 20px;
+                font-weight: 600;
+              }
+              &:hover {
+                background: $color02;
+                color: $color01;
+              }
             }
           }
         }
