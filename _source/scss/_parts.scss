@@ -1,5 +1,178 @@
 @use "setting" as *;
 
+/* ====================================== ttl */
+.ttl {
+
+  /* ------------------------------ 01 */
+  &.-ttl01 {
+    > span {
+      display: block;
+      &.sub {
+        @extend %font01;
+        padding-left: 17px;
+        position: relative;
+        font-size: 16px;
+        font-weight: 500;
+        &:before {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background: $color01;
+          border-radius: 50%;
+          display: block;
+          position: absolute;
+          top: 0.2em;
+          left: 0;
+        }
+      }
+      &.main {
+        margin-top: 10px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.5;
+      }
+    }
+    &.-small {
+      > span {
+        &.main {
+          font-size: 24px;
+        }
+      }
+    }
+    &.-yel {
+      > span {
+        &.sub {
+          &:before {
+            background: $color07;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== txt */
+.txt {
+
+  /* ------------------------------ 01 */
+  &.-txt01 {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+/* ====================================== btn */
+.btn {
+
+  /* ------------------------------ 01 */
+  &.-btn01 {
+    > a, > span {
+      max-width: 100%;
+      padding: 10px 52px 10px 28px;
+      background: $color07;
+      border-radius: 9999px;
+      box-sizing: border-box;
+      display: inline-block;
+      position: relative;
+      text-align: left;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: $wh;
+      transition: opacity $speed01 $easing01;
+      &:after {
+        content: "";
+        width: 16px;
+        height: 16px;
+        margin: auto;
+        background: {
+          image: url(#{$IMGPATH}arw02-r-wh.svg);
+          repeat: no-repeat;
+          size: contain;
+          position: center center;
+        }
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 20px;
+        bottom: 0;
+        transition: right $speed01 $easing01;
+      }
+    }
+    > a {
+      @extend %fade;
+      &:hover {
+        &:after {
+          right: 15px;
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== nav */
+.nav {
+
+  /* ------------------------------ 01 */
+  &.-nav01 {
+    .nav-list {
+      display: flex;
+      gap: 40px;
+      > li {
+        flex: 1;
+        > a {
+          min-height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .nav-img {
+            @extend %img01;
+            border-radius: 5px;
+            aspect-ratio: 353 / 210;
+            img {
+              transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+            }
+          }
+          .nav-name {
+            padding: 10px 70px 10px 0;
+            border: {
+              bottom: 1px solid $border-color;
+            }
+            display: flex;
+            align-items: center;
+            flex: 1;
+            position: relative;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.5;
+            transition: color $speed01 $easing01;
+            &:after {
+              @extend %arw01;
+              content: "";
+              margin: auto;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+            }
+          }
+          &:hover {
+            .nav-img {
+              img {
+                transform: scale(1.05);
+                opacity: 0.7;
+              }
+            }
+            .nav-name {
+              color: $color01;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /* ====================================== article */
 .article {
 

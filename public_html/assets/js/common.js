@@ -3,19 +3,24 @@ var loadStatus = false;
 $(function() {
 
     // ====================================== contents
-    var $window         = $(window),
-        $body           = $('body'),
-        $wrapper        = $('#wrapper'),
-        $header         = $('#header'),
-        $contents       = $('#contents'),
-        $footer         = $('#footer');
+    var $window              = $(window),
+        $body                = $('body'),
+        $wrapper             = $('#wrapper'),
+        $header              = $('#header'),
+        $contents            = $('#contents'),
+        $footer              = $('#footer');
 
-    var $kv             = $('#kv'),
-        $kvLoopSlider   = $kv.find('.loop-slider'),
-        $kvSlider       = $kvLoopSlider.find('.slider'),
-        $kvSliderList   = $kvSlider.find('.list'),
-        $kvSliderListLi = $kvSliderList.children('li'),
-        $kvSwiper       = $kvSliderListLi.find('.kv-swiper');
+    var $kv                  = $('#kv'),
+        $kvLoopSlider        = $kv.find('.loop-slider'),
+        $kvSlider            = $kvLoopSlider.find('.slider'),
+        $kvSliderList        = $kvSlider.find('.list'),
+        $kvSliderListLi      = $kvSliderList.children('li'),
+        $kvSwiper            = $kvSliderListLi.find('.kv-swiper');
+
+    var $people              = $('#people'),
+        $peopleInner         = $people.find('.inner'),
+        $peopleInnerContents = $peopleInner.find('.inner-contents'),
+        $peopleSwiper        = $people.find('.people-swiper');
 
     // ====================================== data
     var windowW;
@@ -168,6 +173,23 @@ $(function() {
                 speed: 2000,
             });
         }
+    }
+
+    // ====================================== people
+    if($peopleSwiper.length) {
+        const peopleSwiper = new Swiper('.people-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+            centeredSlides: true,
+            pagination: {
+                el: '.people-swiper-pagination',
+                clickable: true,
+            },
+        });
     }
 
     // ====================================== pagetop

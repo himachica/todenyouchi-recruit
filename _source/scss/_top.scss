@@ -97,34 +97,8 @@
     }
   }
   .loop-slider {
-    position: relative;
-    &:before, &:after {
-      content: "";
-      width: 100%;
-      height: 1.944vw;
-      background: {
-        repeat: no-repeat;
-        size: 100% auto;
-      }
-      display: block;
-      position: absolute;
-      left: 0;
-      z-index: 1;
-    }
-    &:before {
-      background: {
-        image: url(#{$IMGPATH}wave01.svg);
-        position: top center;
-      }
-      top: 0;
-    }
-    &:after {
-      background: {
-        image: url(#{$IMGPATH}wave02.svg);
-        position: bottom center;
-      }
-      bottom: 0;
-    }
+    @extend %wave-top;
+    @extend %wave-bottom;
     .slider {
       .list {
         > li {
@@ -162,6 +136,318 @@
                       margin-top: 8px;
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== message */
+#message {
+  margin-top: 40px;
+  padding-top: 60px;
+  .inner {
+    .inner-contents {
+      .layout {
+        .block {
+          &.-contents {
+            .copy {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 1.75;
+            }
+            .txt {
+              margin-top: 30px;
+              font-size: 16px;
+              line-height: 2.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== company */
+#company {
+  @extend %wave-top;
+  margin-top: 100px;
+  padding: calc(72px + 1.944vw) 0 100px;
+  background: $gradation01;
+  .inner {
+    .inner-contents {
+      .nav {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+/* ====================================== people */
+#people {
+  margin-top: 40px;
+  padding-top: 60px;
+  .inner {
+    .inner-contents {
+      .head {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        .ttl {
+          flex: 1;
+        }
+      }
+    }
+  }
+  .people-swiper {
+    margin-top: 40px;
+    //padding-right: 440px;
+    .swiper-wrapper {
+      .swiper-slide {
+        width: 400px;
+        > a {
+          border-radius: 5px;
+          display: block;
+          position: relative;
+          overflow: hidden;
+          .slide-img {
+            @extend %img01;
+            aspect-ratio: 40 / 51;
+          }
+          .slide-contents {
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px 60px;
+            background: linear-gradient(to bottom, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity $speed01 $easing01;
+            &:after {
+              @extend %arw01-yel;
+              content: "";
+              position: absolute;
+              right: 20px;
+              bottom: 20px;
+            }
+            .slide-copy {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 1.5;
+              color: $wh;
+            }
+          }
+          &:hover {
+            .slide-contents {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .people-swiper-pagination {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      .swiper-pagination-bullet {
+        max-width: 100px;
+        height: 10px;
+        margin: 0;
+        background: $color07;
+        border-radius: 9999px;
+        flex: 1;
+        opacity: 0.2;
+        transition: opacity $speed01 $easing01;
+        &:hover, &.swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .inner {
+    .inner-contents {
+      .crosstalk {
+        margin-top: 80px;
+        > a {
+          padding: 50px;
+          background: $gradation03;
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          .block {
+            &.-img {
+              width: 55.77%;
+              .img {
+                overflow: hidden;
+                font-size: 0;
+                line-height: 0;
+                img {
+                  transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+                }
+              }
+            }
+            &.-contents {
+              flex: 1;
+              .txt {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 1.5;
+              }
+              .btn-wrap {
+                margin-top: 20px;
+                text-align: right;
+              }
+            }
+          }
+          &:hover {
+            .block {
+              &.-img {
+                .img {
+                  img {
+                    transform: scale(1.05);
+                    opacity: 0.7;
+                  }
+                }
+              }
+              &.-contents {
+                .btn-wrap {
+                  .btn {
+                    @extend %btn01-hover;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== business */
+#business {
+  margin-top: 100px;
+  padding: 100px 0;
+  background: $color10;
+  .inner {
+    .inner-contents {
+      .layout {
+        .block {
+          &.-head {
+            .txt {
+              margin-top: 30px;
+            }
+          }
+          &.-contents {
+            .list {
+              > li {
+                .article {
+                  > a {
+                    .article-img {
+                      @extend %img01;
+                      border-radius: 5px;
+                      aspect-ratio: 80 / 23;
+                      img {
+                        transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+                      }
+                    }
+                    .article-number {
+                      margin-top: 10px;
+                      font-size: 16px;
+                      font-weight: 700;
+                      line-height: 1.5;
+                      transition: color $speed01 $easing01;
+                    }
+                    .article-ttl {
+                      margin-top: 10px;
+                      font-size: 24px;
+                      font-weight: 700;
+                      line-height: 1.5;
+                      transition: color $speed01 $easing01;
+                    }
+                    .article-txt {
+                      margin-top: 10px;
+                      font-size: 14px;
+                      line-height: 1.5;
+                    }
+                    &:hover {
+                      .article-img {
+                        img {
+                          transform: scale(1.05);
+                          opacity: 0.7;
+                        }
+                      }
+                      .article-number, .article-ttl {
+                        color: $color01;
+                      }
+                    }
+                  }
+                }
+                &:not(:first-child) {
+                  margin-top: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== environment */
+#environment {
+  margin-top: 40px;
+  padding-top: 60px;
+  .inner {
+    .inner-contents {
+      .list {
+        margin-top: 40px;
+        display: flex;
+        gap: 40px;
+        > li {
+          flex: 1;
+          .section {
+            > a {
+              .section-img {
+                @extend %img01;
+                border-radius: 5px;
+                aspect-ratio: 55 / 23;
+                img {
+                  transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+                }
+              }
+              .section-ttl {
+                margin-top: 15px;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.5;
+                transition: color $speed01 $easing01;
+              }
+              .section-txt {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 1.5;
+              }
+              &:hover {
+                .section-img {
+                  img {
+                    transform: scale(1.05);
+                    opacity: 0.7;
+                  }
+                }
+                .section-ttl {
+                  color: $color01;
                 }
               }
             }

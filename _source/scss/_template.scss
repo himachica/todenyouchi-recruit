@@ -30,6 +30,19 @@ $bg-color     : #f5f5f5;
 $color01      : #59BFBF;
 $color02      : #DEF2F2;
 $color03      : #777777;
+$color04      : #41BBED;
+$color05      : rgba(23, 185, 251, 0.18);
+$color06      : rgba(45, 213, 185, 0.18);
+$color07      : #E5C43D;
+$color08      : rgba(255, 212, 38, 0.3);
+$color09      : rgba(245, 239, 173, 0.3);
+$color10      : #F8F8F8;
+$color11      : rgba(23, 185, 251, 0.3);
+$color12      : rgba(45, 213, 185, 0.3);
+
+$gradation01  : linear-gradient(to bottom, $color05, $color06);
+$gradation02  : linear-gradient(to bottom, $color11, $color12);
+$gradation03  : linear-gradient(to bottom, $color08, $color09);
 
 /* ====================================== animation */
 $easing01: cubic-bezier(0.19, 1, 0.22, 1);
@@ -348,5 +361,70 @@ $speed02 : 0.6s;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+%wave-top {
+  position: relative;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 1.944vw;
+    background: {
+      image: url(#{$IMGPATH}wave01.svg);
+      repeat: no-repeat;
+      size: 100% auto;
+      position: top center;
+    }
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+%wave-bottom {
+  position: relative;
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1.944vw;
+    background: {
+      image: url(#{$IMGPATH}wave02.svg);
+      repeat: no-repeat;
+      size: 100% auto;
+      position: bottom center;
+    }
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+  }
+}
+%arw01 {
+  width: 60px;
+  height: 30px;
+  background: {
+    color: $color01;
+    image: url(#{$IMGPATH}arw02-r-wh.svg);
+    repeat: no-repeat;
+    size: 16px auto;
+    position: center center;
+  }
+  border-radius: 9999px;
+  display: block;
+}
+%arw01-yel {
+  @extend %arw01;
+  background: {
+    color: $color07;
+  }
+}
+%btn01-hover {
+  > span {
+    opacity: 0.7;
+    &:after {
+      right: 15px;
+    }
+  }
 }
 
