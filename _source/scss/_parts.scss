@@ -108,6 +108,67 @@
       }
     }
   }
+
+  /* ------------------------------ 02 */
+  &.-btn02 {
+    > a {
+      width: 100%;
+      max-width: 260px;
+      min-height: 50px;
+      padding: 10px 60px 10px 40px;
+      border: 1px solid $color01;
+      border-radius: 9999px;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $color01;
+      transition: background-color $speed01 $easing01, color $speed01 $easing01;
+      &:before, &:after {
+        content: "";
+        width: 15px;
+        height: 15px;
+        background: {
+          repeat: no-repeat;
+          size: contain;
+          position: center center;
+        }
+        display: block;
+        position: absolute;
+        top: calc(50% - 7.5px);
+        right: 40px;
+        transition: top $speed01 $easing01, right $speed01 $easing01, opacity $speed01 $easing01;
+      }
+      &:before {
+        background: {
+          image: url(#{$IMGPATH}arw03-tr.svg);
+        }
+      }
+      &:after {
+        background: {
+          image: url(#{$IMGPATH}arw03-tr-wh.svg);
+        }
+        opacity: 0;
+      }
+      &:hover {
+        background: $color01;
+        color: $wh;
+        &:before, &:after {
+          top: calc(50% - 12.5px);
+          right: 35px;
+        }
+        &:before {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 /* ====================================== nav */

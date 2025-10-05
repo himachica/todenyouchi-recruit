@@ -1,3 +1,167 @@
 @use "setting" as *;
 
 /* ====================================== footer */
+#footer {
+  padding: 50px 0;
+  .inner {
+    .inner-contents {
+      .layout {
+        display: flex;
+        gap: 40px;
+        .block {
+          &.-head {
+            flex: 1;
+            .logo {
+              font-size: 0;
+              line-height: 0;
+              > a {
+                img {
+                  max-width: 315px;
+                }
+              }
+            }
+            .btn-wrap {
+              margin-top: 25px;
+              .btn {
+                &:not(:first-child) {
+                  margin-top: 15px;
+                }
+              }
+            }
+          }
+          &.-contents {
+            .nav {
+              .nav-list {
+                column-count: 3;
+                column-gap: 45px;
+                > li {
+                  max-width: 165px;
+                  page-break-inside: avoid;
+                  .nav-head {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    > a {
+                      transition: color $speed01 $easing01;
+                      &:hover {
+                        color: $color01;
+                      }
+                    }
+                  }
+                  .nav-sub-list {
+                    margin-top: 10px;
+                    > li {
+                      padding-left: 16px;
+                      position: relative;
+                      font-size: 14px;
+                      line-height: 1.5;
+                      &:before {
+                        content: "";
+                        width: 11px;
+                        height: 1px;
+                        background: $base-color;
+                        display: block;
+                        position: absolute;
+                        top: 0.75em;
+                        left: 0;
+                      }
+                      > a {
+                        transition: color $speed01 $easing01;
+                        &:hover {
+                          color: $color01;
+                        }
+                      }
+                      &:not(:first-child) {
+                        margin-top: 5px;
+                      }
+                    }
+                  }
+                  .nav-link {
+                    font-size: 14px;
+                    line-height: 1.5;
+                    > a {
+                      display: inline-block;
+                      transition: color $speed01 $easing01;
+                      &[target="_blank"] {
+                        padding-right: 15px;
+                        position: relative;
+                        &:before, &:after {
+                          content: "";
+                          width: 10px;
+                          height: 10px;
+                          background: {
+                            repeat: no-repeat;
+                            size: contain;
+                            position: center center;
+                          }
+                          display: inline-block;
+                          position: absolute;
+                          top: calc(50% - 5px);
+                          right: 0;
+                          transition: top $speed01 $easing01, right $speed01 $easing01, opacity $speed01 $easing01;
+                        }
+                        &:before {
+                          background: {
+                            image: url(#{$IMGPATH}arw03-tr-base.svg);
+                          }
+                        }
+                        &:after {
+                          background: {
+                            image: url(#{$IMGPATH}arw03-tr.svg);
+                          }
+                          opacity: 0;
+                        }
+                      }
+                      &:hover {
+                        color: $color01;
+                        &:before {
+                          opacity: 0;
+                        }
+                        &:after {
+                          opacity: 1;
+                        }
+                      }
+                    }
+                  }
+                  &:not(:first-child) {
+                    margin-top: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .bottom {
+        margin-top: 75px;
+        position: relative;
+        .copyright {
+          @extend %font01;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 400;
+        }
+        #pagetop {
+          width: 60px;
+          position: absolute;
+          right: -60px;
+          bottom: 0;
+          text-align: center;
+          cursor: pointer;
+          .pagetop-img {
+            font-size: 0;
+            line-height: 0;
+            img {
+              width: 45px;
+            }
+          }
+          .pagetop-txt {
+            @extend %font01;
+            font-size: 12px;
+            color: $color01;
+          }
+        }
+      }
+    }
+  }
+}
