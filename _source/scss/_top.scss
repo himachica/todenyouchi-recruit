@@ -2,8 +2,15 @@
 
 /* ====================================== kv */
 #kv {
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding-bottom: 140px;
+    position: relative;
+  }
   .contents {
     padding: 40px 50px;
+    @media screen and (max-width: $VIEWPOINT01) {
+      padding: 45px 15px 20px;
+    }
     .contents-inner {
       width: 100%;
       max-width: 1240px;
@@ -11,11 +18,23 @@
       display: flex;
       align-items: center;
       gap: 30px;
+      @media screen and (max-width: $VIEWPOINT01) {
+        display: block;
+      }
       .copy {
         flex: 1;
         font-size: 48px;
         font-weight: 700;
         line-height: 1.5;
+        @media screen and (max-width: $MIN-WIDTH) {
+          font-size: pc(48);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          font-size: 26px;
+        }
+        @media screen and (max-width: $VIEWPOINT02) {
+          font-size: sp(26);
+        }
       }
       .entry {
         width: 240px;
@@ -26,12 +45,25 @@
         display: flex;
         align-items: center;
         gap: 20px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: auto;
+          max-width: calc(100% - 30px);
+          padding: 0;
+          border: none;
+          gap: 15px;
+          position: absolute;
+          right: 15px;
+          bottom: 30px;
+        }
         .entry-head {
           @extend %font01;
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 500;
           writing-mode: vertical-rl;
           color: $color01;
+          @media screen and (max-width: $VIEWPOINT01) {
+            font-size: 20px;
+          }
         }
         .entry-nav {
           flex: 1;
@@ -46,6 +78,16 @@
                 position: relative;
                 color: $color03;
                 transition: color $speed01 $easing01;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  width: 180px;
+                  min-height: 42px;
+                  padding: 5px 50px 5px 30px;
+                  border: 1px solid $color01;
+                  border-radius: 5px;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: center;
+                }
                 &:before, &:after {
                   content: "";
                   width: 16px;
@@ -62,6 +104,9 @@
                   right: 0;
                   bottom: 0;
                   transition: right $speed01 $easing01, opacity $speed01 $easing01;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    right: 30px;
+                  }
                 }
                 &:before {
                   background: {
@@ -78,17 +123,29 @@
                   color: $color01;
                   &:before, &:after {
                     right: -5px;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      right: 30px;
+                    }
                   }
                   &:before {
                     opacity: 0;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      opacity: 1;
+                    }
                   }
                   &:after {
                     opacity: 1;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      opacity: 0;
+                    }
                   }
                 }
               }
               &:not(:first-child) {
                 margin-top: 5px;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 10px;
+                }
               }
             }
           }
@@ -106,6 +163,11 @@
           height: 648px;
           margin: 0 4px;
           position: relative;
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 1174px;
+            height: 424px;
+            margin: 0 3px;
+          }
           .kv-swiper {
             width: 100%;
             height: 100%;
@@ -118,22 +180,37 @@
                   .kv-swiper-block {
                     display: flex;
                     gap: 8px;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      gap: 6px;
+                    }
                     .kv-swiper-img {
                       @extend %img01;
                       border-radius: 5px;
                       font-size: 0;
                       line-height: 0;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        border-radius: 3px;
+                      }
                       &.-type01 {
                         width: 320px;
                         aspect-ratio: 1 / 1;
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          width: 208px;
+                        }
                       }
                       &.-type02 {
                         width: 160px;
                         aspect-ratio: 1 / 2;
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          width: 104px;
+                        }
                       }
                     }
                     &.-bottom {
                       margin-top: 8px;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        margin-top: 6px;
+                      }
                     }
                   }
                 }
@@ -150,6 +227,10 @@
 #message {
   margin-top: 40px;
   padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 10px;
+    padding-top: 40px;
+  }
   .inner {
     .inner-contents {
       .layout {
@@ -158,12 +239,26 @@
             .copy {
               font-size: 24px;
               font-weight: 700;
-              line-height: 1.75;
+              line-height: 1.7;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 20px;
+              }
             }
             .txt {
               margin-top: 30px;
               font-size: 16px;
               line-height: 2.6;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 14px;
+                line-height: 1.7;
+              }
+              > p {
+                &:not(:first-child) {
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 1.7em;
+                  }
+                }
+              }
             }
           }
         }
@@ -178,10 +273,17 @@
   margin-top: 100px;
   padding: calc(72px + 1.944vw) 0 100px;
   background: $gradation01;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 50px;
+    padding: calc(50px + 4.1vw) 0 50px;
+  }
   .inner {
     .inner-contents {
       .nav {
         margin-top: 40px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -191,14 +293,35 @@
 #people {
   margin-top: 40px;
   padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 10px;
+    padding-top: 40px;
+  }
   .inner {
     .inner-contents {
       .head {
         display: flex;
         align-items: center;
         gap: 40px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: block;
+          position: relative;
+        }
         .ttl {
           flex: 1;
+        }
+        .btn {
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 100%;
+            position: absolute;
+            bottom: calc((30px + ((100vw - 30px) * 1.275) + 58px + 55px) * -1);
+            left: 0;
+          }
+          > a {
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin: 0 auto;
+            }
+          }
         }
       }
     }
@@ -206,9 +329,16 @@
   .people-swiper {
     margin-top: 40px;
     //padding-right: 440px;
+    @media screen and (max-width: $VIEWPOINT01) {
+      margin-top: 30px;
+    }
     .swiper-wrapper {
       .swiper-slide {
         width: 400px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: calc(100% - 30px);
+          max-width: 600px;
+        }
         > a {
           border-radius: 5px;
           display: block;
@@ -231,18 +361,35 @@
             left: 0;
             opacity: 0;
             transition: opacity $speed01 $easing01;
+            @media screen and (max-width: $VIEWPOINT01) {
+              padding: 20px 15px;
+              background: linear-gradient(to bottom, rgba(17, 17, 17, 0), 50%, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
+              opacity: 1;
+            }
             &:after {
               @extend %arw01-yel;
               content: "";
               position: absolute;
               right: 20px;
               bottom: 20px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 65px;
+                height: 65px;
+                background: {
+                  size: 20px auto;
+                }
+                border-radius: 50%;
+              }
             }
             .slide-copy {
               font-size: 24px;
               font-weight: 700;
               line-height: 1.5;
               color: $wh;
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding-right: 85px;
+                font-size: 16px;
+              }
             }
           }
           &:hover {
@@ -255,10 +402,17 @@
     }
     .people-swiper-pagination {
       margin-top: 40px;
+      padding: 0 50px;
+      box-sizing: border-box;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 10px;
+      @media screen and (max-width: $VIEWPOINT01) {
+        margin-top: 20px;
+        padding: 0 15px;
+        gap: 6px;
+      }
       .swiper-pagination-bullet {
         max-width: 100px;
         height: 10px;
@@ -268,6 +422,10 @@
         flex: 1;
         opacity: 0.2;
         transition: opacity $speed01 $easing01;
+        @media screen and (max-width: $VIEWPOINT01) {
+          max-width: 30px;
+          height: 8px;
+        }
         &:hover, &.swiper-pagination-bullet-active {
           opacity: 1;
         }
@@ -278,16 +436,31 @@
     .inner-contents {
       .crosstalk {
         margin-top: 80px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 165px;
+        }
         > a {
           padding: 50px;
           background: $gradation03;
           display: flex;
           align-items: center;
           gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            padding: pc(50);
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            padding: 50px 20px;
+            display: block;
+          }
           .block {
             &.-img {
               width: 55.77%;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 100%;
+              }
               .img {
+                border-radius: 5px;
                 overflow: hidden;
                 font-size: 0;
                 line-height: 0;
@@ -298,14 +471,30 @@
             }
             &.-contents {
               flex: 1;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 40px;
+              }
               .txt {
                 margin-top: 20px;
                 font-size: 16px;
-                line-height: 1.5;
+                line-height: 1.7;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 14px;
+                }
               }
               .btn-wrap {
                 margin-top: 20px;
                 text-align: right;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 40px;
+                }
+                .btn {
+                  > span {
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      margin: 0 auto;
+                    }
+                  }
+                }
               }
             }
           }
@@ -339,6 +528,10 @@
   margin-top: 100px;
   padding: 100px 0;
   background: $color10;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 70px;
+    padding: 50px 0;
+  }
   .inner {
     .inner-contents {
       .layout {
@@ -357,6 +550,9 @@
                       @extend %img01;
                       border-radius: 5px;
                       aspect-ratio: 80 / 23;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        aspect-ratio: 36 / 23;
+                      }
                       img {
                         transition: transform $speed01 $easing01, opacity $speed01 $easing01;
                       }
@@ -367,6 +563,9 @@
                       font-weight: 700;
                       line-height: 1.5;
                       transition: color $speed01 $easing01;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        margin-top: 15px;
+                      }
                     }
                     .article-ttl {
                       margin-top: 10px;
@@ -374,11 +573,18 @@
                       font-weight: 700;
                       line-height: 1.5;
                       transition: color $speed01 $easing01;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        font-size: 20px;
+                      }
                     }
                     .article-txt {
                       margin-top: 10px;
                       font-size: 14px;
                       line-height: 1.5;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        margin-top: 15px;
+                        font-size: 16px;
+                      }
                     }
                     &:hover {
                       .article-img {
@@ -409,12 +615,23 @@
 #environment {
   margin-top: 40px;
   padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 10px;
+    padding-top: 40px;
+  }
   .inner {
     .inner-contents {
       .list {
         margin-top: 40px;
         display: flex;
         gap: 40px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          gap: pc(40);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+          display: block;
+        }
         > li {
           flex: 1;
           .section {
@@ -423,6 +640,9 @@
                 @extend %img01;
                 border-radius: 5px;
                 aspect-ratio: 55 / 23;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  aspect-ratio: 36 / 23;
+                }
                 img {
                   transition: transform $speed01 $easing01, opacity $speed01 $easing01;
                 }
@@ -433,11 +653,17 @@
                 font-weight: 700;
                 line-height: 1.5;
                 transition: color $speed01 $easing01;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 20px;
+                }
               }
               .section-txt {
                 margin-top: 10px;
                 font-size: 14px;
                 line-height: 1.5;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 16px;
+                }
               }
               &:hover {
                 .section-img {
@@ -450,6 +676,11 @@
                   color: $color01;
                 }
               }
+            }
+          }
+          &:not(:first-child) {
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 30px;
             }
           }
         }

@@ -64,6 +64,12 @@ body {
   position: relative;
   box-sizing: border-box;
   overflow: hidden;
+  @media screen and (max-width: $MIN-WIDTH) {
+    min-height: pc(100);
+  }
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding-top: 64px;
+  }
 }
 
 /* ====================================== contents */
@@ -79,8 +85,8 @@ body {
   padding: 0 50px;
   box-sizing: border-box;
   @media screen and (max-width: $VIEWPOINT01) {
-    max-width: 640px;
-    padding: 0 20px;
+    max-width: 630px;
+    padding: 0 15px;
   }
 }
 
@@ -91,12 +97,27 @@ body {
   &.-layout01 {
     display: flex;
     gap: 40px;
+    @media screen and (max-width: $MIN-WIDTH) {
+      gap: pc(40);
+    }
+    @media screen and (max-width: $VIEWPOINT01) {
+      display: block;
+    }
     .block {
       &.-head {
-        width: 22.81%;
+        width: 260px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          width: pc(260);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: 100%;
+        }
       }
       &.-contents {
         flex: 1;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -105,12 +126,27 @@ body {
   &.-layout02 {
     display: flex;
     gap: 40px;
+    @media screen and (max-width: $MIN-WIDTH) {
+      gap: pc(40);
+    }
+    @media screen and (max-width: $VIEWPOINT01) {
+      display: block;
+    }
     .block {
       &.-head {
-        width: 26.32%;
+        width: 300px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          width: pc(300);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: 100%;
+        }
       }
       &.-contents {
         flex: 1;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+        }
       }
     }
   }
@@ -119,6 +155,9 @@ body {
 /* ====================================== data */
 .data {
   margin-top: 100px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 60px;
+  }
   > a {
     padding: 50px;
     border-radius: 5px;
@@ -126,6 +165,9 @@ body {
     display: block;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: $VIEWPOINT01) {
+      padding: 10px;
+    }
     .bg {
       @extend %img01;
       width: 100%;
@@ -146,16 +188,27 @@ body {
       box-sizing: border-box;
       text-align: center;
       color: $wh;
+      @media screen and (max-width: $VIEWPOINT01) {
+        padding: 25px;
+      }
       .box-ttl {
         font-size: 28px;
         font-weight: 700;
         line-height: 1.5;
+        @media screen and (max-width: $VIEWPOINT02) {
+          font-size: sp(28);
+        }
       }
       .box-txt {
         margin-top: 15px;
         font-size: 14px;
         font-weight: 500;
         line-height: 1.5;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 25px;
+          font-size: 16px;
+          line-height: 1.7;
+        }
       }
       .box-more {
         margin-top: 15px;
@@ -166,6 +219,10 @@ body {
         font-weight: 500;
         line-height: 1.5;
         transition: opacity $speed01 $easing01;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 25px;
+          font-size: 16px;
+        }
         &:after {
           content: "";
           width: 16px;
@@ -211,15 +268,32 @@ body {
   margin-top: 100px;
   padding: calc(72px + 1.944vw) 0 100px;
   background: $gradation02;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 50px;
+    padding: calc(60px + 4.1vw) 0 80px;
+  }
   .inner {
     .inner-contents {
       .nav {
+        @media screen and (max-width: $VIEWPOINT01) {
+          max-width: 300px;
+          margin: 0 auto;
+        }
         .nav-list {
           display: flex;
           gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            display: block;
+          }
           > li {
             min-height: 100px;
             flex: 1;
+            @media screen and (max-width: $VIEWPOINT01) {
+              min-height: auto;
+            }
             > a {
               @extend %fade;
               min-height: 100%;
@@ -235,6 +309,11 @@ body {
               font-weight: 700;
               line-height: 1.5;
               color: $color01;
+              @media screen and (max-width: $VIEWPOINT01) {
+                min-height: 70px;
+                padding: 15px 84px 15px 40px;
+                font-size: 20px;
+              }
               &:after {
                 content: "";
                 width: 34px;
@@ -258,6 +337,11 @@ body {
                 &:after {
                   right: 35px;
                 }
+              }
+            }
+            &:not(:first-child) {
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 30px;
               }
             }
           }

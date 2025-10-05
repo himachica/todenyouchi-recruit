@@ -3,24 +3,37 @@ var loadStatus = false;
 $(function() {
 
     // ====================================== contents
-    var $window              = $(window),
-        $body                = $('body'),
-        $wrapper             = $('#wrapper'),
-        $header              = $('#header'),
-        $contents            = $('#contents'),
-        $footer              = $('#footer');
+    var $window               = $(window),
+        $body                 = $('body'),
+        $wrapper              = $('#wrapper'),
+        $header               = $('#header'),
+        $contents             = $('#contents'),
+        $footer               = $('#footer');
 
-    var $kv                  = $('#kv'),
-        $kvLoopSlider        = $kv.find('.loop-slider'),
-        $kvSlider            = $kvLoopSlider.find('.slider'),
-        $kvSliderList        = $kvSlider.find('.list'),
-        $kvSliderListLi      = $kvSliderList.children('li'),
-        $kvSwiper            = $kvSliderListLi.find('.kv-swiper');
+    var $headerInner          = $header.find('.header-inner'),
+        $headerNav            = $headerInner.find('.nav'),
+        $headerNavContents    = $headerNav.find('.nav-contents'),
+        $headerNavInner       = $headerNavContents.find('.nav-inner'),
+        $headerNavList        = $headerNavInner.find('.nav-list'),
+        $headerNavListLi      = $headerNavList.children('li'),
+        $headerNavHead        = $headerNavListLi.find('.nav-head'),
+        $headerNavHeadAcod    = $headerNavHead.find('.nav-head-acod'),
+        $headerSpMenu         = $header.find('.sp-menu'),
+        $headerSpMenuContents = $headerSpMenu.find('.sp-menu-contents'),
+        $headerSpMenuBars     = $headerSpMenuContents.find('.sp-menu-bars'),
+        $headerSpMenuBar1     = $headerSpMenuBars.find('.sp-menu-bar:nth-child(1)');
 
-    var $people              = $('#people'),
-        $peopleInner         = $people.find('.inner'),
-        $peopleInnerContents = $peopleInner.find('.inner-contents'),
-        $peopleSwiper        = $people.find('.people-swiper');
+    var $kv                   = $('#kv'),
+        $kvLoopSlider         = $kv.find('.loop-slider'),
+        $kvSlider             = $kvLoopSlider.find('.slider'),
+        $kvSliderList         = $kvSlider.find('.list'),
+        $kvSliderListLi       = $kvSliderList.children('li'),
+        $kvSwiper             = $kvSliderListLi.find('.kv-swiper');
+
+    var $people               = $('#people'),
+        $peopleInner          = $people.find('.inner'),
+        $peopleInnerContents  = $peopleInner.find('.inner-contents'),
+        $peopleSwiper         = $people.find('.people-swiper');
 
     // ====================================== data
     var windowW;
@@ -154,6 +167,59 @@ $(function() {
         }
     });
 
+    // ====================================== header
+    $headerSpMenu.on('click', function() {
+        $header.toggleClass('-active');
+        if($header.hasClass('-active')) {
+            $headerNav.slideDown(600, 'easeOutQuart');
+        } else {
+            $headerNav.slideUp(600, 'easeOutQuart');
+            $header.addClass('-inactive');
+            $headerSpMenuBar1.on(animationEvent, function() {
+                $headerSpMenuBar1.off(animationEvent);
+                $header.removeClass('-inactive');
+            });
+        }
+    });
+    $headerNavHeadAcod.on('click', function() {
+        var $thisLi      = $(this).closest('li'),
+            $thisSubList = $thisLi.find('.nav-sub-list');
+        $thisLi.toggleClass('-active');
+        if($thisLi.hasClass('-active')) {
+            $thisSubList.slideDown(600, 'easeOutQuart');
+        } else {
+            $thisSubList.slideUp(600, 'easeOutQuart');
+        }
+    });
+    function headerReset() {
+        if(windowW > breakpoint01) {
+            if($header.hasClass('-active')) {
+                $header.removeClass('-active');
+            }
+            $headerNav.show();
+            $headerNavListLi.each(function() {
+                if($(this).hasClass('-active')) {
+                    var $thisSubList = $(this).find('.nav-sub-list');
+                    $(this).removeClass('-active');
+                    $thisSubList.hide();
+                }
+            });
+        } else {
+            if(!$header.hasClass('-active')) {
+                $headerNav.hide();
+            }
+            $headerNavListLi.each(function() {
+                if($(this).hasClass('-active')) {
+                    var $thisSubList = $(this).find('.nav-sub-list');
+                    $thisSubList.show();
+                } else {
+                    var $thisSubList = $(this).find('.nav-sub-list');
+                    $thisSubList.hide();
+                }
+            });
+        }
+    }
+
     // ====================================== kv
     function kvSwiperStart() {
         if($kvSwiper.length) {
@@ -183,12 +249,17 @@ $(function() {
                 delay: 5000,
             },
             slidesPerView: 'auto',
-            spaceBetween: 40,
+            spaceBetween: 15,
             centeredSlides: true,
             pagination: {
                 el: '.people-swiper-pagination',
                 clickable: true,
             },
+            breakpoints: {
+                769: {
+                    spaceBetween: 40,
+                }
+            }
         });
     }
 
@@ -301,6 +372,7 @@ $(function() {
         dateAcquisition();
         animationContentsCheck();
         if(loadingW != windowW) {
+            headerReset();
             contentsH();
             loadingW = windowW;
         }

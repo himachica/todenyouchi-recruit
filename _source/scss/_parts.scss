@@ -30,12 +30,18 @@
         font-size: 32px;
         font-weight: 700;
         line-height: 1.5;
+        @media screen and (max-width: $VIEWPOINT01) {
+          font-size: 28px;
+        }
       }
     }
     &.-small {
       > span {
         &.main {
           font-size: 24px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            font-size: 28px;
+          }
         }
       }
     }
@@ -58,6 +64,9 @@
   &.-txt01 {
     font-size: 14px;
     line-height: 1.7;
+    @media screen and (max-width: $VIEWPOINT01) {
+      font-size: 16px;
+    }
   }
 }
 
@@ -80,6 +89,16 @@
       line-height: 1.5;
       color: $wh;
       transition: opacity $speed01 $easing01;
+      @media screen and (max-width: $VIEWPOINT01) {
+        width: 300px;
+        min-height: 55px;
+        padding: 10px 80px 10px 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 16px;
+      }
       &:after {
         content: "";
         width: 16px;
@@ -97,6 +116,11 @@
         right: 20px;
         bottom: 0;
         transition: right $speed01 $easing01;
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: 20px;
+          height: 20px;
+          right: 50px;
+        }
       }
     }
     > a {
@@ -104,6 +128,9 @@
       &:hover {
         &:after {
           right: 15px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            right: 50px;
+          }
         }
       }
     }
@@ -127,6 +154,13 @@
       line-height: 1.5;
       color: $color01;
       transition: background-color $speed01 $easing01, color $speed01 $easing01;
+      @media screen and (max-width: $MIN-WIDTH) {
+        padding-left: pc(40);
+      }
+      @media screen and (max-width: $VIEWPOINT01) {
+        max-width: 300px;
+        padding: 10px 60px 10px 50px;
+      }
       &:before, &:after {
         content: "";
         width: 15px;
@@ -141,6 +175,9 @@
         top: calc(50% - 7.5px);
         right: 40px;
         transition: top $speed01 $easing01, right $speed01 $easing01, opacity $speed01 $easing01;
+        @media screen and (max-width: $VIEWPOINT01) {
+          right: 30px;
+        }
       }
       &:before {
         background: {
@@ -156,15 +193,29 @@
       &:hover {
         background: $color01;
         color: $wh;
+        @media screen and (max-width: $VIEWPOINT01) {
+          background: $wh;
+          color: $color01;
+        }
         &:before, &:after {
           top: calc(50% - 12.5px);
           right: 35px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            top: calc(50% - 7.5px);
+            right: 30px;
+          }
         }
         &:before {
           opacity: 0;
+          @media screen and (max-width: $VIEWPOINT01) {
+            opacity: 1;
+          }
         }
         &:after {
           opacity: 1;
+          @media screen and (max-width: $VIEWPOINT01) {
+            opacity: 0;
+          }
         }
       }
     }
@@ -179,6 +230,12 @@
     .nav-list {
       display: flex;
       gap: 40px;
+      @media screen and (max-width: $MIN-WIDTH) {
+        gap: pc(40);
+      }
+      @media screen and (max-width: $VIEWPOINT01) {
+        display: block;
+      }
       > li {
         flex: 1;
         > a {
@@ -186,6 +243,10 @@
           display: flex;
           flex-direction: column;
           gap: 5px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            min-height: auto;
+            display: block;
+          }
           .nav-img {
             @extend %img01;
             border-radius: 5px;
@@ -227,6 +288,11 @@
             .nav-name {
               color: $color01;
             }
+          }
+        }
+        &:not(:first-child) {
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 20px;
           }
         }
       }

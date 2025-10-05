@@ -39,6 +39,8 @@ $color09      : rgba(245, 239, 173, 0.3);
 $color10      : #F8F8F8;
 $color11      : rgba(23, 185, 251, 0.3);
 $color12      : rgba(45, 213, 185, 0.3);
+$color13      : #515650;
+$color14      : rgba(17, 17, 17, 0.1);
 
 $gradation01  : linear-gradient(to bottom, $color05, $color06);
 $gradation02  : linear-gradient(to bottom, $color11, $color12);
@@ -48,6 +50,65 @@ $gradation03  : linear-gradient(to bottom, $color08, $color09);
 $easing01: cubic-bezier(0.19, 1, 0.22, 1);
 $speed01 : 1.75s;
 $speed02 : 0.6s;
+
+@keyframes bar-t {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  } 50% {
+    transform: translate(0, 8px) rotate(0);
+  } 100% {
+    transform: translate(0, 8px) rotate(20deg);
+  }
+}
+@keyframes bar-c {
+  0% {
+    opacity: 1;
+  } 49% {
+    opacity: 1;
+  } 50% {
+    opacity: 0;
+  } 100% {
+    opacity: 0;
+  }
+}
+@keyframes bar-b {
+  0% {
+    transform: translate(0, 0) rotate(0);
+  } 50% {
+    transform: translate(0, -8px) rotate(0);
+  } 100% {
+    transform: translate(0, -8px) rotate(-20deg);
+  }
+}
+@keyframes bar-t-r {
+  0% {
+    transform: translate(0, 8px) rotate(20deg);
+  } 50% {
+    transform: translate(0, 8px) rotate(0);
+  } 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+@keyframes bar-c-r {
+  0% {
+    opacity: 0;
+  } 49% {
+    opacity: 0;
+  } 50% {
+    opacity: 1;
+  } 100% {
+    opacity: 1;
+  }
+}
+@keyframes bar-b-r {
+  0% {
+    transform: translate(0, -8px) rotate(-20deg);
+  } 50% {
+    transform: translate(0, -8px) rotate(0);
+  } 100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
 
 @keyframes loop01 {
   0% {
@@ -379,6 +440,12 @@ $speed02 : 0.6s;
     top: 0;
     left: 0;
     z-index: 1;
+    @media screen and (max-width: $VIEWPOINT01) {
+      height: 4.1vw;
+      background: {
+        image: url(#{$IMGPATH}wave01-sp.svg);
+      }
+    }
   }
 }
 %wave-bottom {
@@ -398,6 +465,12 @@ $speed02 : 0.6s;
     bottom: 0;
     left: 0;
     z-index: 1;
+    @media screen and (max-width: $VIEWPOINT01) {
+      height: 4.1vw;
+      background: {
+        image: url(#{$IMGPATH}wave02-sp.svg);
+      }
+    }
   }
 }
 %arw01 {
