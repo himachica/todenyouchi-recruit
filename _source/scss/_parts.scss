@@ -57,6 +57,75 @@
   }
 }
 
+/* ====================================== page-ttl */
+.page-ttl {
+
+  /* ------------------------------ 01 */
+  &.-page-ttl01 {
+    border: {
+      bottom: 1px solid $border-color;
+    }
+    .page-ttl-inner {
+      padding: 40px 100px;
+      display: flex;
+      align-items: flex-end;
+      gap: 30px;
+      @media screen and (max-width: $MIN-WIDTH) {
+        padding: 40px pc(100);
+        gap: pc(30);
+      }
+      @media screen and (max-width: $VIEWPOINT01) {
+        padding: 30px 15px;
+        display: block;
+      }
+      .ttl {
+        flex: 1;
+        > span {
+          display: block;
+          &.sub {
+            @extend %font01;
+            padding-left: 17px;
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            &:before {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background: $color01;
+              border-radius: 50%;
+              display: block;
+              position: absolute;
+              top: 0.2em;
+              left: 0;
+            }
+          }
+          &.main {
+            margin-top: 15px;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.5;
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 10px;
+              font-size: 32px;
+            }
+          }
+        }
+      }
+      .breadcrumbs {
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: none;
+        }
+      }
+    }
+    .page-ttl-img {
+      margin-bottom: -1px;
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+}
+
 /* ====================================== txt */
 .txt {
 
@@ -215,6 +284,54 @@
           opacity: 1;
           @media screen and (max-width: $VIEWPOINT01) {
             opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== breadcrumbs */
+.breadcrumbs {
+
+  /* ------------------------------ 01 */
+  &.-breadcrumbs01 {
+    .breadcrumbs-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      > li {
+        &:first-child {
+          font-size: 0;
+          line-height: 0;
+          > a {
+            @extend %fade;
+            img {
+              width: 20px;
+            }
+          }
+        }
+        &:not(:first-child) {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 1.5;
+          > a {
+            color: $color15;
+            transition: color $speed01 $easing01;
+            &:hover {
+              color: $color01;
+            }
+          }
+        }
+        &:not(:last-child) {
+          padding-right: 15px;
+          background: {
+            image: url(#{$IMGPATH}arw05-r.svg);
+            repeat: no-repeat;
+            size: 5px auto;
+            position: center right;
           }
         }
       }

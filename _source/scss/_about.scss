@@ -1,0 +1,599 @@
+@use "setting" as *;
+
+/* ====================================== movie */
+#movie {
+  margin-top: 40px;
+  padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+  .inner {
+    .inner-contents {
+      .layout {
+        .block {
+          &.-head {
+            .txt {
+              margin-top: 20px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 30px;
+              }
+            }
+          }
+          &.-contents {
+            .movie {
+              font-size: 0;
+              line-height: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== about-company */
+#about-company {
+  margin-top: 40px;
+  padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 10px;
+    padding-top: 50px;
+  }
+  .inner {
+    .inner-contents {
+      .layout {
+        .block {
+          &.-head {
+            .txt {
+              margin-top: 20px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 30px;
+              }
+            }
+          }
+          &.-contents {
+            .img {
+              font-size: 0;
+              line-height: 0;
+              img {
+                border-radius: 5px;
+              }
+            }
+          }
+        }
+      }
+      .service {
+        margin-top: 50px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 60px;
+        }
+        .service-ttl {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 1.5;
+        }
+        .nav {
+          margin-top: 20px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== about-message */
+#about-message {
+  margin-top: 40px;
+  padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 30px;
+    padding-top: 50px;
+  }
+  .inner {
+    .inner-contents {
+      .head {
+        position: relative;
+        z-index: 1;
+        .head-contents {
+          min-height: 410px;
+          padding-bottom: 50px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 20px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            min-height: auto;
+            padding-bottom: 0;
+            display: block;
+          }
+          .head-img {
+            @extend %img01;
+            width: 70.18%;
+            height: 100%;
+            border-radius: 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 100%;
+              margin-top: 50px;
+              position: relative;
+              aspect-ratio: 3 / 2;
+            }
+          }
+          .head-txt {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.9;
+            @media screen and (max-width: $MIN-WIDTH) {
+              font-size: pc(32);
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: -3.25em;
+              font-size: 20px;
+              line-height: 2.1;
+            }
+            @media screen and (max-width: $VIEWPOINT02) {
+              font-size: sp(20);
+            }
+            .marker {
+              padding: 0.05em 0.3em;
+              background: $wh;
+              box-decoration-break: clone;
+              display: inline;
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding: 0.15em 0.3em 0.15em 0;
+              }
+              > span {
+                color: $color01;
+              }
+            }
+          }
+        }
+      }
+      .contents {
+        max-width: 1000px;
+        margin: 60px auto 0;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 40px;
+        }
+        .contents-message {
+          font-size: 16px;
+          line-height: 2;
+          @media screen and (max-width: $VIEWPOINT01) {
+            line-height: 1.7;
+          }
+          > p {
+            &:not(:first-child) {
+              margin-top: 2em;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 1.7em;
+              }
+            }
+          }
+        }
+        .contents-img {
+          margin-top: 60px;
+          font-size: 0;
+          line-height: 0;
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 40px;
+          }
+          img {
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== philosophy */
+#philosophy {
+  padding: 100px 0;
+  background: $color10;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding: 40px 0 50px;
+  }
+  .inner {
+    .inner-contents {
+      .head {
+        min-height: 410px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 1;
+        @media screen and (max-width: $VIEWPOINT01) {
+          min-height: auto;
+          display: block;
+        }
+        .head-img {
+          @extend %img01;
+          width: 70.18%;
+          height: 100%;
+          border-radius: 5px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: -1;
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 91.67%;
+            height: auto;
+            margin: 20px 0 0 auto;
+            position: relative;
+            aspect-ratio: 110 / 61;
+          }
+        }
+        .head-copy {
+          padding: 20px 0 45px 35px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          flex: 1;
+          gap: 20px;
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 1.5;
+          @media screen and (max-width: $MIN-WIDTH) {
+            padding: pc(20) 0 pc(45) pc(35);
+            gap: pc(20);
+            font-size: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: -0.8em;
+            padding: 0;
+            display: block;
+            font-size: 28px;
+          }
+          @media screen and (max-width: $VIEWPOINT02) {
+            font-size: sp(26);
+          }
+          .head-copy-txt {
+            @extend %font02;
+            padding: 0.15em 0.5em 0.22em;
+            background: $wh;
+            display: inline-block;
+            @media screen and (max-width: $VIEWPOINT01) {
+              padding: 0.05em 0.2em 0.1em;
+            }
+            > span {
+              color: $color01;
+            }
+            &:nth-child(2) {
+              margin-left: 50px;
+              @media screen and (max-width: $MIN-WIDTH) {
+                margin-left: pc(50);
+              }
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin: 6px 0 0 50px;
+              }
+            }
+          }
+        }
+      }
+      .point {
+        margin-top: 70px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 65px;
+        }
+        .point-list {
+          display: flex;
+          gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            display: block;
+          }
+          > li {
+            flex: 1;
+            .point-list-section {
+              min-height: 100%;
+              padding: 35px;
+              background: $wh;
+              border: 1px solid $color01;
+              border-radius: 5px;
+              box-sizing: border-box;
+              text-align: center;
+              @media screen and (max-width: $MIN-WIDTH) {
+                padding: pc(35);
+              }
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding: 30px 20px;
+              }
+              .point-list-ico {
+                font-size: 0;
+                line-height: 0;
+                img {
+                  max-width: 130px;
+                }
+              }
+              .point-list-ttl {
+                margin-top: 10px;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.5;
+                @media screen and (max-width: $MIN-WIDTH) {
+                  font-size: 22px;
+                }
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 24px;
+                }
+              }
+              .point-list-txt {
+                margin-top: 10px;
+                font-size: 14px;
+                line-height: 1.5;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 16px;
+                }
+              }
+            }
+            &:not(:first-child) {
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 15px;
+              }
+            }
+          }
+        }
+      }
+      .contents {
+        margin-top: 70px;
+        .layout {
+          .block {
+            &.-head {
+              .copy {
+                font-size: 28px;
+                font-weight: 700;
+                line-height: 1.5;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 26px;
+                }
+              }
+            }
+            &.-contents {
+              .txt {
+                font-size: 16px;
+                line-height: 1.8;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  line-height: 1.7;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== infographics */
+#infographics {
+  margin-top: 40px;
+  padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+  .inner {
+    .inner-contents {
+      .layout {
+        .block {
+          &.-contents {
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 50px;
+            }
+            .section-wrapper {
+              .section {
+                .section-ttl {
+                  padding-left: 30px;
+                  position: relative;
+                  font-size: 22px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    font-size: 20px;
+                  }
+                  &:before {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: $color01;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: 0.6em;
+                    left: 0;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      top: 0.55em;
+                    }
+                  }
+                }
+                .section-contents {
+                  margin-top: 20px;
+                  display: flex;
+                  gap: 20px;
+                  @media screen and (max-width: $MIN-WIDTH) {
+                    gap: pc(20);
+                  }
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    display: block;
+                  }
+                  .section-box {
+                    padding: 35px 20px 20px;
+                    border: 1px solid $color01;
+                    border-radius: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    text-align: center;
+                    @media screen and (max-width: $MIN-WIDTH) {
+                      padding: pc(35) pc(20) pc(20);
+                    }
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      padding: 15px;
+                    }
+                    > dt {
+                      > span {
+                        text-decoration: underline;
+                        text-decoration-color: $color01;
+                        text-decoration-thickness: 1px;
+                        text-underline-offset: 0.5em;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 1.5;
+                        @media screen and (max-width: $MIN-WIDTH) {
+                          font-size: pc(18);
+                        }
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          font-size: 20px;
+                        }
+                      }
+                    }
+                    > dd {
+                      display: flex;
+                      flex-direction: column;
+                      flex: 1;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        display: block;
+                      }
+                      .section-box-number {
+                        min-height: 105px;
+                        padding: 20px 0 10px;
+                        box-sizing: border-box;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: $color01;
+                        @media screen and (max-width: $MIN-WIDTH) {
+                          min-height: pc(105);
+                          padding: pc(20) 0 pc(10);
+                        }
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          min-height: auto;
+                          margin-top: 20px;
+                          padding: 0;
+                        }
+                        span {
+                          &.-wrap {
+                            display: flex;
+                            &.-bottom {
+                              align-items: flex-end;
+                            }
+                            &.-vertical {
+                              flex-direction: column;
+                              align-items: center;
+                              &.-right {
+                                align-items: flex-end;
+                              }
+                            }
+                          }
+                          &.-number {
+                            @extend %font01;
+                            margin-right: 0.15em;
+                            font-size: 64px;
+                            font-weight: 500;
+                            letter-spacing: -0.06em;
+                            @media screen and (max-width: $MIN-WIDTH) {
+                              font-size: pc(64);
+                            }
+                            @media screen and (max-width: $VIEWPOINT01) {
+                              font-size: 64px;
+                            }
+                          }
+                          &.-unit {
+                            padding-bottom: 0.45em;
+                            font-size: 24px;
+                            font-weight: 700;
+                            line-height: 1;
+                            @media screen and (max-width: $MIN-WIDTH) {
+                              font-size: pc(24);
+                            }
+                            @media screen and (max-width: $VIEWPOINT01) {
+                              font-size: 24px;
+                            }
+                            &.-small {
+                              padding-bottom: 0.25em;
+                              font-size: 18px;
+                              @media screen and (max-width: $MIN-WIDTH) {
+                                font-size: pc(18);
+                              }
+                              @media screen and (max-width: $VIEWPOINT01) {
+                                font-size: 18px;
+                              }
+                            }
+                          }
+                          &.-sub {
+                            margin-top: -0.2em;
+                            font-size: 14px;
+                            font-weight: 700;
+                            line-height: 1;
+                            @media screen and (max-width: $MIN-WIDTH) {
+                              font-size: pc(14);
+                            }
+                            @media screen and (max-width: $VIEWPOINT01) {
+                              font-size: 14px;
+                            }
+                          }
+                        }
+                      }
+                      .section-box-graph {
+                        margin: 20px 0 10px;
+                        font-size: 0;
+                        line-height: 0;
+                        img {
+                          max-width: 338px;
+                        }
+                      }
+                      .section-box-bottom {
+                        min-height: 3em;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1;
+                        font-size: 14px;
+                        line-height: 1.5;
+                        @media screen and (max-width: $MIN-WIDTH) {
+                          font-size: pc(14);
+                        }
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          min-height: auto;
+                          margin-top: 15px;
+                          display: block;
+                          font-size: 14px;
+                        }
+                        @media screen and (max-width: $VIEWPOINT02) {
+                          font-size: sp(13);
+                        }
+                      }
+                    }
+                    &:not(:first-child) {
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        margin-top: 10px;
+                      }
+                    }
+                    &.-graph {
+                      padding: 20px;
+                    }
+                  }
+                }
+                &:not(:first-child) {
+                  margin-top: 40px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
