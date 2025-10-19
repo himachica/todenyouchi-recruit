@@ -30,10 +30,7 @@ $(function() {
         $kvSliderListLi       = $kvSliderList.children('li'),
         $kvSwiper             = $kvSliderListLi.find('.kv-swiper');
 
-    var $people               = $('#people'),
-        $peopleInner          = $people.find('.inner'),
-        $peopleInnerContents  = $peopleInner.find('.inner-contents'),
-        $peopleSwiper         = $people.find('.people-swiper');
+    var $peopleSwiper         = $('.people-swiper');
 
     // ====================================== data
     var windowW;
@@ -245,18 +242,21 @@ $(function() {
     if($peopleSwiper.length) {
         const peopleSwiper = new Swiper('.people-swiper', {
             loop: true,
+            loopedSlidesLimit: false,
             autoplay: {
                 delay: 5000,
             },
             slidesPerView: 'auto',
             spaceBetween: 15,
             centeredSlides: true,
+            watchSlidesProgress: true,
             pagination: {
                 el: '.people-swiper-pagination',
                 clickable: true,
             },
             breakpoints: {
                 769: {
+                    slidesPerView: 3.4,
                     spaceBetween: 40,
                 }
             }

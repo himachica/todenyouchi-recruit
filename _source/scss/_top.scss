@@ -297,138 +297,43 @@
     margin-top: 0;
     padding-top: 50px;
   }
-  .inner {
-    .inner-contents {
-      .head {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        @media screen and (max-width: $VIEWPOINT01) {
-          display: block;
-          position: relative;
-        }
-        .ttl {
-          flex: 1;
-        }
-        .btn {
-          @media screen and (max-width: $VIEWPOINT01) {
-            width: 100%;
-            position: absolute;
-            bottom: calc((30px + ((100vw - 30px) * 1.275) + 58px + 55px) * -1);
-            left: 0;
-          }
-          > a {
-            @media screen and (max-width: $VIEWPOINT01) {
-              margin: 0 auto;
-            }
-          }
-        }
-      }
-    }
-  }
-  .people-swiper {
-    margin-top: 40px;
-    //padding-right: 440px;
+  .people-contents {
     @media screen and (max-width: $VIEWPOINT01) {
-      margin-top: 30px;
+      padding-bottom: 85px;
+      position: relative;
     }
-    .swiper-wrapper {
-      .swiper-slide {
-        width: 400px;
-        @media screen and (max-width: $VIEWPOINT01) {
-          width: calc(100% - 30px);
-          max-width: 600px;
-        }
-        > a {
-          border-radius: 5px;
-          display: block;
-          position: relative;
-          overflow: hidden;
-          .slide-img {
-            @extend %img01;
-            aspect-ratio: 40 / 51;
+    .inner {
+      .inner-contents {
+        .head {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            display: block;
           }
-          .slide-contents {
-            width: 100%;
-            height: 100%;
-            padding: 20px 20px 60px;
-            background: linear-gradient(to bottom, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
-            box-sizing: border-box;
-            display: flex;
-            align-items: flex-end;
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity $speed01 $easing01;
+          .ttl {
+            flex: 1;
+          }
+          .btn {
             @media screen and (max-width: $VIEWPOINT01) {
-              padding: 20px 15px;
-              background: linear-gradient(to bottom, rgba(17, 17, 17, 0), 50%, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
-              opacity: 1;
-            }
-            &:after {
-              @extend %arw01-yel;
-              content: "";
+              width: 100%;
               position: absolute;
-              right: 20px;
-              bottom: 20px;
-              @media screen and (max-width: $VIEWPOINT01) {
-                width: 65px;
-                height: 65px;
-                background: {
-                  size: 20px auto;
-                }
-                border-radius: 50%;
-              }
+              bottom: 0;
+              left: 0;
             }
-            .slide-copy {
-              font-size: 24px;
-              font-weight: 700;
-              line-height: 1.5;
-              color: $wh;
+            > a {
               @media screen and (max-width: $VIEWPOINT01) {
-                padding-right: 85px;
-                font-size: 16px;
+                margin: 0 auto;
               }
-            }
-          }
-          &:hover {
-            .slide-contents {
-              opacity: 1;
             }
           }
         }
       }
     }
-    .people-swiper-pagination {
+    .people-swiper {
       margin-top: 40px;
-      padding: 0 50px;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
       @media screen and (max-width: $VIEWPOINT01) {
-        margin-top: 20px;
-        padding: 0 15px;
-        gap: 6px;
-      }
-      .swiper-pagination-bullet {
-        max-width: 100px;
-        height: 10px;
-        margin: 0;
-        background: $color07;
-        border-radius: 9999px;
-        flex: 1;
-        opacity: 0.2;
-        transition: opacity $speed01 $easing01;
-        @media screen and (max-width: $VIEWPOINT01) {
-          max-width: 30px;
-          height: 8px;
-        }
-        &:hover, &.swiper-pagination-bullet-active {
-          opacity: 1;
-        }
+        margin-top: 30px;
       }
     }
   }
@@ -436,9 +341,6 @@
     .inner-contents {
       .crosstalk {
         margin-top: 80px;
-        @media screen and (max-width: $VIEWPOINT01) {
-          margin-top: 165px;
-        }
         > a {
           padding: 50px;
           background: $gradation03;

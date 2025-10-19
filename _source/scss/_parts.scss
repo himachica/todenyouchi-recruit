@@ -62,9 +62,6 @@
 
   /* ------------------------------ 01 */
   &.-page-ttl01 {
-    border: {
-      bottom: 1px solid $border-color;
-    }
     .page-ttl-inner {
       padding: 40px 100px;
       display: flex;
@@ -119,9 +116,68 @@
       }
     }
     .page-ttl-img {
-      margin-bottom: -1px;
       font-size: 0;
       line-height: 0;
+    }
+  }
+
+  /* ------------------------------ 02 */
+  &.-page-ttl02 {
+    border: {
+      bottom: 1px solid $border-color;
+    }
+    .page-ttl-inner {
+      padding: 80px 100px 60px;
+      display: flex;
+      align-items: flex-end;
+      gap: 30px;
+      @media screen and (max-width: $MIN-WIDTH) {
+        padding: 40px pc(100);
+        gap: pc(30);
+      }
+      @media screen and (max-width: $VIEWPOINT01) {
+        padding: 30px 15px;
+        display: block;
+      }
+      .ttl {
+        flex: 1;
+        > span {
+          display: block;
+          &.sub {
+            @extend %font01;
+            padding-left: 17px;
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            &:before {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background: $color01;
+              border-radius: 50%;
+              display: block;
+              position: absolute;
+              top: 0.2em;
+              left: 0;
+            }
+          }
+          &.main {
+            margin-top: 15px;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.5;
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 10px;
+              font-size: 32px;
+            }
+          }
+        }
+      }
+      .breadcrumbs {
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: none;
+        }
+      }
     }
   }
 }
@@ -135,6 +191,15 @@
     line-height: 1.7;
     @media screen and (max-width: $VIEWPOINT01) {
       font-size: 16px;
+    }
+  }
+
+  /* ------------------------------ 02 */
+  &.-txt02 {
+    font-size: 16px;
+    line-height: 1.8;
+    @media screen and (max-width: $VIEWPOINT01) {
+      line-height: 1.7;
     }
   }
 }
@@ -404,6 +469,105 @@
             }
             .nav-name {
               color: $color01;
+            }
+          }
+        }
+        &:not(:first-child) {
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ------------------------------ 02 */
+  &.-nav02 {
+    .nav-list {
+      display: flex;
+      gap: 25px;
+      @media screen and (max-width: $MIN-WIDTH) {
+        gap: pc(25);
+      }
+      @media screen and (max-width: $VIEWPOINT01) {
+        display: block;
+      }
+      > li {
+        flex: 1;
+        > a {
+          min-height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            min-height: auto;
+            display: block;
+          }
+          .nav-img {
+            @extend %img01;
+            border-radius: 5px;
+            aspect-ratio: 26 / 15;
+            img {
+              transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+            }
+          }
+          .nav-name {
+            padding: 10px 70px 10px 0;
+            border: {
+              bottom: 1px solid $border-color;
+            }
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            flex: 1;
+            gap: 3px;
+            position: relative;
+            @media screen and (max-width: $VIEWPOINT01) {
+              padding: 15px 70px 15px 0;
+            }
+            &:after {
+              @extend %arw01;
+              content: "";
+              position: absolute;
+              right: 0;
+              bottom: 10px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                bottom: 15px;
+              }
+            }
+            > span {
+              display: block;
+              &.sub {
+                @extend %font01;
+                font-size: 14px;
+                font-weight: 500;
+                color: $color01;
+              }
+              &.main {
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.5;
+                transition: color $speed01 $easing01;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+          &:hover {
+            .nav-img {
+              img {
+                transform: scale(1.05);
+                opacity: 0.7;
+              }
+            }
+            .nav-name {
+              > span {
+                display: block;
+                &.main {
+                  color: $color01;
+                }
+              }
             }
           }
         }

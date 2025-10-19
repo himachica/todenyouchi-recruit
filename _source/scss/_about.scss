@@ -1,5 +1,115 @@
 @use "setting" as *;
 
+/* ====================================== data */
+.data {
+  margin-top: 100px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 60px;
+  }
+  > a {
+    padding: 50px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: $VIEWPOINT01) {
+      padding: 10px;
+    }
+    .bg {
+      @extend %img01;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      img {
+        transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+      }
+    }
+    .box {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 30px;
+      background: rgba(65, 187, 237, 0.7);
+      box-sizing: border-box;
+      text-align: center;
+      color: $wh;
+      @media screen and (max-width: $VIEWPOINT01) {
+        padding: 25px;
+      }
+      .box-ttl {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.5;
+        @media screen and (max-width: $VIEWPOINT02) {
+          font-size: sp(28);
+        }
+      }
+      .box-txt {
+        margin-top: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 25px;
+          font-size: 16px;
+          line-height: 1.7;
+        }
+      }
+      .box-more {
+        margin-top: 15px;
+        padding-right: 26px;
+        display: inline-block;
+        position: relative;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        transition: opacity $speed01 $easing01;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 25px;
+          font-size: 16px;
+        }
+        &:after {
+          content: "";
+          width: 16px;
+          height: 16px;
+          margin: auto;
+          background: {
+            image: url(#{$IMGPATH}arw02-r-wh.svg);
+            repeat: no-repeat;
+            size: contain;
+            position: center center;
+          }
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          transition: right $speed01 $easing01;
+        }
+      }
+    }
+    &:hover {
+      .bg {
+        img {
+          transform: scale(1.05);
+          opacity: 0.7;
+        }
+      }
+      .box {
+        .box-more {
+          opacity: 0.7;
+          &:after {
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+}
+
 /* ====================================== movie */
 #movie {
   margin-top: 40px;
@@ -587,6 +697,260 @@
                   margin-top: 40px;
                   @media screen and (max-width: $VIEWPOINT01) {
                     margin-top: 50px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== service-intro */
+#service-intro {
+  &.-type01 {
+    padding: 80px 0;
+    background: $gradation01;
+    @media screen and (max-width: $VIEWPOINT01) {
+      padding: 40px 0;
+    }
+    .inner {
+      .inner-contents {
+        .contents {
+          position: relative;
+          .img {
+            width: 70.18%;
+            font-size: 0;
+            line-height: 0;
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 91.67%;
+            }
+            img {
+              border-radius: 5px;
+            }
+          }
+          .copy {
+            max-width: calc(100% - 100px);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 92.5%;
+              max-width: none;
+              margin: -40px 0 0 auto;
+              position: static;
+            }
+            .copy-txt {
+              padding: 25px;
+              background: $wh;
+              display: inline-block;
+              font-size: 25px;
+              font-weight: 700;
+              line-height: 1.9;
+              @media screen and (max-width: $MIN-WIDTH) {
+                padding: pc(25);
+                font-size: pc(25);
+              }
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding: 17px;
+                font-size: 18px;
+                line-height: 1.5;
+              }
+              @media screen and (max-width: $VIEWPOINT02) {
+                padding: sp(17);
+                font-size: sp(17);
+              }
+              > span {
+                color: $color01;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.-type02 {
+    padding-top: 30px;
+    @media screen and (max-width: $VIEWPOINT01) {
+      padding-top: 15px;
+    }
+    .inner {
+      .inner-contents {
+        padding-top: 70px;
+        position: relative;
+        @media screen and (max-width: $VIEWPOINT01) {
+          padding-top: 20px;
+        }
+        &:before {
+          content: "";
+          width: 30%;
+          height: 100%;
+          background: $gradation01;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 20%;
+          }
+        }
+        .img {
+          width: 90.79%;
+          margin: 0 0 0 auto;
+          font-size: 0;
+          line-height: 0;
+          img {
+            border-radius: 5px;
+          }
+        }
+        .copy {
+          padding: 60px 70px 60px calc(30% + 70px);
+          font-size: 25px;
+          font-weight: 700;
+          line-height: 1.9;
+          @media screen and (max-width: $MIN-WIDTH) {
+            padding: pc(60) pc(70) pc(60) calc(30% + pc(70));
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            padding: 17px 0 17px calc(20% + 17px);
+            font-size: 18px;
+            line-height: 1.5;
+          }
+          @media screen and (max-width: $VIEWPOINT02) {
+            padding: sp(17) 0 sp(17) calc(20% + sp(17));
+          }
+          > span {
+            color: $color01;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== service-point */
+#service-point {
+  margin-top: 40px;
+  padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding-top: 50px;
+  }
+  .inner {
+    .inner-contents {
+      .list {
+        counter-reset: number 0;
+        > li {
+          counter-increment: number 1;
+          .section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            @media screen and (max-width: $MIN-WIDTH) {
+              gap: pc(40);
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              display: block;
+            }
+            .block {
+              &.-txt {
+                width: 46.49%;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  width: 100%;
+                }
+                .section-number {
+                  padding-left: 18px;
+                  position: relative;
+                  font-size: 16px;
+                  font-weight: 500;
+                  color: $color01;
+                  &:before {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background: $color01;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: 0.28em;
+                    left: 0;
+                  }
+                  &:after {
+                    @extend %font01;
+                    content: "Point " counter(number, decimal-leading-zero);
+                    display: inline-block;
+                  }
+                }
+                .section-ttl {
+                  margin-top: 10px;
+                  font-size: 32px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    font-size: 28px;
+                  }
+                  @media screen and (max-width: $VIEWPOINT02) {
+                    font-size: 26px;
+                  }
+                }
+                .section-txt {
+                  margin-top: 30px;
+                  font-size: 16px;
+                  line-height: 1.8;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 20px;
+                  }
+                  .section-txt-item {
+                    > dt {
+                      margin-left: 1em;
+                      &:before {
+                        content: "・";
+                        width: 1em;
+                        margin-left: -1em;
+                        display: inline-block;
+                      }
+                    }
+                    > dd {
+                      padding-left: 1em;
+                    }
+                  }
+                }
+              }
+              &.-img {
+                flex: 1;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 25px;
+                }
+                .section-img {
+                  font-size: 0;
+                  line-height: 0;
+                  img {
+                    border-radius: 5px;
+                  }
+                }
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin-top: 70px;
+          }
+        }
+        &.-work {
+          > li {
+            .section {
+              .block {
+                &.-txt {
+                  .section-number {
+                    &:after {
+                      content: "Work " counter(number, decimal-leading-zero);
+                    }
                   }
                 }
               }
