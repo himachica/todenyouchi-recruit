@@ -266,11 +266,17 @@
 /* ====================================== interview-single-head */
 #interview-single-head {
   padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding-top: 40px;
+  }
   .inner {
     .inner-contents {
       padding-top: 130px;
       position: relative;
       z-index: 1;
+      @media screen and (max-width: $VIEWPOINT01) {
+        padding-top: 0;
+      }
       .img {
         @extend %img01;
         width: 70.18%;
@@ -279,8 +285,18 @@
         top: 0;
         right: 0;
         z-index: -1;
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: 91.67%;
+          height: auto;
+          margin-left: auto;
+          position: relative;
+          aspect-ratio: 66 / 37;
+        }
       }
       .contents {
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: -26px;
+        }
         .number {
           > span {
             padding: 2px 10px 3px;
@@ -291,6 +307,9 @@
             font-weight: 700;
             line-height: 1.5;
             color: $wh;
+            @media screen and (max-width: $VIEWPOINT01) {
+              font-size: 16px;
+            }
           }
         }
         .copy {
@@ -298,13 +317,19 @@
           font-size: 32px;
           font-weight: 700;
           line-height: 1.9;
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 20px;
+            font-size: 24px;
+            line-height: 1.6;
+          }
           > span {
             padding: 0.05em 0.3em;
             background: $wh;
             box-decoration-break: clone;
             display: inline;
             @media screen and (max-width: $VIEWPOINT01) {
-              padding: 0.15em 0.3em 0.15em 0;
+              padding: 0;
+              background: transparent;
             }
           }
         }
@@ -350,15 +375,28 @@
   margin-top: 100px;
   padding: 100px 0;
   background: $gradation03;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 50px;
+    padding: 50px 0;
+  }
   .inner {
     .inner-contents {
       .contents {
         display: flex;
         align-items: center;
         gap: 40px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          gap: pc(40);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: block;
+        }
         .block {
           &.-img {
             width: 48.25%;
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 100%;
+            }
             .img {
               font-size: 0;
               line-height: 0;
@@ -372,12 +410,19 @@
             background: $wh;
             border-radius: 5px;
             flex: 1;
+            @media screen and (max-width: $MIN-WIDTH) {
+              padding: pc(40);
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 40px;
+              padding: 20px;
+            }
             .ttl {
               > span {
                 display: block;
                 &.sub {
                   @extend %font01;
-                  padding-left: 17px;
+                  padding-left: 18px;
                   position: relative;
                   font-size: 16px;
                   font-weight: 500;
@@ -400,13 +445,16 @@
                   font-weight: 700;
                   line-height: 1.5;
                   @media screen and (max-width: $VIEWPOINT01) {
-                    font-size: 28px;
+                    font-size: 24px;
                   }
                 }
               }
             }
             .txt {
               margin-top: 30px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 20px;
+              }
             }
           }
         }
@@ -419,6 +467,10 @@
 #interview-single-article {
   margin-top: 40px;
   padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 10px;
+    padding-top: 50px;
+  }
   .inner {
     .inner-contents {
       .section-wrapper {
@@ -434,6 +486,14 @@
           box-sizing: border-box;
           display: flex;
           gap: 75px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(75);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            min-height: auto;
+            padding: 40px 0;
+            display: block;
+          }
           .section-block {
             .section-img {
               font-size: 0;
@@ -446,6 +506,9 @@
               font-size: 32px;
               font-weight: 700;
               line-height: 1.5;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 20px;
+              }
             }
             .section-q {
               padding-left: 73px;
@@ -459,13 +522,15 @@
                 content: "Q.";
                 width: 58px;
                 height: 29px;
+                margin: auto;
                 background: $color07;
                 border-radius: 9999px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 position: absolute;
-                top: -0.1em;
+                top: 0;
+                bottom: 0;
                 left: 0;
                 text-align: center;
                 font-size: 16px;
@@ -474,6 +539,9 @@
               }
               &:not(:first-child) {
                 margin-top: 40px;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 30px;
+                }
               }
             }
             .section-txt {
@@ -481,13 +549,22 @@
               line-height: 1.8;
               &:not(:first-child) {
                 margin-top: 20px;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 15px;
+                }
               }
             }
             &.-head {
               width: 45.18%;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 100%;
+              }
             }
             &.-contents {
               flex: 1;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 30px;
+              }
             }
           }
           &:nth-child(2) {
@@ -496,9 +573,15 @@
         }
       }
       .bottom-img {
+        @extend %img01;
         margin-top: 60px;
         font-size: 0;
         line-height: 0;
+        aspect-ratio: 114 / 41;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin: 30px calc(((100vw - 100%) / 2) * -1) 0;
+          aspect-ratio: 3 / 1;
+        }
         img {
           border-radius: 5px;
         }
@@ -513,12 +596,22 @@
   margin-top: 100px;
   padding: calc(1.944vw + 70px) 0 100px;
   background: $gradation03;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 50px;
+    padding: calc(4.1vw + 40px) 0 50px;
+  }
   .inner {
     .inner-contents {
       .box {
         padding: 50px 60px;
         background: $wh;
         border-radius: 5px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          padding: pc(50) pc(60);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          padding: 30px 15px;
+        }
         .box-ttl {
           > span {
             display: block;
@@ -534,6 +627,9 @@
               font-size: 32px;
               font-weight: 700;
               line-height: 1.5;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 24px;
+              }
             }
           }
         }
@@ -542,6 +638,13 @@
           display: flex;
           flex-direction: row-reverse;
           gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 20px;
+            display: block;
+          }
           .box-block {
             flex: 1;
             &.-img {
@@ -554,15 +657,24 @@
               }
             }
             &.-contents {
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 20px;
+              }
               .box-copy {
                 font-size: 32px;
                 font-weight: 700;
                 line-height: 1.5;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  font-size: 20px;
+                }
               }
               .box-txt {
                 margin-top: 20px;
                 font-size: 16px;
                 line-height: 1.8;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 10px;
+                }
               }
             }
           }
@@ -576,7 +688,14 @@
 #other-interview {
   margin-top: 40px;
   padding-top: 60px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 30px;
+    padding-top: 50px;
+  }
   .people-swiper {
     margin-top: 40px;
+    @media screen and (max-width: $VIEWPOINT01) {
+      margin-top: 30px;
+    }
   }
 }
