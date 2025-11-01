@@ -616,9 +616,6 @@
                 font-weight: 700;
                 line-height: 1.5;
                 transition: color $speed01 $easing01;
-                @media screen and (max-width: $VIEWPOINT01) {
-                  font-size: 20px;
-                }
               }
             }
           }
