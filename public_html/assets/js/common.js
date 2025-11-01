@@ -30,7 +30,8 @@ $(function() {
         $kvSliderListLi       = $kvSliderList.children('li'),
         $kvSwiper             = $kvSliderListLi.find('.kv-swiper');
 
-    var $peopleSwiper         = $('.people-swiper');
+    var $peopleEmblaWrap      = $('.people-embla-wrap'),
+        $peopleEmbla          = $peopleEmblaWrap.find('.people-embla');
 
     // ====================================== data
     var windowW;
@@ -239,28 +240,52 @@ $(function() {
     }
 
     // ====================================== people
-    if($peopleSwiper.length) {
-        const peopleSwiper = new Swiper('.people-swiper', {
+    if($peopleEmbla.length) {
+        const peopleEmblaWrap    = document.querySelector('.people-embla-wrap');
+        const peopleEmbla        = peopleEmblaWrap.querySelector('.people-embla');
+        const peopleEmblaDots    = peopleEmblaWrap.querySelector('.people-embla-dots');
+        const peopleEmblaOptions = {
             loop: true,
-            loopedSlidesLimit: false,
-            autoplay: {
-                delay: 5000,
-            },
-            slidesPerView: 'auto',
-            spaceBetween: 15,
-            centeredSlides: true,
-            watchSlidesProgress: true,
-            pagination: {
-                el: '.people-swiper-pagination',
-                clickable: true,
-            },
-            breakpoints: {
-                769: {
-                    slidesPerView: 3.4,
-                    spaceBetween: 40,
-                }
-            }
+            align: 'center',
+            duration: 20,
+        };
+        const peopleEmblaAutoplay = EmblaCarouselAutoplay({
+            delay: 3000,
+            stopOnMouseEnter: false,
+            stopOnInteraction: true,
+            stopOnFocusIn: true,
+            rootNode: () => peopleEmblaWrap,
         });
+        const peopleEmblaApi     = EmblaCarousel(peopleEmbla, peopleEmblaOptions, [peopleEmblaAutoplay]);
+
+        // --- マウスイベントで制御 ---
+        peopleEmblaWrap.addEventListener('mouseenter', () => peopleEmblaAutoplay.stop());
+        peopleEmblaWrap.addEventListener('mouseleave', () => peopleEmblaAutoplay.play());
+
+        // --- ドット生成 ---
+        const dots = peopleEmblaApi.slideNodes().map((_, index) => {
+          const button = document.createElement('button');
+          button.classList.add('people-embla-dot');
+          button.type = 'button';
+          button.setAttribute('aria-label', `Go to slide ${index + 1}`);
+          peopleEmblaDots.appendChild(button);
+          button.addEventListener('click', () => peopleEmblaApi.scrollTo(index));
+          return button;
+        });
+
+        // --- 選択状態の更新 ---
+        const setSelectedDot = () => {
+          const selected = peopleEmblaApi.selectedScrollSnap();
+          dots.forEach((dot, i) => {
+            dot.classList.toggle('-selected', i === selected);
+          });
+        };
+
+        peopleEmblaApi.on('select', setSelectedDot);
+        peopleEmblaApi.on('init', setSelectedDot);
+        setSelectedDot();
+
+        console.log(peopleEmblaApi.slideNodes()) // Access API
     }
 
     // ====================================== pagetop

@@ -330,6 +330,12 @@
         }
       }
     }
+    .people-embla-wrap {
+      margin-top: 40px;
+      @media screen and (max-width: $VIEWPOINT01) {
+        margin-top: 30px;
+      }
+    }
     .people-swiper {
       margin-top: 40px;
       @media screen and (max-width: $VIEWPOINT01) {

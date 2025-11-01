@@ -1815,7 +1815,7 @@ ul.notes li .mark {
   opacity: 0.7;
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img, #interview-single-head .inner .inner-contents .img, #interview-single-article .inner .inner-contents .bottom-img, .three-min > a .bg, #about-message .inner .inner-contents .head .head-contents .head-img, #philosophy .inner .inner-contents .head .head-img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img, #environment .inner .inner-contents .list > li .section > a .section-img, .nav.-nav01 .nav-list > li > a .nav-img, .nav.-nav02 .nav-list > li > a .nav-img {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img, #interview-single-head .inner .inner-contents .img, #interview-single-article .inner .inner-contents .bottom-img, .three-min > a .bg, #about-message .inner .inner-contents .head .head-contents .head-img, #philosophy .inner .inner-contents .head .head-img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img, #environment .inner .inner-contents .list > li .section > a .section-img, .nav.-nav01 .nav-list > li > a .nav-img, .nav.-nav02 .nav-list > li > a .nav-img {
   position: relative;
   overflow: hidden;
   font-size: 0;
@@ -1824,7 +1824,7 @@ ul.notes li .mark {
   transform: translateZ(0);
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-img img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img img, #interview-single-head .inner .inner-contents .img img, #interview-single-article .inner .inner-contents .bottom-img img, .three-min > a .bg img, #about-message .inner .inner-contents .head .head-contents .head-img img, #philosophy .inner .inner-contents .head .head-img img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img img, #environment .inner .inner-contents .list > li .section > a .section-img img, .nav.-nav01 .nav-list > li > a .nav-img img, .nav.-nav02 .nav-list > li > a .nav-img img {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img img, #interview-single-head .inner .inner-contents .img img, #interview-single-article .inner .inner-contents .bottom-img img, .three-min > a .bg img, #about-message .inner .inner-contents .head .head-contents .head-img img, #philosophy .inner .inner-contents .head .head-img img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img img, #environment .inner .inner-contents .list > li .section > a .section-img img, .nav.-nav01 .nav-list > li > a .nav-img img, .nav.-nav02 .nav-list > li > a .nav-img img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -1884,7 +1884,7 @@ ul.notes li .mark {
     background-image: url(/assets/img/wave02-sp.svg);
   }
 }
-.nav.-nav01 .nav-list > li > a .nav-name:after, .nav.-nav02 .nav-list > li > a .nav-name:after, .people-swiper .swiper-wrapper .swiper-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
+.nav.-nav01 .nav-list > li > a .nav-name:after, .nav.-nav02 .nav-list > li > a .nav-name:after, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
   width: 60px;
   height: 30px;
   background-color: #59BFBF;
@@ -1896,7 +1896,7 @@ ul.notes li .mark {
   display: block;
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
   background-color: #E5C43D;
 }
 
@@ -4438,6 +4438,15 @@ body.fixed {
     margin: 0 auto;
   }
 }
+#people .people-contents .people-embla-wrap {
+  margin-top: 40px;
+}
+
+@media screen and (max-width: 768px) {
+  #people .people-contents .people-embla-wrap {
+    margin-top: 30px;
+  }
+}
 #people .people-contents .people-swiper {
   margin-top: 40px;
 }
@@ -5991,33 +6000,52 @@ body.fixed {
   content: "Work " counter(number, decimal-leading-zero);
 }
 
-/* ====================================== people-swiper */
-.people-swiper {
-  overflow: visible;
+/* ====================================== people-embla-wrap */
+.people-embla-wrap .people-embla {
+  overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
-  .people-swiper .swiper-wrapper .swiper-slide {
-    width: calc(100% - 30px);
-    max-width: 600px;
+.people-embla-wrap .people-embla .embla__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.people-embla-wrap .people-embla .embla__container .people-embla-slide {
+  min-width: 0;
+  margin: 0 20px;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 400px;
+  -ms-flex: 0 0 400px;
+  flex: 0 0 400px;
+}
+
+@media screen and (max-width: 630px) {
+  .people-embla-wrap .people-embla .embla__container .people-embla-slide {
+    margin: 0 15px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 calc(100% - 30px);
+    -ms-flex: 0 0 calc(100% - 30px);
+    flex: 0 0 calc(100% - 30px);
   }
 }
-.people-swiper .swiper-wrapper .swiper-slide > a {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a {
   border-radius: 5px;
   display: block;
   position: relative;
   overflow: hidden;
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-img {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img {
   aspect-ratio: 40/51;
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-img img {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img img {
   display: block;
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-contents {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents {
   width: 100%;
   height: 100%;
   padding: 20px 20px 60px;
@@ -6043,7 +6071,7 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .people-swiper .swiper-wrapper .swiper-slide > a .slide-contents {
+  .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents {
     padding: 20px 15px;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(17, 17, 17, 0)), color-stop(50%), color-stop(rgba(17, 17, 17, 0)), color-stop(rgba(17, 17, 17, 0.5)), to(rgba(17, 17, 17, 0.7)));
     background: -webkit-linear-gradient(top, rgba(17, 17, 17, 0), 50%, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
@@ -6051,7 +6079,7 @@ body.fixed {
     opacity: 1;
   }
 }
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-contents:after {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after {
   content: "";
   position: absolute;
   right: 20px;
@@ -6059,14 +6087,14 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .people-swiper .swiper-wrapper .swiper-slide > a .slide-contents:after {
+  .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after {
     width: 65px;
     height: 65px;
     background-size: 20px auto;
     border-radius: 50%;
   }
 }
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-contents .slide-copy {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents .slide-copy {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.5;
@@ -6074,13 +6102,74 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .people-swiper .swiper-wrapper .swiper-slide > a .slide-contents .slide-copy {
+  .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents .slide-copy {
     padding-right: 85px;
     font-size: 16px;
   }
 }
-.people-swiper .swiper-wrapper .swiper-slide > a:hover .slide-contents {
+.people-embla-wrap .people-embla .embla__container .people-embla-slide > a:hover .slide-contents {
   opacity: 1;
+}
+
+.people-embla-wrap .people-embla-dots {
+  margin-top: 40px;
+  padding: 0 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .people-embla-wrap .people-embla-dots {
+    margin-top: 20px;
+    padding: 0 15px;
+    gap: 6px;
+  }
+}
+.people-embla-wrap .people-embla-dots .people-embla-dot {
+  max-width: 100px;
+  height: 10px;
+  margin: 0;
+  background: #E5C43D;
+  border-radius: 9999px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  opacity: 0.2;
+  -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .people-embla-wrap .people-embla-dots .people-embla-dot {
+    max-width: 30px;
+    height: 8px;
+  }
+}
+.people-embla-wrap .people-embla-dots .people-embla-dot:hover, .people-embla-wrap .people-embla-dots .people-embla-dot.-selected {
+  opacity: 1;
+}
+
+.people-embla-wrap .people-embla-dots .people-embla-dot:not(.-selected) {
+  cursor: pointer;
+}
+
+/* ====================================== people-swiper */
+.people-swiper {
+  overflow: visible;
 }
 
 .people-swiper .people-swiper-pagination {

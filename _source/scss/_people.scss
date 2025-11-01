@@ -1,78 +1,126 @@
 @use "setting" as *;
 
+/* ====================================== people-embla-wrap */
+.people-embla-wrap {
+  .people-embla {
+    overflow: hidden;
+    .embla__container {
+      display: flex;
+      .people-embla-slide {
+        min-width: 0;
+        margin: 0 20px;
+        flex: 0 0 400px;
+        @media screen and (max-width: 630px) {
+          margin: 0 15px;
+          flex: 0 0 calc(100% - 30px);
+        }
+        > a {
+          border-radius: 5px;
+          display: block;
+          position: relative;
+          overflow: hidden;
+          .slide-img {
+            @extend %img01;
+            aspect-ratio: 40 / 51;
+            img {
+              display: block;
+            }
+          }
+          .slide-contents {
+            width: 100%;
+            height: 100%;
+            padding: 20px 20px 60px;
+            background: linear-gradient(to bottom, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
+            box-sizing: border-box;
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity $speed01 $easing01;
+            @media screen and (max-width: $VIEWPOINT01) {
+              padding: 20px 15px;
+              background: linear-gradient(to bottom, rgba(17, 17, 17, 0), 50%, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
+              opacity: 1;
+            }
+            &:after {
+              @extend %arw01-yel;
+              content: "";
+              position: absolute;
+              right: 20px;
+              bottom: 20px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 65px;
+                height: 65px;
+                background: {
+                  size: 20px auto;
+                }
+                border-radius: 50%;
+              }
+            }
+            .slide-copy {
+              font-size: 24px;
+              font-weight: 700;
+              line-height: 1.5;
+              color: $wh;
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding-right: 85px;
+                font-size: 16px;
+              }
+            }
+          }
+          &:hover {
+            .slide-contents {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .people-embla-dots {
+    margin-top: 40px;
+    padding: 0 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    @media screen and (max-width: $VIEWPOINT01) {
+      margin-top: 20px;
+      padding: 0 15px;
+      gap: 6px;
+    }
+    .people-embla-dot {
+      max-width: 100px;
+      height: 10px;
+      margin: 0;
+      background: $color07;
+      border-radius: 9999px;
+      flex: 1;
+      opacity: 0.2;
+      transition: opacity $speed01 $easing01;
+      @media screen and (max-width: $VIEWPOINT01) {
+        max-width: 30px;
+        height: 8px;
+      }
+      &:hover, &.-selected {
+        opacity: 1;
+      }
+      &:not(.-selected) {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 /* ====================================== people-swiper */
 .people-swiper {
   //padding-right: 440px;
   overflow: visible;
   .swiper-wrapper {
     .swiper-slide {
-      //width: 400px;
-      @media screen and (max-width: $VIEWPOINT01) {
-        width: calc(100% - 30px);
-        max-width: 600px;
-      }
-      > a {
-        border-radius: 5px;
-        display: block;
-        position: relative;
-        overflow: hidden;
-        .slide-img {
-          @extend %img01;
-          aspect-ratio: 40 / 51;
-          img {
-            display: block;
-          }
-        }
-        .slide-contents {
-          width: 100%;
-          height: 100%;
-          padding: 20px 20px 60px;
-          background: linear-gradient(to bottom, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
-          box-sizing: border-box;
-          display: flex;
-          align-items: flex-end;
-          position: absolute;
-          top: 0;
-          left: 0;
-          opacity: 0;
-          transition: opacity $speed01 $easing01;
-          @media screen and (max-width: $VIEWPOINT01) {
-            padding: 20px 15px;
-            background: linear-gradient(to bottom, rgba(17, 17, 17, 0), 50%, rgba(17, 17, 17, 0), rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.7));
-            opacity: 1;
-          }
-          &:after {
-            @extend %arw01-yel;
-            content: "";
-            position: absolute;
-            right: 20px;
-            bottom: 20px;
-            @media screen and (max-width: $VIEWPOINT01) {
-              width: 65px;
-              height: 65px;
-              background: {
-                size: 20px auto;
-              }
-              border-radius: 50%;
-            }
-          }
-          .slide-copy {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 1.5;
-            color: $wh;
-            @media screen and (max-width: $VIEWPOINT01) {
-              padding-right: 85px;
-              font-size: 16px;
-            }
-          }
-        }
-        &:hover {
-          .slide-contents {
-            opacity: 1;
-          }
-        }
-      }
     }
   }
   .people-swiper-pagination {
