@@ -3,13 +3,13 @@
 /* ====================================== kv */
 #kv {
   @media screen and (max-width: $VIEWPOINT01) {
-    padding-bottom: 140px;
+    padding-bottom: 25px;
     position: relative;
   }
   .contents {
     padding: 40px 50px;
     @media screen and (max-width: $VIEWPOINT01) {
-      padding: 45px 15px 20px;
+      padding: 25px 15px 25px;
     }
     .contents-inner {
       width: 100%;
@@ -50,6 +50,7 @@
           max-width: calc(100% - 30px);
           padding: 0;
           border: none;
+          display: none;
           gap: 15px;
           position: absolute;
           right: 15px;
@@ -164,9 +165,9 @@
           margin: 0 4px;
           position: relative;
           @media screen and (max-width: $VIEWPOINT01) {
-            width: 1174px;
-            height: 424px;
-            margin: 0 3px;
+            width: 795px;
+            height: 285px;
+            margin: 0 2.5px;
           }
           .kv-swiper {
             width: 100%;
@@ -195,21 +196,21 @@
                         width: 320px;
                         aspect-ratio: 1 / 1;
                         @media screen and (max-width: $VIEWPOINT01) {
-                          width: 208px;
+                          width: 140px;
                         }
                       }
                       &.-type02 {
                         width: 160px;
                         aspect-ratio: 1 / 2;
                         @media screen and (max-width: $VIEWPOINT01) {
-                          width: 104px;
+                          width: 70px;
                         }
                       }
                     }
                     &.-bottom {
                       margin-top: 8px;
                       @media screen and (max-width: $VIEWPOINT01) {
-                        margin-top: 6px;
+                        margin-top: 5px;
                       }
                     }
                   }
@@ -465,33 +466,62 @@
                         transition: transform $speed01 $easing01, opacity $speed01 $easing01;
                       }
                     }
-                    .article-number {
-                      margin-top: 10px;
-                      font-size: 16px;
-                      font-weight: 700;
-                      line-height: 1.5;
-                      transition: color $speed01 $easing01;
+                    .article-contents {
+                      margin-top: 20px;
+                      display: flex;
+                      align-items: center;
+                      gap: 20px;
                       @media screen and (max-width: $VIEWPOINT01) {
-                        margin-top: 15px;
+                        display: block;
                       }
-                    }
-                    .article-ttl {
-                      margin-top: 10px;
-                      font-size: 24px;
-                      font-weight: 700;
-                      line-height: 1.5;
-                      transition: color $speed01 $easing01;
-                      @media screen and (max-width: $VIEWPOINT01) {
-                        font-size: 20px;
-                      }
-                    }
-                    .article-txt {
-                      margin-top: 10px;
-                      font-size: 14px;
-                      line-height: 1.5;
-                      @media screen and (max-width: $VIEWPOINT01) {
-                        margin-top: 15px;
-                        font-size: 16px;
+                      .article-contents-block {
+                        &.-info {
+                          flex: 1;
+                          .article-ttl {
+                            > span {
+                              display: block;
+                              &.sub {
+                                @extend %font01;
+                                padding-left: 17px;
+                                position: relative;
+                                font-size: 16px;
+                                font-weight: 500;
+                                &:before {
+                                  content: "";
+                                  width: 10px;
+                                  height: 10px;
+                                  background: $color01;
+                                  border-radius: 50%;
+                                  position: absolute;
+                                  top: 0.2em;
+                                  left: 0;
+                                }
+                              }
+                              &.main {
+                                margin-top: 10px;
+                                font-size: 24px;
+                                font-weight: 700;
+                                line-height: 1.5;
+                                transition: color $speed01 $easing01;
+                              }
+                            }
+                          }
+                          .article-txt {
+                            margin-top: 15px;
+                            font-size: 16px;
+                            line-height: 1.5;
+                          }
+                        }
+                        &.-btn {
+                          @media screen and (max-width: $VIEWPOINT01) {
+                            margin-top: 20px;
+                          }
+                          .btn {
+                            @media screen and (max-width: $VIEWPOINT01) {
+                              text-align: right;
+                            }
+                          }
+                        }
                       }
                     }
                     &:hover {
@@ -501,14 +531,32 @@
                           opacity: 0.7;
                         }
                       }
-                      .article-number, .article-ttl {
-                        color: $color01;
+                      .article-contents {
+                        .article-contents-block {
+                          &.-info {
+                            .article-ttl {
+                              > span {
+                                &.main {
+                                  color: $color01;
+                                }
+                              }
+                            }
+                          }
+                          &.-btn {
+                            .btn {
+                              @extend %btn03-hover;
+                            }
+                          }
+                        }
                       }
                     }
                   }
                 }
                 &:not(:first-child) {
                   margin-top: 40px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 50px;
+                  }
                 }
               }
             }
@@ -557,12 +605,19 @@
               }
               .section-ttl {
                 margin-top: 15px;
+                padding-right: 70px;
+                position: relative;
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 1.5;
                 transition: color $speed01 $easing01;
-                @media screen and (max-width: $VIEWPOINT01) {
-                  font-size: 20px;
+                &:after {
+                  content: "";
+                  margin: auto;
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  bottom: 0;
                 }
               }
               .section-txt {
@@ -571,6 +626,20 @@
                 line-height: 1.5;
                 @media screen and (max-width: $VIEWPOINT01) {
                   font-size: 16px;
+                }
+              }
+              &:not([target="_blank"]) {
+                .section-ttl {
+                  &:after {
+                    @extend %arw01;
+                  }
+                }
+              }
+              &[target="_blank"] {
+                .section-ttl {
+                  &:after {
+                    @extend %arw02;
+                  }
                 }
               }
               &:hover {

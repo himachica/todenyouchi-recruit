@@ -71,7 +71,7 @@
       .nav-contents {
         @media screen and (max-width: $VIEWPOINT01) {
           height: calc(100% + 1px);
-          background: $gradation02;
+          background: $gradation04;
           overflow-y: auto;
         }
         .nav-inner {
@@ -279,58 +279,48 @@
           .sp-entry {
             display: none;
             @media screen and (max-width: $VIEWPOINT01) {
-              margin-top: 40px;
+              margin-top: 25px;
               display: block;
             }
-            .sp-entry-contents {
+            .sp-entry-btn-wrap {
               display: flex;
-              align-items: center;
-              gap: 20px;
-              .sp-entry-head {
-                @extend %font01;
-                font-size: 20px;
-                font-weight: 500;
-                writing-mode: vertical-rl;
-                color: $color01;
-              }
-              .sp-entry-btn-wrap {
+              gap: 10px;
+              .sp-entry-btn {
+                min-height: 45px;
                 flex: 1;
-                .sp-entry-btn {
-                  > a {
-                    width: 100%;
-                    min-height: 50px;
-                    padding: 10px 56px 10px 30px;
-                    background: $wh;
-                    border: 1px solid $color01;
-                    border-radius: 5px;
-                    box-sizing: border-box;
-                    display: flex;
-                    align-items: center;
-                    position: relative;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 1.5;
-                    color: $color03;
-                    &:after {
-                      content: "";
-                      width: 16px;
-                      height: 16px;
-                      margin: auto;
-                      background: {
-                        image: url(#{$IMGPATH}arw02-r.svg);
-                        repeat: no-repeat;
-                        size: contain;
-                        position: center center;
-                      }
-                      display: block;
-                      position: absolute;
-                      top: 0;
-                      right: 30px;
-                      bottom: 0;
+                > a {
+                  width: 100%;
+                  min-height: 100%;
+                  padding: 10px 40px 10px 10px;
+                  background: $wh;
+                  border-radius: 5px;
+                  box-sizing: border-box;
+                  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+                  display: flex;
+                  align-items: center;
+                  position: relative;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  color: $color01;
+                  &:after {
+                    content: "";
+                    width: 25px;
+                    height: 25px;
+                    margin: auto;
+                    background: {
+                      color: $color01;
+                      image: url(#{$IMGPATH}arw02-r-wh.svg);
+                      repeat: no-repeat;
+                      size: 56% auto;
+                      position: center center;
                     }
-                  }
-                  &:not(:first-child) {
-                    margin-top: 10px;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 10px;
+                    bottom: 0;
                   }
                 }
               }

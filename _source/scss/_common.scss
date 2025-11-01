@@ -183,7 +183,6 @@ body {
     .inner-contents {
       .nav {
         @media screen and (max-width: $VIEWPOINT01) {
-          max-width: 300px;
           margin: 0 auto;
         }
         .nav-list {
@@ -219,7 +218,6 @@ body {
               @media screen and (max-width: $VIEWPOINT01) {
                 min-height: 70px;
                 padding: 15px 84px 15px 40px;
-                font-size: 20px;
               }
               &:after {
                 content: "";
