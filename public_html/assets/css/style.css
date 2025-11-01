@@ -1815,7 +1815,7 @@ ul.notes li .mark {
   opacity: 0.7;
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img, #interview-single-head .inner .inner-contents .img, #interview-single-article .inner .inner-contents .bottom-img, .data > a .bg, #about-message .inner .inner-contents .head .head-contents .head-img, #philosophy .inner .inner-contents .head .head-img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img, #environment .inner .inner-contents .list > li .section > a .section-img, .nav.-nav01 .nav-list > li > a .nav-img, .nav.-nav02 .nav-list > li > a .nav-img {
+.people-swiper .swiper-wrapper .swiper-slide > a .slide-img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img, #interview-single-head .inner .inner-contents .img, #interview-single-article .inner .inner-contents .bottom-img, .three-min > a .bg, #about-message .inner .inner-contents .head .head-contents .head-img, #philosophy .inner .inner-contents .head .head-img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img, #environment .inner .inner-contents .list > li .section > a .section-img, .nav.-nav01 .nav-list > li > a .nav-img, .nav.-nav02 .nav-list > li > a .nav-img {
   position: relative;
   overflow: hidden;
   font-size: 0;
@@ -1824,7 +1824,7 @@ ul.notes li .mark {
   transform: translateZ(0);
 }
 
-.people-swiper .swiper-wrapper .swiper-slide > a .slide-img img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img img, #interview-single-head .inner .inner-contents .img img, #interview-single-article .inner .inner-contents .bottom-img img, .data > a .bg img, #about-message .inner .inner-contents .head .head-contents .head-img img, #philosophy .inner .inner-contents .head .head-img img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img img, #environment .inner .inner-contents .list > li .section > a .section-img img, .nav.-nav01 .nav-list > li > a .nav-img img, .nav.-nav02 .nav-list > li > a .nav-img img {
+.people-swiper .swiper-wrapper .swiper-slide > a .slide-img img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img img, #interview-single-head .inner .inner-contents .img img, #interview-single-article .inner .inner-contents .bottom-img img, .three-min > a .bg img, #about-message .inner .inner-contents .head .head-contents .head-img img, #philosophy .inner .inner-contents .head .head-img img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img img, #environment .inner .inner-contents .list > li .section > a .section-img img, .nav.-nav01 .nav-list > li > a .nav-img img, .nav.-nav02 .nav-list > li > a .nav-img img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -4730,17 +4730,17 @@ body.fixed {
     margin-top: 30px;
   }
 }
-/* ====================================== data */
-.data {
+/* ====================================== three-min */
+.three-min {
   margin-top: 100px;
 }
 
 @media screen and (max-width: 768px) {
-  .data {
+  .three-min {
     margin-top: 60px;
   }
 }
-.data > a {
+.three-min > a {
   padding: 50px;
   border-radius: 5px;
   -webkit-box-sizing: border-box;
@@ -4751,11 +4751,11 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .data > a {
+  .three-min > a {
     padding: 10px;
   }
 }
-.data > a .bg {
+.three-min > a .bg {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -4764,14 +4764,14 @@ body.fixed {
   z-index: -1;
 }
 
-.data > a .bg img {
+.three-min > a .bg img {
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: transform 1.75s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: transform 1.75s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.data > a .box {
+.three-min > a .box {
   max-width: 700px;
   margin: 0 auto;
   padding: 30px;
@@ -4783,22 +4783,22 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .data > a .box {
+  .three-min > a .box {
     padding: 25px;
   }
 }
-.data > a .box .box-ttl {
+.three-min > a .box .box-ttl {
   font-size: 28px;
   font-weight: 700;
   line-height: 1.5;
 }
 
 @media screen and (max-width: 374px) {
-  .data > a .box .box-ttl {
+  .three-min > a .box .box-ttl {
     font-size: 7.4666666667vw;
   }
 }
-.data > a .box .box-txt {
+.three-min > a .box .box-txt {
   margin-top: 15px;
   font-size: 14px;
   font-weight: 500;
@@ -4806,13 +4806,13 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .data > a .box .box-txt {
+  .three-min > a .box .box-txt {
     margin-top: 25px;
     font-size: 16px;
     line-height: 1.7;
   }
 }
-.data > a .box .box-more {
+.three-min > a .box .box-more {
   margin-top: 15px;
   padding-right: 26px;
   display: inline-block;
@@ -4825,12 +4825,12 @@ body.fixed {
 }
 
 @media screen and (max-width: 768px) {
-  .data > a .box .box-more {
+  .three-min > a .box .box-more {
     margin-top: 25px;
     font-size: 16px;
   }
 }
-.data > a .box .box-more:after {
+.three-min > a .box .box-more:after {
   content: "";
   width: 16px;
   height: 16px;
@@ -4848,17 +4848,17 @@ body.fixed {
   transition: right 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-.data > a:hover .bg img {
+.three-min > a:hover .bg img {
   -webkit-transform: scale(1.05);
   transform: scale(1.05);
   opacity: 0.7;
 }
 
-.data > a:hover .box .box-more {
+.three-min > a:hover .box .box-more {
   opacity: 0.7;
 }
 
-.data > a:hover .box .box-more:after {
+.three-min > a:hover .box .box-more:after {
   right: -5px;
 }
 
