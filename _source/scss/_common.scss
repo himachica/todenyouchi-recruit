@@ -63,7 +63,7 @@ body {
   padding-top: 100px;
   position: relative;
   box-sizing: border-box;
-  overflow: hidden;
+  //overflow: hidden;
   @media screen and (max-width: $MIN-WIDTH) {
     min-height: pc(100);
   }

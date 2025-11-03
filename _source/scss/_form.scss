@@ -1,0 +1,212 @@
+@use "setting" as *;
+
+/* ====================================== form-page */
+#form-page {
+  margin-top: 50px;
+  padding: 50px 0 100px;
+  .inner {
+    .inner-contents {
+      .form {
+        max-width: 1000px;
+        margin: 0 auto;
+        .item-wrap {
+          .item {
+            display: flex;
+            gap: 20px;
+            > dt {
+              width: 230px;
+              max-height: 70px;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              gap: 5px 15px;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 1.5;
+            }
+            > dd {
+              flex: 1;
+              .name {
+                width: 100%;
+                max-width: 660px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .name-item {
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  flex: 1;
+                  .name-txt {
+                    width: 37px;
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                  }
+                  input {
+                    flex: 1;
+                  }
+                }
+              }
+              .birth {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                select {
+                  max-width: 150px;
+                }
+              }
+              .address {
+                .address-postcode {
+                  max-width: 365px;
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  .address-mark {
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 1.5;
+                  }
+                  input {
+                    flex: 1;
+                  }
+                }
+                .address-line {
+                  margin-top: 30px;
+                  input {
+                    max-width: none;
+                  }
+                }
+              }
+              .radio {
+                .radio-list {
+                  min-height: 45px;
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  gap: 10px 20px;
+                  > li {
+                    .radio-label {
+                      display: flex;
+                      align-items: center;
+                      gap: 10px;
+                      cursor: pointer;
+                    }
+                    .radio-txt {
+                      font-size: 18px;
+                      font-weight: 500;
+                      line-height: 1.5;
+                    }
+                  }
+                }
+              }
+            }
+            &:not(:first-child) {
+              margin-top: 30px;
+            }
+            &.-required {
+              > dt {
+                &:after {
+                  content: "必須";
+                  padding: 0 5px 0.1em;
+                  background: $color01;
+                  border-radius: 5px;
+                  display: inline-block;
+                  text-align: center;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  color: $wh;
+                }
+              }
+            }
+          }
+        }
+        .privacy {
+          margin-top: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .privacy-label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .privacy-txt {
+              font-size: 18px;
+              font-weight: 500;
+              line-height: 1.5;
+              > a {
+                text-decoration: underline;
+                transition: color $speed01 $easing01;
+                &:hover {
+                  color: $color01;
+                }
+              }
+            }
+          }
+        }
+        .submit {
+          margin-top: 30px;
+          text-align: center;
+          input[type="submit"] {
+            @extend %fade;
+            width: 100%;
+            max-width: 220px;
+            min-height: 60px;
+            padding: 5px 20px;
+            background: $color01;
+            border-radius: 9999px;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: $wh;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== thanks-page */
+#thanks-page {
+  margin-top: 50px;
+  padding: 50px 0 100px;
+  .inner {
+    .inner-contents {
+      .ttl {
+        > span {
+          display: block;
+          text-align: center;
+          &.sub {
+            @extend %font01;
+            font-size: 18px;
+            font-weight: 500;
+            color: $color01;
+          }
+          &.main {
+            margin-top: 20px;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.5;
+          }
+        }
+      }
+      .txt {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .btn {
+        margin-top: 40px;
+        > a {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

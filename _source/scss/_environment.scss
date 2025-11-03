@@ -1,0 +1,282 @@
+@use "setting" as *;
+
+/* ====================================== welfare */
+#welfare {
+  margin-top: 50px;
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  .inner {
+    .inner-contents {
+      .head {
+        display: flex;
+        gap: 40px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          gap: pc(40);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: block;
+        }
+        .ttl {
+          flex: 1;
+        }
+        .head-img {
+          width: 70.18%;
+          font-size: 0;
+          line-height: 0;
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 100%;
+            margin-top: 30px;
+          }
+        }
+      }
+      .section-wrap {
+        margin-top: 60px;
+        border: {
+          top: 1px solid $border-color;
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+        }
+        .section {
+          padding: 60px 0;
+          border: {
+            bottom: 1px solid $border-color;
+          }
+          box-sizing: border-box;
+          display: flex;
+          gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            padding: 30px 0;
+            display: block;
+          }
+          .section-block {
+            &.-head {
+              flex: 1;
+              .section-ttl {
+                > span {
+                  display: block;
+                  &.sub {
+                    @extend %font01;
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $color01;
+                  }
+                  &.main {
+                    margin-top: 10px;
+                    font-size: 28px;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      font-size: 24px;
+                    }
+                  }
+                }
+              }
+              .section-txt {
+                margin-top: 10px;
+                font-size: 12px;
+                line-height: 1.5;
+              }
+            }
+            &.-contents {
+              width: 70.18%;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 100%;
+                margin-top: 20px;
+              }
+              .item-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                @media screen and (max-width: $MIN-WIDTH) {
+                  gap: pc(20);
+                }
+                @media screen and (max-width: $VIEWPOINT01) {
+                  display: block;
+                }
+                .item {
+                  width: calc((100% - 40px) / 3);
+                  min-height: 310px;
+                  padding: 30px;
+                  border: 1px solid $color01;
+                  border-radius: 5px;
+                  box-sizing: border-box;
+                  @media screen and (max-width: $MIN-WIDTH) {
+                    width: calc((100% - pc(40)) / 3);
+                    padding: pc(30);
+                  }
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    width: 100%;
+                    min-height: auto;
+                    padding: 30px;
+                  }
+                  > dt {
+                    text-align: center;
+                    > span {
+                      padding-bottom: 0.3em;
+                      border: {
+                        bottom: 1px solid $color01;
+                      }
+                      display: inline-block;
+                      font-size: 18px;
+                      font-weight: 700;
+                      line-height: 1.5;
+                    }
+                  }
+                  > dd {
+                    margin-top: 15px;
+                    .item-number {
+                      text-align: center;
+                      font-size: 30px;
+                      font-weight: 700;
+                      color: $color01;
+                      @media screen and (max-width: $MIN-WIDTH) {
+                        font-size: pc(30);
+                      }
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        font-size: 30px;
+                      }
+                      > span {
+                        @extend %font01;
+                        font-size: 64px;
+                        font-weight: 500;
+                        letter-spacing: -0.06em;
+                        @media screen and (max-width: $MIN-WIDTH) {
+                          font-size: pc(64);
+                        }
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          font-size: 64px;
+                        }
+                      }
+                    }
+                    .item-contents {
+                      text-align: center;
+                      font-size: 16px;
+                      font-weight: 700;
+                      line-height: 1.5;
+                      color: $color01;
+                      &:not(:first-child) {
+                        margin-top: 15px;
+                      }
+                    }
+                    .item-ico {
+                      text-align: center;
+                      font-size: 0;
+                      line-height: 0;
+                      img {
+                        max-width: 120px;
+                      }
+                      &:not(:first-child) {
+                        margin-top: 15px;
+                      }
+                    }
+                    .item-txt, .item-note {
+                      font-size: 12px;
+                      line-height: 1.5;
+                      &:not(:first-child) {
+                        margin-top: 15px;
+                      }
+                    }
+                    .item-note {
+                      margin-left: 1em;
+                      &:before {
+                        content: "※";
+                        width: 1em;
+                        margin-left: -1em;
+                        display: inline-block;
+                      }
+                      &.-sp-center {
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          text-align: center;
+                        }
+                      }
+                    }
+                  }
+                  &:not(:first-child) {
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      margin-top: 20px;
+                    }
+                  }
+                }
+              }
+              .note {
+                margin-top: 10px;
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== educational-system */
+#educational-system {
+  .inner {
+    .inner-contents {
+      .section-wrap {
+        .section {
+          padding-top: 50px;
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            padding-top: 30px;
+            display: block;
+          }
+          .section-block {
+            &.-img {
+              width: 50%;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 100%;
+              }
+              .section-img {
+                @extend %img01;
+                border-radius: 5px;
+                aspect-ratio: 190 / 107;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  aspect-ratio: 120 / 107;
+                }
+              }
+            }
+            &.-contents {
+              flex: 1;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 20px;
+              }
+              .section-ttl {
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 1.5;
+              }
+              .section-txt {
+                margin-top: 20px;
+                font-size: 16px;
+                line-height: 1.8;
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin-top: 50px;
+            border: {
+              top: 1px solid $border-color;
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 30px;
+            }
+          }
+          &:nth-child(even) {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
+}

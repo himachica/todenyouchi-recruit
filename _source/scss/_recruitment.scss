@@ -1,0 +1,488 @@
+@use "setting" as *;
+
+/* ====================================== recruitment-nav */
+#recruitment-nav {
+  margin-top: 50px;
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+  }
+  .inner {
+    .inner-contents {
+      .nav {
+        .nav-list {
+          > li {
+            .nav-section {
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding-bottom: 50px;
+              }
+              > a {
+                min-height: 410px;
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-end;
+                position: relative;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  min-height: auto;
+                  aspect-ratio: 1 / 1;
+                }
+                .nav-img {
+                  @extend %img01;
+                  width: 100%;
+                  height: 100%;
+                  border-radius: 5px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  z-index: -1;
+                  img {
+                    transition: opacity $speed01 $easing01, transform $speed01 $easing01;
+                  }
+                }
+                .nav-contents {
+                  width: 500px;
+                  padding: 30px 60px;
+                  background: $wh;
+                  border-radius: 5px 0 0 0;
+                  box-sizing: border-box;
+                  display: flex;
+                  align-items: flex-end;
+                  gap: 20px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    width: 83.33%;
+                    margin-bottom: -50px;
+                    padding: 30px 15px;
+                    display: block;
+                  }
+                  .nav-ttl {
+                    flex: 1;
+                    > span {
+                      display: block;
+                      &.sub {
+                        @extend %font01;
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: $color01;
+                      }
+                      &.main {
+                        margin-top: 10px;
+                        font-size: 28px;
+                        font-weight: 700;
+                        line-height: 1.7;
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          font-size: 24px;
+                        }
+                      }
+                    }
+                  }
+                  .btn {
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      margin-top: 15px;
+                      text-align: right;
+                    }
+                  }
+                }
+                &:hover {
+                  .nav-img {
+                    img {
+                      opacity: 0.7;
+                      transform: scale(1.05);
+                    }
+                  }
+                  .nav-contents {
+                    .btn {
+                      @extend %btn03-hover;
+                    }
+                  }
+                }
+              }
+            }
+            &:not(:first-child) {
+              margin-top: 60px;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== recruitment-list */
+#recruitment-list {
+  margin-top: 50px;
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+  }
+  .inner {
+    .inner-contents {
+      .nav {
+        margin-top: 40px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+        }
+        .nav-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            display: block;
+          }
+          > li {
+            width: calc((100% - 40px) / 2);
+            @media screen and (max-width: $MIN-WIDTH) {
+              width: calc((100% - pc(40)) / 2);
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 100%;
+            }
+            .nav-section {
+              > a {
+                padding: 30px 130px 30px 30px;
+                border: 1px solid $color01;
+                display: block;
+                position: relative;
+                &:after {
+                  @extend %arw01;
+                  content: "";
+                  margin: auto;
+                  position: absolute;
+                  top: 0;
+                  right: 30px;
+                  bottom: 0;
+                  transition: right $speed01 $easing01;
+                }
+                .nav-ttl {
+                  font-size: 24px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  transition: color $speed01 $easing01;
+                }
+                .nav-txt {
+                  margin-top: 20px;
+                  font-size: 14px;
+                  line-height: 1.7;
+                }
+                &:hover {
+                  &:after {
+                    right: 25px;
+                  }
+                  .nav-ttl {
+                    color: $color01;
+                  }
+                }
+              }
+            }
+            &:not(:first-child) {
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== recruitment-page */
+#recruitment-page {
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding-top: 0;
+  }
+  .inner {
+    .inner-contents {
+      .layout {
+        display: flex;
+        gap: 40px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: block;
+        }
+        .block {
+          &.-sub {
+            padding-top: 50px;
+            flex: 1;
+            @media screen and (max-width: $VIEWPOINT01) {
+              display: none;
+            }
+            .nav {
+              padding-left: 30px;
+              border: {
+                left: 1px solid $color01;
+              }
+              position: sticky;
+              top: 150px;
+              left: 0;
+              .nav-head {
+                @extend %font01;
+                font-size: 16px;
+                font-weight: 600;
+                color: $color01;
+              }
+              .nav-list {
+                margin-top: 20px;
+                > li {
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  > a {
+                    color: $color20;
+                    transition: color $speed01 $easing01;
+                  }
+                  &:not(:first-child) {
+                    margin-top: 10px;
+                  }
+                  &.-current {
+                    > a {
+                      color: $bk;
+                    }
+                  }
+                  &:not(.-current) {
+                    > a {
+                      &:hover {
+                        color: $color01;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &.-main {
+            width: 800px;
+            max-width: calc(100% - 160px);
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 100%;
+              max-width: none;
+            }
+            .section-wrap {
+              .section {
+                padding-top: 50px;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  padding-top: 40px;
+                }
+                .section-ttl {
+                  padding: 10px 20px;
+                  background: $color01;
+                  border-radius: 5px;
+                  font-size: 18px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  color: $wh;
+                }
+                .section-contents {
+                  margin-top: 10px;
+                  .section-tbl {
+                    .section-tbl-item {
+                      padding: 30px 0;
+                      border: {
+                        bottom: 1px solid $border-color;
+                      }
+                      display: flex;
+                      gap: 10px;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        padding: 20px 0;
+                        display: block;
+                      }
+                      > dt, > dd {
+                        font-size: 14px;
+                        line-height: 1.7;
+                      }
+                      > dt {
+                        width: 140px;
+                        font-weight: 700;
+                      }
+                      > dd {
+                        flex: 1;
+                        @media screen and (max-width: $VIEWPOINT01) {
+                          margin-top: 5px;
+                        }
+                      }
+                    }
+                  }
+                }
+                &:not(:first-child) {
+                  margin-top: 50px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 40px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== faq */
+#faq {
+  margin-top: 50px;
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  .inner {
+    .inner-contents {
+      .section-wrap {
+        .section {
+          display: flex;
+          gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            display: block;
+          }
+          .section-block {
+            &.-head {
+              flex: 1;
+            }
+            &.-contents {
+              width: 70.18%;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 100%;
+                margin-top: 30px;
+              }
+              .item-wrap {
+                .item {
+                  border: 1px solid $border-color;
+                  border-radius: 5px;
+                  > dt {
+                    padding: 20px 120px 20px 85px;
+                    position: relative;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    cursor: pointer;
+                    transition: color $speed01 $easing01;
+                    @media screen and (max-width: $MIN-WIDTH) {
+                      padding: 20px calc(60px + pc(60)) 20px calc(35px + pc(50));
+                    }
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      padding: 20px 95px 20px 50px;
+                    }
+                    &:before {
+                      @extend %font01;
+                      content: "Q.";
+                      height: 1em;
+                      margin: auto;
+                      display: inline;
+                      position: absolute;
+                      top: 0;
+                      left: 50px;
+                      bottom: 0;
+                      font-size: 22px;
+                      font-weight: 500;
+                      color: $color01;
+                      @media screen and (max-width: $MIN-WIDTH) {
+                        left: pc(50);
+                      }
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        left: 15px;
+                      }
+                    }
+                    &:after {
+                      content: "";
+                      width: 60px;
+                      height: 30px;
+                      margin: auto;
+                      background: {
+                        color: $color01;
+                        image: url(#{$IMGPATH}ico-plus02.svg);
+                        repeat: no-repeat;
+                        size: 16px auto;
+                        position: center center;
+                      }
+                      border-radius: 9999px;
+                      display: block;
+                      position: absolute;
+                      top: 0;
+                      right: 50px;
+                      bottom: 0;
+                      @media screen and (max-width: $MIN-WIDTH) {
+                        right: pc(50);
+                      }
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        right: 15px;
+                      }
+                    }
+                    &:hover {
+                      color: $color01;
+                    }
+                  }
+                  > dd {
+                    padding: 0 50px 30px 50px;
+                    display: none;
+                    @media screen and (max-width: $MIN-WIDTH) {
+                      padding: 0 pc(50) 30px pc(50);
+                    }
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      padding: 0 15px 20px 15px;
+                    }
+                    .dd-contents {
+                      padding: 10px 70px 0 35px;
+                      border: {
+                        top: 1px solid $border-color;
+                      }
+                      position: relative;
+                      font-size: 18px;
+                      font-weight: 500;
+                      line-height: 1.7;
+                      @media screen and (max-width: $MIN-WIDTH) {
+                        padding: 10px pc(70) 0 35px;
+                      }
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        padding: 10px 35px 0 35px;
+                        font-size: 16px;
+                      }
+                      &:before {
+                        @extend %font01;
+                        content: "A.";
+                        height: 1em;
+                        display: inline;
+                        position: absolute;
+                        top: 16px;
+                        left: 0;
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: $color01;
+                      }
+                    }
+                  }
+                  &:not(:first-child) {
+                    margin-top: 25px;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      margin-top: 20px;
+                    }
+                  }
+                  &.-active {
+                    > dt {
+                      &:after {
+                        background: {
+                          image: url(#{$IMGPATH}ico-minus02.svg);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin-top: 60px;
+          }
+        }
+      }
+    }
+  }
+}

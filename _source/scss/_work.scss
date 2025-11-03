@@ -1,0 +1,407 @@
+@use "setting" as *;
+
+/* ====================================== careerstory-archive */
+#careerstory-archive {
+  margin-top: 50px;
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding-top: 40px;
+  }
+  .inner {
+    .inner-contents {
+      .list {
+        margin-top: 60px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 20px;
+        }
+        > li {
+          .article {
+            > a {
+              min-height: 410px;
+              border-radius: 5px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+              position: relative;
+              overflow: hidden;
+              @media screen and (max-width: $VIEWPOINT01) {
+                min-height: auto;
+                border-radius: 0;
+                display: block;
+              }
+              .article-img {
+                @extend %img01;
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  border-radius: 5px;
+                  position: static;
+                  aspect-ratio: 36 / 23;
+                }
+                img {
+                  transition: transform $speed01 $easing01, opacity $speed01 $easing01;
+                }
+              }
+              .article-contents {
+                width: 42.11%;
+                padding: 30px 60px;
+                background: $wh;
+                border-radius: 5px 0 0 0;
+                box-sizing: border-box;
+                @media screen and (max-width: $MIN-WIDTH) {
+                  padding: 30px pc(60);
+                }
+                @media screen and (max-width: $VIEWPOINT01) {
+                  width: 100%;
+                  margin-top: 20px;
+                  padding: 0;
+                  background: transparent;
+                  border-radius: 0;
+                }
+                .article-number {
+                  @extend %font01;
+                  font-size: 18px;
+                  font-weight: 600;
+                  color: $color01;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    font-size: 16px;
+                  }
+                }
+                .article-ttl {
+                  margin-top: 10px;
+                  font-size: 24px;
+                  font-weight: 700;
+                  line-height: 1.7;
+                }
+                .btn {
+                  margin-top: 10px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 20px;
+                    text-align: right;
+                  }
+                }
+              }
+              &:hover {
+                .article-img {
+                  img {
+                    opacity: 0.7;
+                    transform: scale(1.05);
+                  }
+                }
+                .article-contents {
+                  .btn {
+                    @extend %btn03-hover;
+                  }
+                }
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin-top: 60px;
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== careerstory-single-head */
+#careerstory-single-head {
+  padding: 60px 0 160px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding: 30px 0 80px;
+  }
+  .inner {
+    .inner-contents {
+      .head {
+        min-height: 410px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        position: relative;
+        @media screen and (max-width: $VIEWPOINT01) {
+          min-height: auto;
+          aspect-ratio: 36 / 41;
+        }
+        .head-img {
+          @extend %img01;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+        .head-info {
+          width: 340px;
+          padding: 30px 50px;
+          background: $wh;
+          border-radius: 5px 0 0 0;
+          box-sizing: border-box;
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 82.5%;
+            padding: 15px 30px;
+          }
+          .head-year {
+            padding-left: 16px;
+            position: relative;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            &:before {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background: $color01;
+              border-radius: 50%;
+              display: block;
+              position: absolute;
+              top: 0.5em;
+              left: 0;
+            }
+          }
+          .head-name {
+            margin-top: 5px;
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.5;
+          }
+          .head-position {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: $color01;
+          }
+        }
+      }
+      .contents {
+        margin-top: 40px;
+        .contents-tag {
+          > span {
+            @extend %tag01;
+          }
+        }
+        .contents-ttl {
+          margin-top: 15px;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 1.5;
+          @media screen and (max-width: $VIEWPOINT01) {
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== careerstory-single-career */
+#careerstory-single-career {
+  .inner {
+    .inner-contents {
+      .list {
+        > li {
+          padding: 60px 0;
+          border: {
+            top: 1px solid $border-color;
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            padding: 30px 0;
+          }
+          .list-section {
+            border: {
+              left: 1px solid $border-color;
+            }
+            display: flex;
+            gap: 40px;
+            @media screen and (max-width: $MIN-WIDTH) {
+              gap: pc(40);
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              border: none;
+              display: block;
+            }
+            .list-section-block {
+              &.-contents {
+                padding-left: 50px;
+                flex: 1;
+                @media screen and (max-width: $MIN-WIDTH) {
+                  padding-left: pc(50);
+                }
+                @media screen and (max-width: $VIEWPOINT01) {
+                  padding-left: 0;
+                }
+                .list-ttl {
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  gap: 5px 10px;
+                  position: relative;
+                  font-size: 22px;
+                  font-weight: 600;
+                  line-height: 1.5;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    padding-left: 30px;
+                  }
+                  &:before {
+                    @extend %font01;
+                    content: "Career";
+                    display: inline-block;
+                    color: $color01;
+                  }
+                  &:after {
+                    content: "";
+                    width: 21px;
+                    height: 21px;
+                    background: $color01;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    top: 0.37em;
+                    left: calc(-11px - 50px);
+                    @media screen and (max-width: $MIN-WIDTH) {
+                      left: calc(-11px - pc(50));
+                    }
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      width: 20px;
+                      height: 20px;
+                      left: 0;
+                    }
+                  }
+                  > span {
+                    padding: 0 20px 0.1em;
+                    border-radius: 5px;
+                    background: $color19;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: $color01;
+                  }
+                }
+                .list-copy {
+                  margin-top: 30px;
+                  font-size: 32px;
+                  font-weight: 700;
+                  line-height: 1.5;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    font-size: 24px;
+                  }
+                }
+                .list-txt {
+                  margin-top: 30px;
+                  font-size: 16px;
+                  line-height: 1.8;
+                }
+              }
+              &.-img {
+                width: 48.25%;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  width: 100%;
+                  margin-top: 20px;
+                }
+                .list-img {
+                  font-size: 0;
+                  line-height: 0;
+                  img {
+                    border-radius: 5px;
+                  }
+                }
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin-top: 60px;
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== careerstory-single-message */
+#careerstory-single-message {
+  @extend %wave-top;
+  margin-top: 100px;
+  padding: calc(1.944vw + 70px) 0 100px;
+  background: $gradation01;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 50px;
+    padding: calc(4.1vw + 40px) 0 100px;
+  }
+  .inner {
+    .inner-contents {
+      .box {
+        padding: 50px 90px;
+        background: $wh;
+        border-radius: 5px;
+        @media screen and (max-width: $MIN-WIDTH) {
+          padding: 50px pc(90);
+        }
+        @media screen and (max-width: $VIEWPOINT01) {
+          padding: 50px 15px;
+        }
+        .box-ttl {
+          > span {
+            display: block;
+            text-align: center;
+            &.sub {
+              @extend %font01;
+              font-size: 16px;
+              font-weight: 500;
+              color: $color01;
+            }
+            &.main {
+              margin-top: 10px;
+              font-size: 32px;
+              font-weight: 700;
+              line-height: 1.5;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 24px;
+              }
+            }
+          }
+        }
+        .box-contents {
+          margin-top: 40px;
+          display: flex;
+          gap: 30px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(30);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            display: block;
+          }
+          .box-copy, .box-txt {
+            flex: 1;
+          }
+          .box-copy {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.5;
+            @media screen and (max-width: $VIEWPOINT02) {
+              font-size: 28px;
+            }
+          }
+          .box-txt {
+            font-size: 16px;
+            line-height: 1.8;
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

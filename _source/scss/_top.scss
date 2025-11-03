@@ -577,89 +577,10 @@
   }
   .inner {
     .inner-contents {
-      .list {
+      .nav {
         margin-top: 40px;
-        display: flex;
-        gap: 40px;
-        @media screen and (max-width: $MIN-WIDTH) {
-          gap: pc(40);
-        }
         @media screen and (max-width: $VIEWPOINT01) {
           margin-top: 30px;
-          display: block;
-        }
-        > li {
-          flex: 1;
-          .section {
-            > a {
-              .section-img {
-                @extend %img01;
-                border-radius: 5px;
-                aspect-ratio: 55 / 23;
-                @media screen and (max-width: $VIEWPOINT01) {
-                  aspect-ratio: 36 / 23;
-                }
-                img {
-                  transition: transform $speed01 $easing01, opacity $speed01 $easing01;
-                }
-              }
-              .section-ttl {
-                margin-top: 15px;
-                padding-right: 70px;
-                position: relative;
-                font-size: 24px;
-                font-weight: 700;
-                line-height: 1.5;
-                transition: color $speed01 $easing01;
-                &:after {
-                  content: "";
-                  margin: auto;
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-                  bottom: 0;
-                }
-              }
-              .section-txt {
-                margin-top: 10px;
-                font-size: 14px;
-                line-height: 1.5;
-                @media screen and (max-width: $VIEWPOINT01) {
-                  font-size: 16px;
-                }
-              }
-              &:not([target="_blank"]) {
-                .section-ttl {
-                  &:after {
-                    @extend %arw01;
-                  }
-                }
-              }
-              &[target="_blank"] {
-                .section-ttl {
-                  &:after {
-                    @extend %arw02;
-                  }
-                }
-              }
-              &:hover {
-                .section-img {
-                  img {
-                    transform: scale(1.05);
-                    opacity: 0.7;
-                  }
-                }
-                .section-ttl {
-                  color: $color01;
-                }
-              }
-            }
-          }
-          &:not(:first-child) {
-            @media screen and (max-width: $VIEWPOINT01) {
-              margin-top: 30px;
-            }
-          }
         }
       }
     }

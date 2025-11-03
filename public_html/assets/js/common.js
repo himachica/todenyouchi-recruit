@@ -3,35 +3,61 @@ var loadStatus = false;
 $(function() {
 
     // ====================================== contents
-    var $window               = $(window),
-        $body                 = $('body'),
-        $wrapper              = $('#wrapper'),
-        $header               = $('#header'),
-        $contents             = $('#contents'),
-        $footer               = $('#footer');
+    var $window                        = $(window),
+        $body                          = $('body'),
+        $wrapper                       = $('#wrapper'),
+        $header                        = $('#header'),
+        $contents                      = $('#contents'),
+        $footer                        = $('#footer');
 
-    var $headerInner          = $header.find('.header-inner'),
-        $headerNav            = $headerInner.find('.nav'),
-        $headerNavContents    = $headerNav.find('.nav-contents'),
-        $headerNavInner       = $headerNavContents.find('.nav-inner'),
-        $headerNavList        = $headerNavInner.find('.nav-list'),
-        $headerNavListLi      = $headerNavList.children('li'),
-        $headerNavHead        = $headerNavListLi.find('.nav-head'),
-        $headerNavHeadAcod    = $headerNavHead.find('.nav-head-acod'),
-        $headerSpMenu         = $header.find('.sp-menu'),
-        $headerSpMenuContents = $headerSpMenu.find('.sp-menu-contents'),
-        $headerSpMenuBars     = $headerSpMenuContents.find('.sp-menu-bars'),
-        $headerSpMenuBar1     = $headerSpMenuBars.find('.sp-menu-bar:nth-child(1)');
+    var $headerInner                   = $header.find('.header-inner'),
+        $headerNav                     = $headerInner.find('.nav'),
+        $headerNavContents             = $headerNav.find('.nav-contents'),
+        $headerNavInner                = $headerNavContents.find('.nav-inner'),
+        $headerNavList                 = $headerNavInner.find('.nav-list'),
+        $headerNavListLi               = $headerNavList.children('li'),
+        $headerNavHead                 = $headerNavListLi.find('.nav-head'),
+        $headerNavHeadAcod             = $headerNavHead.find('.nav-head-acod'),
+        $headerSpMenu                  = $header.find('.sp-menu'),
+        $headerSpMenuContents          = $headerSpMenu.find('.sp-menu-contents'),
+        $headerSpMenuBars              = $headerSpMenuContents.find('.sp-menu-bars'),
+        $headerSpMenuBar1              = $headerSpMenuBars.find('.sp-menu-bar:nth-child(1)');
 
-    var $kv                   = $('#kv'),
-        $kvLoopSlider         = $kv.find('.loop-slider'),
-        $kvSlider             = $kvLoopSlider.find('.slider'),
-        $kvSliderList         = $kvSlider.find('.list'),
-        $kvSliderListLi       = $kvSliderList.children('li'),
-        $kvSwiper             = $kvSliderListLi.find('.kv-swiper');
+    var $kv                            = $('#kv'),
+        $kvLoopSlider                  = $kv.find('.loop-slider'),
+        $kvSlider                      = $kvLoopSlider.find('.slider'),
+        $kvSliderList                  = $kvSlider.find('.list'),
+        $kvSliderListLi                = $kvSliderList.children('li'),
+        $kvSwiper                      = $kvSliderListLi.find('.kv-swiper');
 
-    var $peopleEmblaWrap      = $('.people-embla-wrap'),
-        $peopleEmbla          = $peopleEmblaWrap.find('.people-embla');
+    var $peopleEmblaWrap               = $('.people-embla-wrap'),
+        $peopleEmbla                   = $peopleEmblaWrap.find('.people-embla');
+
+    var $recruitmentPage               = $('#recruitment-page'),
+        $recruitmentPageInner          = $recruitmentPage.find('.inner'),
+        $recruitmentPageInnerContents  = $recruitmentPageInner.find('.inner-contents'),
+        $recruitmentPageLayout         = $recruitmentPageInnerContents.find('.layout'),
+        $recruitmentPageLayoutBlockSub = $recruitmentPageLayout.find('.block.-sub'),
+        $recruitmentPageNav            = $recruitmentPageLayoutBlockSub.find('.nav'),
+        $recruitmentPageNavList        = $recruitmentPageNav.find('.nav-list'),
+        $recruitmentPageNavListLi      = $recruitmentPageNavList.children('li'),
+        $recruitmentPageNavListLiA     = $recruitmentPageNavListLi.find('a');
+    var $sections = $recruitmentPageNavListLiA.map(function () {
+        var id = $(this).attr('href');
+        if (id && id.startsWith('#')) {
+            return $(id);
+        }
+    });
+
+    var $faq                           = $('#faq'),
+        $faqInner                      = $faq.find('.inner'),
+        $faqInnerContents              = $faqInner.find('.inner-contents'),
+        $faqSectionWrap                = $faqInnerContents.find('.section-wrap'),
+        $faqSection                    = $faqSectionWrap.find('.section'),
+        $faqSectionBlockContents       = $faqSection.find('.section-block.-contents'),
+        $faqItemWrap                   = $faqSectionBlockContents.find('.item-wrap'),
+        $faqItem                       = $faqItemWrap.find('.item'),
+        $faqItemDt                     = $faqItem.find('dt');
 
     // ====================================== data
     var windowW;
@@ -288,6 +314,39 @@ $(function() {
         console.log(peopleEmblaApi.slideNodes()) // Access API
     }
 
+    // ====================================== recruitmentPage
+    function recruitmentPageScroll() {
+        if($recruitmentPageNav.length) {
+            var offset = headerH; // ナビ切り替えの余白（調整OK）
+            var currentId = null;
+            $sections.each(function () {
+                var sectionTop = $(this).offset().top - offset;
+                if (scrollT >= sectionTop) {
+                    currentId = $(this).attr('id');
+                }
+            });
+            if (currentId) {
+              $recruitmentPageNavListLiA.parent().removeClass('-current');
+              $recruitmentPageNavListLiA
+                .filter('[href="#' + currentId + '"]')
+                .parent()
+                .addClass('-current');
+            }
+        }
+    }
+
+    // ====================================== faq
+    $faqItemDt.on('click', function() {
+        var $thisItem = $(this).closest('.item'),
+            $thisDd   = $(this).next('dd');
+        $thisItem.toggleClass('-active');
+        if($thisItem.hasClass('-active')) {
+            $thisDd.slideDown(600, 'easeOutQuart');
+        } else {
+            $thisDd.slideUp(600, 'easeOutQuart');
+        }
+    });
+
     // ====================================== pagetop
     $("#pagetop").on("click", toTop);
     function toTop(){
@@ -383,6 +442,7 @@ $(function() {
         animationContentsCheck();
         loopSlider();
         kvSwiperStart();
+        recruitmentPageScroll();
     }
     $window.on('load', function() {
         loadAction();
@@ -396,6 +456,7 @@ $(function() {
     $window.resize(function() {
         dateAcquisition();
         animationContentsCheck();
+        recruitmentPageScroll();
         if(loadingW != windowW) {
             headerReset();
             contentsH();
@@ -407,12 +468,14 @@ $(function() {
     $window.on('scroll', function() {
         dateAcquisition();
         animationContentsCheck();
+        recruitmentPageScroll();
     });
 
     // ====================================== touchmove
     $window.on('touchmove', function() {
         dateAcquisition();
         animationContentsCheck();
+        recruitmentPageScroll();
     });
 
     // ====================================== smartphone
