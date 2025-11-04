@@ -164,4 +164,78 @@ function is_parent_slug() {
 }
 
 
+
+/** -----------------------------------------------------------
+ * カスタム投稿（インタビュー）のスラッグを上から順に番号追加
+ * -----------------------------------------------------------*/
+// interview のスラッグを menu_order に基づいて自動生成
+add_action('save_post_interview', function ($post_id, $post, $update) {
+  // 自動保存やリビジョンを除外
+  if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
+  if ( wp_is_post_revision($post_id) ) return;
+
+  // 公開済み・下書き両方で動作可
+  $post_type = get_post_type($post_id);
+  if ($post_type !== 'interview') return;
+
+  // menu_order を取得（未設定なら0）
+  $order = get_post_field('menu_order', $post_id);
+  $order_num = sprintf('%02d', (int) $order); // 2桁化 例: 1→01
+
+  // スラッグを生成
+  $new_slug = 'interview' . $order_num;
+
+  // 現在のスラッグと異なる場合のみ更新
+  $current_slug = $post->post_name;
+  if ($current_slug !== $new_slug) {
+    // post_name を直接更新
+    wp_update_post([
+      'ID'        => $post_id,
+      'post_name' => sanitize_title($new_slug),
+    ]);
+  }
+}, 10, 3);
+
+
+/** -----------------------------------------------------------
+ * 何番目の投稿かを表示させるコードを追加
+ * -----------------------------------------------------------*/
+function get_order_index_in_cpt( $post_id, $scope = [] ): ?int {
+  $post = get_post( $post_id );
+  if ( ! $post ) return null;
+
+  $args = [
+    'post_type'              => $post->post_type,
+    'post_status'            => 'publish',
+    'orderby'                => ['menu_order' => 'ASC', 'date' => 'DESC'], // 同順時のタイブレーク
+    'fields'                 => 'ids',
+    'nopaging'               => true,
+    'no_found_rows'          => true,
+    'update_post_meta_cache' => false,
+    'update_post_term_cache' => false,
+  ];
+
+  // 同じターム内だけで順位を出したい場合（任意）
+  // 例: $scope = ['taxonomy' => 'category', 'in_same_term' => true]
+  if ( ! empty( $scope['in_same_term'] ) && ! empty( $scope['taxonomy'] ) ) {
+    $tax   = $scope['taxonomy'];
+    $terms = wp_get_object_terms( $post_id, $tax, ['fields' => 'ids'] );
+    if ( ! is_wp_error( $terms ) && $terms ) {
+      $args['tax_query'] = [[
+        'taxonomy' => $tax,
+        'field'    => 'term_id',
+        'terms'    => $terms,
+      ]];
+    }
+  }
+
+  // すべての並び順IDを取得して、位置を探す
+  $ids = get_posts( $args );
+  if ( empty( $ids ) ) return null;
+
+  $pos = array_search( (int) $post_id, array_map('intval', $ids), true );
+  return ($pos === false) ? null : ($pos + 1); // 1始まりの順位
+}
+
+
 ?>

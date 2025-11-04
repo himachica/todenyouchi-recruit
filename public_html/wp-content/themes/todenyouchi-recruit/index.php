@@ -183,97 +183,54 @@
                             </div>
                         </div>
 
+                        <?php
+                        $args = array(
+                            'post_type'      => 'interview',
+                            'posts_per_page' => -1,
+                            'order'          => 'DESC'
+                        );
+                        $posts = get_posts( $args );
+                        if ( $posts ) :
+                        ?>
                         <!-- people embla-->
                         <div class="people-embla-wrap">
                             <div class="people-embla">
                                 <div class="embla__container">
 
+                                    <?php
+                                    foreach ( $posts as $post ) : setup_postdata( $post );
+                                        $thumb = get_field( 'interview_thumb', $post );
+                                        if ( $thumb ) :
+                                            $thumb_src    = $thumb['url'];
+                                            $thumb_width  = $thumb['width'];
+                                            $thumb_height = $thumb['height'];
+                                        endif;
+                                        $copy  = get_field( 'interview_copy', $post );
+                                    ?>
                                     <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/01-img01.webp" width="800" height="1020" alt=""></p>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <p class="slide-img">
+                                                <?php if ( $thumb ) : ?>
+                                                <img src="<?php echo esc_attr( $thumb_src ); ?>" width="<?php echo esc_attr( $thumb_width ); ?>" height="<?php echo esc_attr( $thumb_height ); ?>" alt="">
+                                                <?php else : ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumb-logo01.webp" width="800" height="1020" alt="">
+                                                <?php endif; ?>
+                                            </p>
                                             <div class="slide-contents">
-                                                <p class="slide-copy">暮らしも、電気も、守る。<br>その使命が、私の成長につながっている。</p>
+                                                <?php if ( $copy ) : ?>
+                                                <p class="slide-copy"><?php echo nl2br( esc_html( $copy ) ); ?></p>
+                                                <?php endif; ?>
                                             </div>
                                         </a>
                                     </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/02-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">人と人のつながりを紡ぎ、<br>土地と未来をつなぐ。</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/03-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">あなたの『挑戦』を応援する。<br>どんどんチャレンジしていきたいです。</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/04-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">人の話に耳を傾け、信頼をつなぐ。これが私の仕事。</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/05-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">会社も、自分も、挑戦のとき。どんどんチャレンジしていきたいです。</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/06-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">人見知りだった私が<br>人と地域をつなぐ力になる。</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/07-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">ゼロから鉄塔を立てる。<br>僕の挑戦は未来を支える。</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/08-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">地域の電気を守るのは、私だ。挑戦する心で未来をつなぐ！</p>
-                                            </div>
-                                        </a>
-                                    </div>
-
-                                    <div class="people-embla-slide">
-                                        <a href="/people/interview01/">
-                                            <p class="slide-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/interview/09-img01.webp" width="800" height="1020" alt=""></p>
-                                            <div class="slide-contents">
-                                                <p class="slide-copy">知識ゼロでもいい。<br>挑戦する勇気が未来をつくる。</p>
-                                            </div>
-                                        </a>
-                                    </div>
+                                    <?php endforeach; ?>
 
                                 </div>
                             </div>
                             <div class="people-embla-dots"></div>
                         </div>
                         <!-- /people embla-->
+                        <?php endif; wp_reset_postdata(); ?>
 
                     </div>
                     <div class="inner">

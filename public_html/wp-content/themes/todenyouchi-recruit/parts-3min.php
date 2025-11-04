@@ -1,5 +1,5 @@
 <section class="three-min">
-    <a href="<?php echo esc_url( home_url( '/company/3min-toden/' ) ); ?>">
+    <a href="<?php echo esc_url( home_url( '/company/data/' ) ); ?>">
         <p class="bg">
             <picture>
                 <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/data-bg01-sp.webp" width="720" height="522" media="(max-width: 768px)">

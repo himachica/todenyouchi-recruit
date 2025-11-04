@@ -49,7 +49,7 @@
                                         <span class="nav-head-acod"></span>
                                     </p>
                                     <ul class="nav-sub-list">
-                                        <li><a href="<?php echo esc_url( home_url( '/company/3min-toden/' ) ); ?>">３分で知る東電⽤地</a></li>
+                                        <li><a href="<?php echo esc_url( home_url( '/company/data/' ) ); ?>">３分で知る東電⽤地</a></li>
                                         <li><a href="<?php echo esc_url( home_url( '/company/power-land/' ) ); ?>">電⼒⽤地</a></li>
                                         <li><a href="<?php echo esc_url( home_url( '/company/infrastructure-support/' ) ); ?>">社会インフラサポート</a></li>
                                         <li><a href="<?php echo esc_url( home_url( '/company/life-support/' ) ); ?>">暮らしのサポート</a></li>
