@@ -2981,6 +2981,21 @@ ul.notes li .mark {
   font-size: 18px;
   font-weight: 400;
 }
+.form.-form01 input[type=text]::-webkit-input-placeholder, .form.-form01 input[type=tel]::-webkit-input-placeholder, .form.-form01 input[type=email]::-webkit-input-placeholder, .form.-form01 select::-webkit-input-placeholder, .form.-form01 textarea::-webkit-input-placeholder {
+  color: #777777;
+}
+.form.-form01 input[type=text]::-moz-placeholder, .form.-form01 input[type=tel]::-moz-placeholder, .form.-form01 input[type=email]::-moz-placeholder, .form.-form01 select::-moz-placeholder, .form.-form01 textarea::-moz-placeholder {
+  color: #777777;
+}
+.form.-form01 input[type=text]:-ms-input-placeholder, .form.-form01 input[type=tel]:-ms-input-placeholder, .form.-form01 input[type=email]:-ms-input-placeholder, .form.-form01 select:-ms-input-placeholder, .form.-form01 textarea:-ms-input-placeholder {
+  color: #777777;
+}
+.form.-form01 input[type=text]::-ms-input-placeholder, .form.-form01 input[type=tel]::-ms-input-placeholder, .form.-form01 input[type=email]::-ms-input-placeholder, .form.-form01 select::-ms-input-placeholder, .form.-form01 textarea::-ms-input-placeholder {
+  color: #777777;
+}
+.form.-form01 input[type=text]::placeholder, .form.-form01 input[type=tel]::placeholder, .form.-form01 input[type=email]::placeholder, .form.-form01 select::placeholder, .form.-form01 textarea::placeholder {
+  color: #777777;
+}
 .form.-form01 input[type=text], .form.-form01 input[type=tel], .form.-form01 input[type=email], .form.-form01 select {
   max-width: 365px;
   height: 70px;
@@ -2991,6 +3006,13 @@ ul.notes li .mark {
   background-repeat: no-repeat;
   background-size: 14px auto;
   background-position: center right 12px;
+  color: #111111;
+}
+.form.-form01 select.select-change {
+  color: #777777;
+}
+.form.-form01 select.select-change.-active {
+  color: #111111;
 }
 .form.-form01 textarea {
   height: 164px;
@@ -8881,6 +8903,14 @@ body.fixed {
   max-width: 1000px;
   margin: 0 auto;
 }
+#form-page .inner .inner-contents .form .wpcf7-list-item {
+  margin: 0;
+}
+#form-page .inner .inner-contents .form .wpcf7-not-valid-tip {
+  margin-top: 5px;
+  font-size: 10px;
+  line-height: 1.5;
+}
 #form-page .inner .inner-contents .form .item-wrap .item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8931,10 +8961,6 @@ body.fixed {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
   gap: 10px;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -8943,13 +8969,14 @@ body.fixed {
 }
 #form-page .inner .inner-contents .form .item-wrap .item > dd .name .name-item .name-txt {
   width: 37px;
+  padding-top: calc((70px - 1.5em) / 2);
   display: inline-block;
   text-align: center;
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
 }
-#form-page .inner .inner-contents .form .item-wrap .item > dd .name .name-item input {
+#form-page .inner .inner-contents .form .item-wrap .item > dd .name .name-item .wpcf7-form-control-wrap {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
@@ -8997,7 +9024,7 @@ body.fixed {
 #form-page .inner .inner-contents .form .item-wrap .item > dd .address .address-line input {
   max-width: none;
 }
-#form-page .inner .inner-contents .form .item-wrap .item > dd .radio .radio-list {
+#form-page .inner .inner-contents .form .item-wrap .item > dd .radio .wpcf7-radio {
   min-height: 45px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -9012,7 +9039,7 @@ body.fixed {
   align-items: center;
   gap: 10px 20px;
 }
-#form-page .inner .inner-contents .form .item-wrap .item > dd .radio .radio-list > li .radio-label {
+#form-page .inner .inner-contents .form .item-wrap .item > dd .radio .wpcf7-radio .wpcf7-list-item label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9024,7 +9051,7 @@ body.fixed {
   gap: 10px;
   cursor: pointer;
 }
-#form-page .inner .inner-contents .form .item-wrap .item > dd .radio .radio-list > li .radio-txt {
+#form-page .inner .inner-contents .form .item-wrap .item > dd .radio .wpcf7-radio .wpcf7-list-item .wpcf7-list-item-label {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
@@ -9059,7 +9086,7 @@ body.fixed {
   -ms-flex-align: center;
   align-items: center;
 }
-#form-page .inner .inner-contents .form .privacy .privacy-label {
+#form-page .inner .inner-contents .form .privacy label {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9070,17 +9097,17 @@ body.fixed {
   align-items: center;
   gap: 8px;
 }
-#form-page .inner .inner-contents .form .privacy .privacy-label .privacy-txt {
+#form-page .inner .inner-contents .form .privacy label .privacy-txt {
   font-size: 18px;
   font-weight: 500;
   line-height: 1.5;
 }
-#form-page .inner .inner-contents .form .privacy .privacy-label .privacy-txt > a {
+#form-page .inner .inner-contents .form .privacy label .privacy-txt > a {
   text-decoration: underline;
   -webkit-transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
-#form-page .inner .inner-contents .form .privacy .privacy-label .privacy-txt > a:hover {
+#form-page .inner .inner-contents .form .privacy label .privacy-txt > a:hover {
   color: #59BFBF;
 }
 #form-page .inner .inner-contents .form .submit {
@@ -9101,6 +9128,15 @@ body.fixed {
   line-height: 1.5;
   color: #ffffff;
   cursor: pointer;
+  -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#form-page .inner .inner-contents .form .submit input[type=submit]:disabled {
+  opacity: 0.3;
+}
+#form-page .inner .inner-contents .form .submit .wpcf7-spinner {
+  margin: 10px auto 0;
+  display: block;
 }
 
 /* ====================================== thanks-page */

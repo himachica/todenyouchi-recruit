@@ -47,7 +47,7 @@
                                         <ul class="nav-sub-list">
                                             <li><a href="<?php echo esc_url( home_url( '/recruitment/newgraduate/' ) ); ?>">新卒採⽤</a></li>
                                             <li><a href="<?php echo esc_url( home_url( '/recruitment/career/' ) ); ?>">キャリア採⽤</a></li>
-                                            <li><a href="<?php echo esc_url( home_url( '/recruitment/faq/' ) ); ?>">よくあるご質問</a></li>
+                                            <li><a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">よくあるご質問</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -81,6 +81,18 @@
 <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugin/desvg.js"></script>
+<?php if ( is_page( 'entry' ) ) : ?>
+<!-- <script>
+    document.addEventListener('wpcf7invalid', function (e) {
+      e.target.classList.add('is-validated'); // 初回送信でフラグON
+    }, false);
+
+    document.addEventListener('wpcf7submit', function (e) {
+      // 送信成功・失敗どちらでも一旦フラグは維持。成功時はフォームがリセットされるので問題なし。
+      e.target.classList.add('is-validated');
+    }, false);
+</script>
+ --><?php endif; ?>
 
 </body>
 

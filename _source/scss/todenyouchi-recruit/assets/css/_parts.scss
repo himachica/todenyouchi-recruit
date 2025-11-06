@@ -937,6 +937,9 @@
       box-sizing: border-box;
       font-size: 18px;
       font-weight: 400;
+      &::placeholder {
+        color: $color03;
+      }
     }
     input[type="text"], input[type="tel"], input[type="email"], select {
       max-width: 365px;
@@ -949,6 +952,13 @@
         repeat: no-repeat;
         size: 14px auto;
         position: center right 12px;
+      }
+      color: $base-color;
+      &.select-change {
+        color: $color03;
+        &.-active {
+          color: $base-color;
+        }
       }
     }
     textarea {
