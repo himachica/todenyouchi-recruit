@@ -64,7 +64,7 @@ add_action('admin_head', 'post_output_css');
  * 特定の固定ページをダッシュボードに表示
  * -----------------------------------------------------------*/
 add_action( 'admin_menu', function() {
-    //add_menu_page( 'トップページ', 'トップページ', 'read', 'post.php?post=78&action=edit', '', 'dashicons-admin-page', 5 );
+    add_menu_page( '新卒採用', '新卒採用', 'read', 'post.php?post=90&action=edit', '', 'dashicons-admin-page', 5 );
 } );
 
 
@@ -162,39 +162,6 @@ function is_parent_slug() {
         return $post_data->post_name;
     }
 }
-
-
-
-/** -----------------------------------------------------------
- * カスタム投稿（インタビュー）のスラッグを上から順に番号追加
- * -----------------------------------------------------------*/
-// interview のスラッグを menu_order に基づいて自動生成
-add_action('save_post_interview', function ($post_id, $post, $update) {
-  // 自動保存やリビジョンを除外
-  if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return;
-  if ( wp_is_post_revision($post_id) ) return;
-
-  // 公開済み・下書き両方で動作可
-  $post_type = get_post_type($post_id);
-  if ($post_type !== 'interview') return;
-
-  // menu_order を取得（未設定なら0）
-  $order = get_post_field('menu_order', $post_id);
-  $order_num = sprintf('%02d', (int) $order); // 2桁化 例: 1→01
-
-  // スラッグを生成
-  $new_slug = 'interview' . $order_num;
-
-  // 現在のスラッグと異なる場合のみ更新
-  $current_slug = $post->post_name;
-  if ($current_slug !== $new_slug) {
-    // post_name を直接更新
-    wp_update_post([
-      'ID'        => $post_id,
-      'post_name' => sanitize_title($new_slug),
-    ]);
-  }
-}, 10, 3);
 
 
 /** -----------------------------------------------------------

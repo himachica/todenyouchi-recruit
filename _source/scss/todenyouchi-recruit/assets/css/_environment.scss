@@ -219,6 +219,10 @@
 
 /* ====================================== educational-system */
 #educational-system {
+  padding-top: 50px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding-top: 20px;
+  }
   .inner {
     .inner-contents {
       .section-wrap {
@@ -228,7 +232,7 @@
           align-items: center;
           gap: 40px;
           @media screen and (max-width: $VIEWPOINT01) {
-            padding-top: 30px;
+            padding-top: 0;
             display: block;
           }
           .section-block {
@@ -241,9 +245,6 @@
                 @extend %img01;
                 border-radius: 5px;
                 aspect-ratio: 190 / 107;
-                @media screen and (max-width: $VIEWPOINT01) {
-                  aspect-ratio: 120 / 107;
-                }
               }
             }
             &.-contents {
@@ -270,6 +271,7 @@
             }
             @media screen and (max-width: $VIEWPOINT01) {
               margin-top: 30px;
+              border: none;
             }
           }
           &:nth-child(even) {

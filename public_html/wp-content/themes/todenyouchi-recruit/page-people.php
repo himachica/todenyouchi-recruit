@@ -46,6 +46,7 @@
 
                                 <?php
                                 foreach ( $posts as $post ) : setup_postdata( $post );
+                                    $thumb_src = $thumb_width = $thumb_height = '';
                                     $thumb    = get_field( 'interview_thumb', $post );
                                     if ( $thumb ) :
                                         $thumb_src    = $thumb['url'];

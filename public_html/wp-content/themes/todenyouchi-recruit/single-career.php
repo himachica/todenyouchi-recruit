@@ -1,6 +1,10 @@
 <?php get_header(); ?>
 
 <?php
+$career_type        = get_field( 'career_type', $post );
+$career_personnel   = get_field( 'career_personnel', $post );
+$career_contents    = get_field( 'career_contents', $post );
+
 $requirements_group = SCF::get( 'requirements_group' );
 ?>
 
@@ -10,14 +14,15 @@ $requirements_group = SCF::get( 'requirements_group' );
                 <div class="inner">
                     <div class="inner-contents">
                         <h1 class="ttl">
-                            <span class="sub">Newgraduate</span>
-                            <span class="main">新卒採用</span>
+                            <span class="sub">Career</span>
+                            <span class="main">キャリア採用 | <?php the_title(); ?></span>
                         </h1>
                         <div class="breadcrumbs -breadcrumbs01">
                             <ol class="breadcrumbs-list">
                                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico-home01.svg" width="20" height="20" alt=""></a></li>
                                 <li><a href="<?php echo esc_url( home_url( '/recruitment/' ) ); ?>">採用情報</a></li>
-                                <li>新卒採用</li>
+                                <li><a href="<?php echo esc_url( home_url( '/recruitment/career/' ) ); ?>">キャリア採用</a></li>
+                                <li><?php the_title(); ?></li>
                             </ol>
                         </div>
                     </div>
@@ -46,8 +51,30 @@ $requirements_group = SCF::get( 'requirements_group' );
                                         <section id="requirements" class="section">
                                             <h2 class="section-ttl">募集要項</h2>
                                             <div class="section-contents">
-                                                <?php if ( $requirements_group[0]['requirements_group_ttl'] || $requirements_group[0]['requirements_group_txt'] ) : ?>
                                                 <div class="section-tbl">
+                                                    <dl class="section-tbl-item">
+                                                        <dt>募集職種</dt>
+                                                        <dd><?php the_title(); ?></dd>
+                                                    </dl>
+                                                    <?php if ( $career_type ) : ?>
+                                                    <dl class="section-tbl-item">
+                                                        <dt>雇用形態</dt>
+                                                        <dd><?php echo nl2br( esc_html( $career_type ) ); ?></dd>
+                                                    </dl>
+                                                    <?php endif; ?>
+                                                    <?php if ( $career_personnel ) : ?>
+                                                    <dl class="section-tbl-item">
+                                                        <dt>募集人員</dt>
+                                                        <dd><?php echo nl2br( esc_html( $career_personnel ) ); ?></dd>
+                                                    </dl>
+                                                    <?php endif; ?>
+                                                    <?php if ( $career_contents ) : ?>
+                                                    <dl class="section-tbl-item">
+                                                        <dt>業務内容</dt>
+                                                        <dd><?php echo nl2br( esc_html( $career_contents ) ); ?></dd>
+                                                    </dl>
+                                                    <?php endif; ?>
+                                                    <?php if ( $requirements_group[0]['requirements_group_ttl'] || $requirements_group[0]['requirements_group_txt'] ) : ?>
                                                     <?php
                                                     foreach ( $requirements_group as $fields ) {
                                                         $requirements_group_ttl = $fields['requirements_group_ttl'];
@@ -58,8 +85,8 @@ $requirements_group = SCF::get( 'requirements_group' );
                                                         <dd><?php if ( $requirements_group_txt ) : ?><?php echo nl2br( esc_html( $requirements_group_txt ) ); ?><?php endif; ?></dd>
                                                     </dl>
                                                     <?php } ?>
+                                                    <?php endif; ?>
                                                 </div>
-                                                <?php endif; ?>
                                             </div>
                                         </section>
 
@@ -114,10 +141,6 @@ $requirements_group = SCF::get( 'requirements_group' );
                                             </div>
                                         </section>
 
-                                    </div>
-                                    <div class="entry">
-                                        <p class="entry-copy">地域と未来をつなぐ仕事に、<br class="dsp-sp">踏み出そう。</p>
-                                        <p class="btn -btn05"><a href="<?php echo esc_url( home_url( '/entry/' ) ); ?>">エントリーする</a></p>
                                     </div>
                                 </div>
                             </div>

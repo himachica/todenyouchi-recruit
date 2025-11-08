@@ -29,12 +29,7 @@
 
                                 <section class="section">
                                     <div class="section-block -img">
-                                        <p class="section-img">
-                                            <picture>
-                                                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img01-sp.webp" width="720" height="642" media="(max-width: 768px)">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img01.webp" width="1140" height="642" alt="">
-                                            </picture>
-                                        </p>
+                                        <p class="section-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img01.webp" width="1140" height="642" alt=""></p>
                                     </div>
                                     <div class="section-block -contents">
                                         <h2 class="section-ttl">内定者研修</h2>
@@ -44,12 +39,7 @@
 
                                 <section class="section">
                                     <div class="section-block -img">
-                                        <p class="section-img">
-                                            <picture>
-                                                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img02-sp.webp" width="720" height="642" media="(max-width: 768px)">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img02.webp" width="1140" height="642" alt="">
-                                            </picture>
-                                        </p>
+                                        <p class="section-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img02.webp" width="1140" height="642" alt=""></p>
                                     </div>
                                     <div class="section-block -contents">
                                         <h2 class="section-ttl">新入社員研修</h2>
@@ -59,12 +49,7 @@
 
                                 <section class="section">
                                     <div class="section-block -img">
-                                        <p class="section-img">
-                                            <picture>
-                                                <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img03-sp.webp" width="720" height="642" media="(max-width: 768px)">
-                                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img03.webp" width="1140" height="642" alt="">
-                                            </picture>
-                                        </p>
+                                        <p class="section-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img03.webp" width="1140" height="642" alt=""></p>
                                     </div>
                                     <div class="section-block -contents">
                                         <h2 class="section-ttl">階層別研修</h2>

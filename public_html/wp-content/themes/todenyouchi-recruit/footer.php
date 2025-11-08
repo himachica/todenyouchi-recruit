@@ -82,17 +82,12 @@
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugin/desvg.js"></script>
 <?php if ( is_page( 'entry' ) ) : ?>
-<!-- <script>
-    document.addEventListener('wpcf7invalid', function (e) {
-      e.target.classList.add('is-validated'); // 初回送信でフラグON
-    }, false);
-
-    document.addEventListener('wpcf7submit', function (e) {
-      // 送信成功・失敗どちらでも一旦フラグは維持。成功時はフォームがリセットされるので問題なし。
-      e.target.classList.add('is-validated');
+<script>
+    document.addEventListener('wpcf7mailsent', function (event) {
+      window.location.href = "<?php echo esc_url( home_url( '/entry/thanks' ) ); ?>";
     }, false);
 </script>
- --><?php endif; ?>
+<?php endif; ?>
 
 </body>
 

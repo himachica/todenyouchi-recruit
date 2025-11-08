@@ -35,7 +35,7 @@
                                             <a href="<?php echo esc_url( home_url( '/recruitment/newgraduate/' ) ); ?>">
                                                 <p class="nav-img">
                                                     <picture>
-                                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/nav-img01-sp.webp" width="720" height="720" media="(max-width: 768px)">
+                                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/nav-img01-sp.webp" width="720" height="406" media="(max-width: 768px)">
                                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/nav-img01.webp" width="2280" height="820" alt="">
                                                     </picture>
                                                 </p>
@@ -54,7 +54,7 @@
                                             <a href="<?php echo esc_url( home_url( '/recruitment/career/' ) ); ?>">
                                                 <p class="nav-img">
                                                     <picture>
-                                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/nav-img02-sp.webp" width="720" height="720" media="(max-width: 768px)">
+                                                        <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/nav-img02-sp.webp" width="720" height="406" media="(max-width: 768px)">
                                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/nav-img02.webp" width="2280" height="820" alt="">
                                                     </picture>
                                                 </p>

@@ -4,6 +4,10 @@
 #form-page {
   margin-top: 50px;
   padding: 50px 0 100px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding: 0 0 25px;
+  }
   .inner {
     .inner-contents {
       .form {
@@ -21,6 +25,9 @@
           .item {
             display: flex;
             gap: 20px;
+            @media screen and (max-width: $VIEWPOINT01) {
+              display: block;
+            }
             > dt {
               width: 230px;
               max-height: 70px;
@@ -31,9 +38,17 @@
               font-size: 18px;
               font-weight: 700;
               line-height: 1.5;
+              @media screen and (max-width: $VIEWPOINT01) {
+                width: 100%;
+                min-height: auto;
+                font-size: 16px;
+              }
             }
             > dd {
               flex: 1;
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 10px;
+              }
               .name {
                 width: 100%;
                 max-width: 660px;
@@ -52,6 +67,12 @@
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 1.5;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      width: auto;
+                      padding-top: calc((37px - 1.5em) / 2);
+                      font-size: 16px;
+                      white-space: nowrap;
+                    }
                   }
                   .wpcf7-form-control-wrap {
                     flex: 1;
@@ -62,8 +83,18 @@
                 display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
-                select {
+                .birth-select {
                   max-width: 150px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    max-width: none;
+                    flex: 1;
+                  }
+                  select {
+                    padding-left: 20px;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      padding-left: 10px;
+                    }
+                  }
                 }
               }
               .address {
@@ -72,6 +103,9 @@
                   display: flex;
                   align-items: center;
                   gap: 10px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    max-width: none;
+                  }
                   .address-mark {
                     font-size: 18px;
                     font-weight: 500;
@@ -83,6 +117,9 @@
                 }
                 .address-line {
                   margin-top: 30px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 10px;
+                  }
                   input {
                     max-width: none;
                   }
@@ -95,6 +132,9 @@
                   flex-wrap: wrap;
                   align-items: center;
                   gap: 10px 20px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    min-height: auto;
+                  }
                   .wpcf7-list-item {
                     label {
                       display: flex;
@@ -106,8 +146,16 @@
                       font-size: 18px;
                       font-weight: 500;
                       line-height: 1.5;
+                      @media screen and (max-width: $VIEWPOINT01) {
+                        font-size: 16px;
+                      }
                     }
                   }
+                }
+              }
+              .file {
+                .wpcf7-form-control-wrap {
+                  width: 100%;
                 }
               }
             }
@@ -127,6 +175,9 @@
                   font-weight: 700;
                   line-height: 1.5;
                   color: $wh;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    font-size: 14px;
+                  }
                 }
               }
             }
@@ -137,14 +188,20 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 30px;
+          }
           label {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             .privacy-txt {
               font-size: 18px;
               font-weight: 500;
               line-height: 1.5;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 16px;
+              }
               > a {
                 text-decoration: underline;
                 transition: color $speed01 $easing01;
@@ -191,6 +248,10 @@
 #thanks-page {
   margin-top: 50px;
   padding: 50px 0 100px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    margin-top: 0;
+    padding: 20px 0 50px;
+  }
   .inner {
     .inner-contents {
       .ttl {
@@ -219,6 +280,9 @@
       }
       .btn {
         margin-top: 40px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          margin-top: 30px;
+        }
         > a {
           margin: 0 auto;
         }

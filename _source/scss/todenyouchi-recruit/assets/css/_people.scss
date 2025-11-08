@@ -113,6 +113,19 @@
       }
     }
   }
+  /* スクロール不可の時だけ中央寄せにする */
+  &.is-static {
+    .people-embla {
+      cursor: default;
+      .embla__container {
+        justify-content: center;    /* 余白を左右に配分して中央寄せ */
+        transform: none !important; /* 念のため */
+      }
+    }
+    .people-embla-dots {
+      display: none;
+    }
+  }
 }
 
 /* ====================================== interview-archive */
@@ -274,7 +287,7 @@
 #interview-single-head {
   padding-top: 60px;
   @media screen and (max-width: $VIEWPOINT01) {
-    padding-top: 40px;
+    padding-top: 0;
   }
   .inner {
     .inner-contents {
@@ -641,9 +654,6 @@
               }
             }
             &.-contents {
-              @media screen and (max-width: $VIEWPOINT01) {
-                margin-top: 20px;
-              }
               .box-copy {
                 font-size: 32px;
                 font-weight: 700;
@@ -658,6 +668,11 @@
                 line-height: 1.8;
                 @media screen and (max-width: $VIEWPOINT01) {
                   margin-top: 10px;
+                }
+              }
+              &:not(:first-child) {
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 20px;
                 }
               }
             }
@@ -688,7 +703,7 @@
 #crosstalk-single-head {
   padding: 60px 0 50px;
   @media screen and (max-width: $VIEWPOINT01) {
-    padding: 45px 0 30px;
+    padding: 10px 0 30px;
   }
   .inner {
     .inner-contents {
@@ -1041,7 +1056,7 @@
 #voice-head {
   padding: 60px 0 80px;
   @media screen and (max-width: $VIEWPOINT01) {
-    padding: 45px 0 50px;
+    padding: 0 0 50px;
   }
   .inner {
     .inner-contents {

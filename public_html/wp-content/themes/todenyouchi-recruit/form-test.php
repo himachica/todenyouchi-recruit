@@ -38,7 +38,7 @@
   <dl class="item -required">
     <dt><span>性別</span></dt>
     <dd>
-      <div class="radio">[radio gender use_label_element "男" "女"]</div>
+      <div class="radio">[radio gender use_label_element "男性" "女性"]</div>
     </dd>
   </dl>
 
@@ -86,7 +86,7 @@
   <!-- 応募書類 -->
   <dl class="item -required">
     <dt><span>応募書類</span></dt>
-    <dd>[file* resume filetypes:pdf/*|doc/*|docx/*|image/* limit:5mb]</dd>
+    <dd><div class="file">[file* resume filetypes:pdf/*|doc/*|docx/*|image/* limit:5mb]</div></dd>
   </dl>
 
   <!-- 備考 -->

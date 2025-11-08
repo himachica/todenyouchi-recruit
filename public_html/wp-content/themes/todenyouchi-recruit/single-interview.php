@@ -275,11 +275,11 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                         <span class="main">学生の皆さんへ</span>
                                     </h3>
                                     <div class="box-contents">
+                                        <?php if ( $interview_message_img ) : ?>
                                         <div class="box-block -img">
-                                            <?php if ( $interview_message_img ) : ?>
                                             <p class="box-img"><img src="<?php echo esc_attr( $interview_message_img_src ); ?>" width="<?php echo esc_attr( $interview_message_img_width ); ?>" height="<?php echo esc_attr( $interview_message_img_height ); ?>" alt=""></p>
-                                            <?php endif; ?>
                                         </div>
+                                        <?php endif; ?>
                                         <div class="box-block -contents">
                                             <?php if ( $interview_message_copy ) : ?>
                                             <p class="box-copy"><?php echo nl2br( esc_html( $interview_message_copy ) ); ?></p>
@@ -325,6 +325,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
 
                                 <?php
                                 foreach ( $posts as $post ) : setup_postdata( $post );
+                                    $thumb_src = $thumb_width = $thumb_height = '';
                                     $thumb = get_field( 'interview_thumb', $post );
                                     if ( $thumb ) :
                                         $thumb_src    = $thumb['url'];

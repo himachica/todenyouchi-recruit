@@ -29,18 +29,33 @@
                                 <span class="sub">Requirements List</span>
                                 <span class="main">キャリア採用 募集要項一覧</span>
                             </h2>
+                            <?php
+                            $args = array(
+                                'post_type'      => 'career',
+                                'posts_per_page' => -1,
+                                'order'          => 'DESC'
+                            );
+                            $posts = get_posts( $args );
+                            if ( $posts ) :
+                            ?>
                             <nav class="nav">
                                 <ul class="nav-list">
+                                    <?php
+                                    foreach ( $posts as $post ) : setup_postdata( $post );
+                                        $career_contents   = get_field( 'career_contents', $post );
+                                    ?>
                                     <li>
                                         <section class="nav-section">
-                                            <a href="<?php echo esc_url( home_url( '/recruitment/career/01/' ) ); ?>">
-                                                <h3 class="nav-ttl">総合職</h3>
-                                                <p class="nav-txt">・発電所から電気をご家庭等に届けるまでの送電鉄塔や電柱等の設備用地の取得・管理を行うための、地域・地権者の皆さまとの面談によるご説明やご承諾のお願い等の対応...</p>
+                                            <a href="<?php the_permalink(); ?>">
+                                                <h3 class="nav-ttl"><?php the_title(); ?></h3>
+                                                <p class="nav-txt"><?php echo nl2br( esc_html( $career_contents ) ); ?></p>
                                             </a>
                                         </section>
                                     </li>
+                                    <?php endforeach; ?>
                                 </ul>
                             </nav>
+                            <?php endif; wp_reset_postdata(); ?>
                         </div>
                     </div>
                 </div>

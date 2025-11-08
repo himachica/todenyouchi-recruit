@@ -75,7 +75,7 @@
                                     <div class="section-block -head">
                                         <h2 class="ttl -ttl01">
                                             <span class="sub">English</span>
-                                            <span class="main">キャリア採用に<br>関して</span>
+                                            <span class="main">キャリア採用に<br class="dsp-pc">関して</span>
                                         </h2>
                                     </div>
                                     <div class="section-block -contents">

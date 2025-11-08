@@ -42,7 +42,7 @@ $(function() {
         $recruitmentPageNavList        = $recruitmentPageNav.find('.nav-list'),
         $recruitmentPageNavListLi      = $recruitmentPageNavList.children('li'),
         $recruitmentPageNavListLiA     = $recruitmentPageNavListLi.find('a');
-    var $sections = $recruitmentPageNavListLiA.map(function () {
+    var $recruitmentPageSections       = $recruitmentPageNavListLiA.map(function () {
         var id = $(this).attr('href');
         if (id && id.startsWith('#')) {
             return $(id);
@@ -289,15 +289,23 @@ $(function() {
         peopleEmblaWrap.addEventListener('mouseleave', () => peopleEmblaAutoplay.play());
 
         // --- ドット生成 ---
-        const dots = peopleEmblaApi.slideNodes().map((_, index) => {
-          const button = document.createElement('button');
-          button.classList.add('people-embla-dot');
-          button.type = 'button';
-          button.setAttribute('aria-label', `Go to slide ${index + 1}`);
-          peopleEmblaDots.appendChild(button);
-          button.addEventListener('click', () => peopleEmblaApi.scrollTo(index));
-          return button;
-        });
+        // ★ makeDots を関数宣言に（ホイスティング可）
+        function makeDots () {
+          if (!peopleEmblaDots) return [];
+          peopleEmblaDots.innerHTML = '';
+          const snapCount = peopleEmblaApi.scrollSnapList().length;
+          return Array.from({ length: snapCount }, (_, index) => {
+            const button = document.createElement('button');
+            button.classList.add('people-embla-dot');
+            button.type = 'button';
+            button.setAttribute('aria-label', `Go to slide ${index + 1}`);
+            button.addEventListener('click', () => peopleEmblaApi.scrollTo(index));
+            peopleEmblaDots.appendChild(button);
+            return button;
+          });
+        }
+
+        let dots = makeDots();
 
         // --- 選択状態の更新 ---
         const setSelectedDot = () => {
@@ -311,6 +319,44 @@ $(function() {
         peopleEmblaApi.on('init', setSelectedDot);
         setSelectedDot();
 
+        // --- ★ スクロール可否で .is-static を付け外し（中央寄せ＆ドット制御） ---
+        const updateStaticState = () => {
+          const canScroll = peopleEmblaApi.canScrollPrev() || peopleEmblaApi.canScrollNext();
+          peopleEmblaWrap.classList.toggle('is-static', !canScroll); // ←ここ変更！
+
+          if (!canScroll) {
+            peopleEmblaAutoplay.stop();
+          } else {
+            peopleEmblaAutoplay.play();
+          }
+
+          // スナップ数が変わる可能性があるのでドットも取り直す
+          const newSnapCount = peopleEmblaApi.scrollSnapList().length;
+          if (newSnapCount !== dots.length) {
+            dots = makeDots();
+            setSelectedDot();
+          }
+        };
+
+        peopleEmblaApi.on('select', updateStaticState);
+        peopleEmblaApi.on('reInit', () => {
+          updateStaticState();
+          setSelectedDot();
+        });
+
+        // --- ★ ResizeObserverでサイズ変化に追従（デバウンスでreInit） ---
+        const ro = new ResizeObserver(() => {
+          clearTimeout(ro._t);
+          ro._t = setTimeout(() => {
+            peopleEmblaApi.reInit();
+            updateStaticState();
+          }, 150);
+        });
+        ro.observe(peopleEmbla);
+
+        // 初期判定
+        updateStaticState();
+
         console.log(peopleEmblaApi.slideNodes()) // Access API
     }
 
@@ -319,8 +365,8 @@ $(function() {
         if($recruitmentPageNav.length) {
             var offset = headerH; // ナビ切り替えの余白（調整OK）
             var currentId = null;
-            $sections.each(function () {
-                var sectionTop = $(this).offset().top - offset;
+            $recruitmentPageSections.each(function () {
+                var sectionTop = $(this).offset().top - offset - 1;
                 if (scrollT >= sectionTop) {
                     currentId = $(this).attr('id');
                 }

@@ -199,6 +199,7 @@
 
                                     <?php
                                     foreach ( $posts as $post ) : setup_postdata( $post );
+                                        $thumb_src = $thumb_width = $thumb_height = '';
                                         $thumb = get_field( 'interview_thumb', $post );
                                         if ( $thumb ) :
                                             $thumb_src    = $thumb['url'];
@@ -268,23 +269,60 @@
                                     <p class="txt -txt01">東電用地は東京電力グループの一員として、電力設備用地に必要な土地の取得・管理を行っています。</p>
                                 </div>
                                 <div class="block -contents">
+                                    <?php
+                                    $args = array(
+                                        'post_type'      => 'careerstory',
+                                        'posts_per_page' => -1,
+                                        'order'          => 'DESC'
+                                    );
+                                    $posts = get_posts( $args );
+                                    if ( $posts ) :
+                                    ?>
                                     <ul class="list">
+                                        <?php
+                                        foreach ( $posts as $post ) : setup_postdata( $post );
+                                            $careerstory_top_img_src = $careerstory_top_img_width = $careerstory_top_img_height = '';
+                                            $careerstory_top_img_sp_src = $careerstory_top_img_sp_width = $careerstory_top_img_sp_height = '';
+                                            $index                  = get_order_index_in_cpt( get_the_ID() );
+                                            $careerstory_top_img    = get_field( 'careerstory_top_img', $post );
+                                            if ( $careerstory_top_img ) :
+                                                $careerstory_top_img_src    = $careerstory_top_img['url'];
+                                                $careerstory_top_img_width  = $careerstory_top_img['width'];
+                                                $careerstory_top_img_height = $careerstory_top_img['height'];
+                                            endif;
+                                            $careerstory_top_img_sp = get_field( 'careerstory_top_img_sp', $post );
+                                            if ( $careerstory_top_img_sp ) :
+                                                $careerstory_top_img_sp_src    = $careerstory_top_img_sp['url'];
+                                                $careerstory_top_img_sp_width  = $careerstory_top_img_sp['width'];
+                                                $careerstory_top_img_sp_height = $careerstory_top_img_sp['height'];
+                                            endif;
+                                            $careerstory_top_copy   = get_field( 'careerstory_top_copy', $post );
+                                            $careerstory_top_txt    = get_field( 'careerstory_top_txt', $post );
+                                        ?>
                                         <li>
                                             <article class="article">
-                                                <a href="<?php echo esc_url( home_url( '/work/careerstory01/' ) ); ?>">
+                                                <a href="<?php the_permalink(); ?>">
                                                     <p class="article-img">
+                                                        <?php if ( $careerstory_top_img_src && $careerstory_top_img_sp_src ) : ?>
                                                         <picture>
-                                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/work/careerstory01/img01-sp.webp" width="720" height="460" media="(max-width: 768px)">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/careerstory01/img01.webp" width="1600" height="460" alt="">
+                                                            <source srcset="<?php echo esc_attr( $careerstory_top_img_sp_src ); ?>" width="<?php echo esc_attr( $careerstory_top_img_sp_width ); ?>" height="<?php echo esc_attr( $careerstory_top_img_sp_height ); ?>" media="(max-width: 768px)">
+                                                            <img src="<?php echo esc_attr( $careerstory_top_img_src ); ?>" width="<?php echo esc_attr( $careerstory_top_img_width ); ?>" height="<?php echo esc_attr( $careerstory_top_img_height ); ?>" alt="">
                                                         </picture>
+                                                        <?php elseif ( $careerstory_top_img_src ) : ?>
+                                                        <img src="<?php echo esc_attr( $careerstory_top_img_src ); ?>" width="<?php echo esc_attr( $careerstory_top_img_width ); ?>" height="<?php echo esc_attr( $careerstory_top_img_height ); ?>" alt="">
+                                                        <?php elseif ( $careerstory_top_img_sp_src ) : ?>
+                                                        <img src="<?php echo esc_attr( $careerstory_top_img_sp_src ); ?>" width="<?php echo esc_attr( $careerstory_top_img_sp_width ); ?>" height="<?php echo esc_attr( $careerstory_top_img_sp_height ); ?>" alt="">
+                                                        <?php endif; ?>
                                                     </p>
                                                     <div class="article-contents">
                                                         <div class="article-contents-block -info">
                                                             <h3 class="article-ttl">
-                                                                <span class="sub">Career Story.01</span>
-                                                                <span class="main">ライフイベントもキャリアも、あきらめない。</span>
+                                                                <span class="sub">Career Story.<?php printf('%02d', $index); ?></span>
+                                                                <?php if ( $careerstory_top_copy ) : ?>
+                                                                <span class="main"><?php echo nl2br( esc_html( $careerstory_top_copy ) ); ?></span>
+                                                                <?php endif; ?>
                                                             </h3>
-                                                            <p class="article-txt">制度と仲間に支えられ、キャリアを重ねてきたリアルストーリー。<br>産休・育休からの復帰後の理想的な働き方を東電用地で実現しました。</p>
+                                                            <p class="article-txt"><?php echo nl2br( esc_html( $careerstory_top_txt ) ); ?></p>
                                                         </div>
                                                         <div class="article-contents-block -btn">
                                                             <p class="btn -btn03 -grn"><span>もっと見る</span></p>
@@ -293,31 +331,9 @@
                                                 </a>
                                             </article>
                                         </li>
-                                        <li>
-                                            <article class="article">
-                                                <a href="<?php echo esc_url( home_url( '/work/careerstory02/' ) ); ?>">
-                                                    <p class="article-img">
-                                                        <picture>
-                                                            <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/work/careerstory02/img01-sp.webp" width="720" height="460" media="(max-width: 768px)">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/work/careerstory02/img01.webp" width="1600" height="460" alt="">
-                                                        </picture>
-                                                    </p>
-                                                    <div class="article-contents">
-                                                        <div class="article-contents-block -info">
-                                                            <h3 class="article-ttl">
-                                                                <span class="sub">Career Story.02</span>
-                                                                <span class="main">挑戦は、新しい景色を見せてくれる。</span>
-                                                            </h3>
-                                                            <p class="article-txt">挫折も、異動も、経験もすべてが未来の力になる。<br>自分自身の力で東電用地の新たな価値を実現しました。</p>
-                                                        </div>
-                                                        <div class="article-contents-block -btn">
-                                                            <p class="btn -btn03 -grn"><span>もっと見る</span></p>
-                                                        </div>
-                                                    </div>
-                                                </a>
-                                            </article>
-                                        </li>
+                                        <?php endforeach; ?>
                                     </ul>
+                                    <?php endif; wp_reset_postdata(); ?>
                                 </div>
                             </div>
                         </div>
