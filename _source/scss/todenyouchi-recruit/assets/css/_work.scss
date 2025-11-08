@@ -199,6 +199,9 @@
             font-size: 24px;
           }
         }
+        &.-animation {
+          transition-delay: 0.4s;
+        }
       }
     }
   }

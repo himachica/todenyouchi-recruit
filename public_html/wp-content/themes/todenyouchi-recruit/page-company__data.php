@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Company</span>
                             <span class="main">３分で知る東電⽤地</span>
                         </h1>
@@ -25,18 +25,18 @@
                 <section id="philosophy">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="head">
+                            <div class="head animation-contents">
                                 <h2 class="ttl -ttl01">
                                     <span class="sub">Philosophy</span>
                                     <span class="main">経営理念</span>
                                 </h2>
-                                <p class="head-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/data/philosophy-img01.webp" width="1600" height="820" alt=""></p>
-                                <div class="head-copy">
+                                <p class="head-img animation -animation03"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/data/philosophy-img01.webp" width="1600" height="820" alt=""></p>
+                                <div class="head-copy animation -animation01 -l">
                                     <p class="head-copy-txt"><span>つくる</span>、きっかけ。</p>
                                     <p class="head-copy-txt"><span>ひろげる</span>、よろこび。</p>
                                 </div>
                             </div>
-                            <div class="point">
+                            <div class="point animation-contents animation -animation01">
                                 <ul class="point-list">
                                     <li>
                                         <section class="point-list-section">
@@ -61,7 +61,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="contents">
+                            <div class="contents animation-contents animation -animation01">
                                 <div class="layout -layout02">
                                     <div class="block -head">
                                         <p class="copy">人が生活するうえで<br>欠かせない電気</p>
@@ -78,7 +78,7 @@
                 <section id="infographics">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="layout -layout02">
+                            <div class="layout -layout02 animation-contents animation -animation01">
                                 <div class="block -head">
                                     <h2 class="ttl -ttl01">
                                         <span class="sub">Infographics</span>

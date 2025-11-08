@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Enterprize</span>
                             <span class="main">社会インフラサポート</span>
                         </h1>
@@ -25,15 +25,15 @@
                 <div id="service-intro">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="contents">
-                                <p class="img">
+                            <div class="contents animation-contents">
+                                <p class="img animation -animation03">
                                     <picture>
                                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/company/infrastructure-support/intro-img01-sp.webp" width="660" height="366" media="(max-width: 768px)">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/infrastructure-support/intro-img01.webp" width="1600" height="820" alt="">
                                     </picture>
                                 </p>
                                 <div class="copy">
-                                    <p class="copy-txt">電力設備の⽤地取得で培ってきたノウハウ。<br>全国をカバーする機動力とマンパワーで<span>多様な⽤地業務</span>をサポート。</p>
+                                    <p class="copy-txt animation -animation01 -l">電力設備の⽤地取得で培ってきたノウハウ。<br>全国をカバーする機動力とマンパワーで<span>多様な⽤地業務</span>をサポート。</p>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                     <div class="inner">
                         <div class="inner-contents">
                             <ol class="list">
-                                <li>
+                                <li class="animation-contents animation -animation01">
                                     <section class="section">
                                         <div class="block -txt">
                                             <p class="section-number"></p>
@@ -58,7 +58,7 @@
                                         </div>
                                     </section>
                                 </li>
-                                <li>
+                                <li class="animation-contents animation -animation01">
                                     <section class="section">
                                         <div class="block -txt">
                                             <p class="section-number"></p>
@@ -83,7 +83,7 @@
                                         </div>
                                     </section>
                                 </li>
-                                <li>
+                                <li class="animation-contents animation -animation01">
                                     <section class="section">
                                         <div class="block -txt">
                                             <p class="section-number"></p>

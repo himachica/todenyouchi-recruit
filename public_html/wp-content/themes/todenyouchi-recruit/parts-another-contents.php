@@ -1,6 +1,6 @@
 <section id="another-contents">
     <div class="inner">
-        <div class="inner-contents">
+        <div class="inner-contents animation-contents animation -animation01">
             <h2 class="ttl -ttl01">
                 <span class="sub">Another contents</span>
                 <span class="main">関連コンテンツ</span>

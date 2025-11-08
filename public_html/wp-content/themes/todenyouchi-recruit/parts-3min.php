@@ -1,4 +1,4 @@
-<section class="three-min">
+<section class="three-min animation-contents animation -animation01">
     <a href="<?php echo esc_url( home_url( '/company/data/' ) ); ?>">
         <p class="bg">
             <picture>

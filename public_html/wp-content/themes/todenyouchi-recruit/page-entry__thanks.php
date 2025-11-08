@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Form</span>
                             <span class="main">応募フォーム</span>
                         </h1>

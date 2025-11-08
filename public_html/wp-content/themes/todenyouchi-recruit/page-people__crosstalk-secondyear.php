@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Cross talk</span>
                             <span class="main">⼊社2年⽬の座談会</span>
                         </h1>
@@ -26,20 +26,20 @@
 
                     <div id="crosstalk-single-head">
                         <div class="inner">
-                            <div class="inner-contents">
+                            <div class="inner-contents animation-contents">
                                 <div class="head">
-                                    <p class="head-img">
+                                    <p class="head-img animation -animation03">
                                         <picture>
                                             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/crosstalk-secondyear/img01-sp.webp" width="660" height="370" media="(max-width: 768px)">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/crosstalk-secondyear/img01.webp" width="1600" height="820" alt="">
                                         </picture>
                                     </p>
-                                    <div class="head-contents">
+                                    <div class="head-contents animation -animation01 -l">
                                         <p class="head-number"><span>Cross Talk.01</span></p>
                                         <h2 class="head-copy"><span>先輩たちの<span>リアル</span>な声で知る、<br>入社2年目の<span>挑戦</span>と成長</span></h2>
                                     </div>
                                 </div>
-                                <p class="txt">入社2年目の社員が、仕事のやりがいや日々の学び、職場の雰囲気、同期との関係について率直に語るクロストーク。<br>入社前に想像していたこととのギャップや、実際に働く中で感じた成長の瞬間、<br class="dsp-pc">仲間との支え合いのエピソードまで、リアルな声を余すところなくお届けします。</p>
+                                <p class="txt animation -animation01">入社2年目の社員が、仕事のやりがいや日々の学び、職場の雰囲気、同期との関係について率直に語るクロストーク。<br>入社前に想像していたこととのギャップや、実際に働く中で感じた成長の瞬間、<br class="dsp-pc">仲間との支え合いのエピソードまで、リアルな声を余すところなくお届けします。</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                     <section id="crosstalk-single-member">
                         <div class="inner">
                             <div class="inner-contents">
-                                <div class="box">
+                                <div class="box animation-contents animation -animation01">
                                     <h3 class="box-ttl">Member</h3>
                                     <ul class="box-list">
                                         <li>
@@ -102,7 +102,7 @@
                                 <div class="chapter-wrap">
 
                                     <!-- chapter01 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">決め手は“人の温かさ”。<br class="dsp-sp">ここで働きたいと思えた瞬間</span>
@@ -161,7 +161,7 @@
                                     <!-- /chapter01 -->
 
                                     <!-- chapter02 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">交渉も現場もデスクワークも。<br class="dsp-sp">日々挑戦の連続</span>
@@ -224,7 +224,7 @@
                                     <!-- /chapter02 -->
 
                                     <!-- chapter03 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">つながりが力になる。<br class="dsp-sp">同期と歩む日々</span>
@@ -287,7 +287,7 @@
                                     <!-- /chapter03 -->
 
                                     <!-- chapter04 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">人と向き合い、自分と向き合う。<br class="dsp-sp">成長し続ける人に未来は開ける</span>

@@ -2,9 +2,9 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl01">
+            <div class="page-ttl -page-ttl01 animation-contents">
                 <div class="page-ttl-inner">
-                    <h1 class="ttl">
+                    <h1 class="ttl animation -animation01 -l">
                         <span class="sub">Recruitment</span>
                         <span class="main">採用情報</span>
                     </h1>
@@ -15,7 +15,7 @@
                         </ol>
                     </div>
                 </div>
-                <p class="page-ttl-img">
+                <p class="page-ttl-img animation -animation03">
                     <picture>
                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/ttl-img01-sp.webp" width="780" height="360" media="(max-width: 768px)">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/ttl-img01.webp" width="2880" height="640" alt="">
@@ -30,7 +30,7 @@
                         <div class="inner-contents">
                             <nav class="nav">
                                 <ul class="nav-list">
-                                    <li>
+                                    <li class="animation-contents animation -animation01">
                                         <section class="nav-section">
                                             <a href="<?php echo esc_url( home_url( '/recruitment/newgraduate/' ) ); ?>">
                                                 <p class="nav-img">
@@ -49,7 +49,7 @@
                                             </a>
                                         </section>
                                     </li>
-                                    <li>
+                                    <li class="animation-contents animation -animation01">
                                         <section class="nav-section">
                                             <a href="<?php echo esc_url( home_url( '/recruitment/career/' ) ); ?>">
                                                 <p class="nav-img">

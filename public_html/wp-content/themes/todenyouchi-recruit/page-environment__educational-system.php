@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Educational System</span>
                             <span class="main">研修制度 / 教育体制</span>
                         </h1>
@@ -27,7 +27,7 @@
                         <div class="inner-contents">
                             <div class="section-wrap">
 
-                                <section class="section">
+                                <section class="section animation-contents animation -animation01">
                                     <div class="section-block -img">
                                         <p class="section-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img01.webp" width="1140" height="642" alt=""></p>
                                     </div>
@@ -37,7 +37,7 @@
                                     </div>
                                 </section>
 
-                                <section class="section">
+                                <section class="section animation-contents animation -animation01">
                                     <div class="section-block -img">
                                         <p class="section-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img02.webp" width="1140" height="642" alt=""></p>
                                     </div>
@@ -47,7 +47,7 @@
                                     </div>
                                 </section>
 
-                                <section class="section">
+                                <section class="section animation-contents animation -animation01">
                                     <div class="section-block -img">
                                         <p class="section-img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/educational-system/img03.webp" width="1140" height="642" alt=""></p>
                                     </div>

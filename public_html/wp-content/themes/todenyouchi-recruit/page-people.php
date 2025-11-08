@@ -2,9 +2,9 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl01">
+            <div class="page-ttl -page-ttl01 animation-contents">
                 <div class="page-ttl-inner">
-                    <h1 class="ttl">
+                    <h1 class="ttl animation -animation01 -l">
                         <span class="sub">People</span>
                         <span class="main">⼈を知る</span>
                     </h1>
@@ -15,7 +15,7 @@
                         </ol>
                     </div>
                 </div>
-                <p class="page-ttl-img">
+                <p class="page-ttl-img animation -animation03">
                     <picture>
                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/ttl-img01-sp.webp" width="780" height="360" media="(max-width: 768px)">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/ttl-img01.webp" width="2880" height="640" alt="">
@@ -36,7 +36,7 @@
                 ?>
                 <section id="interview-archive">
                     <div class="inner">
-                        <div class="inner-contents">
+                        <div class="inner-contents animation-contents animation -animation01">
                             <h2 class="ttl -ttl01 -yel">
                                 <span class="sub">Staff Interview</span>
                                 <span class="main">インタビュー</span>

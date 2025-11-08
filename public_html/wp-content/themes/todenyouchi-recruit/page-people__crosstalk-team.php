@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation-contents animation -animation01">
                             <span class="sub">Cross talk</span>
                             <span class="main">チーム座談会</span>
                         </h1>
@@ -26,20 +26,20 @@
 
                     <div id="crosstalk-single-head">
                         <div class="inner">
-                            <div class="inner-contents">
+                            <div class="inner-contents animation-contents">
                                 <div class="head">
-                                    <p class="head-img">
+                                    <p class="head-img animation -animation03">
                                         <picture>
                                             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/crosstalk-team/img01-sp.webp" width="660" height="370" media="(max-width: 768px)">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/crosstalk-team/img01.webp" width="1600" height="820" alt="">
                                         </picture>
                                     </p>
-                                    <div class="head-contents">
+                                    <div class="head-contents animation -animation01 -l">
                                         <p class="head-number"><span>Cross Talk.02</span></p>
                                         <h2 class="head-copy"><span>先輩と一緒に<span>未来</span>をつくる仕事<br>東電用地で働く<span>魅力</span>と将来性</span></h2>
                                     </div>
                                 </div>
-                                <p class="txt">今回は、若手社員のYさんを中心に、先輩社員のTさん・Kさんを交えたチーム座談会をお届けします。<br>入社のきっかけや仕事のやりがい、働きやすさ、そして未来の仲間へのメッセージまで――本音で語り合っていただきました。</p>
+                                <p class="txt animation -animation01">今回は、若手社員のYさんを中心に、先輩社員のTさん・Kさんを交えたチーム座談会をお届けします。<br>入社のきっかけや仕事のやりがい、働きやすさ、そして未来の仲間へのメッセージまで――本音で語り合っていただきました。</p>
                             </div>
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                     <section id="crosstalk-single-member">
                         <div class="inner">
                             <div class="inner-contents">
-                                <div class="box">
+                                <div class="box animation-contents animation -animation01">
                                     <h3 class="box-ttl">Member</h3>
                                     <ul class="box-list">
                                         <li>
@@ -92,7 +92,7 @@
                                 <div class="chapter-wrap">
 
                                     <!-- chapter01 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">温かな出会いが、<br class="dsp-sp">挑戦の第一歩になる</span>
@@ -155,7 +155,7 @@
                                     <!-- /chapter01 -->
 
                                     <!-- chapter02 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">失敗も成長の種。<br class="dsp-sp">挑戦が自分を強くする</span>
@@ -218,7 +218,7 @@
                                     <!-- /chapter02 -->
 
                                     <!-- chapter03 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">支え合える仲間と、<br class="dsp-sp">安心して働ける場所</span>
@@ -299,7 +299,7 @@
                                     <!-- /chapter03 -->
 
                                     <!-- chapter04 -->
-                                    <section class="chapter">
+                                    <section class="chapter animation-contents animation -animation01">
                                         <h3 class="chapter-ttl">
                                             <span class="number"></span>
                                             <span class="main">ここから、<br class="dsp-sp">一緒に未来をつくろう</span>

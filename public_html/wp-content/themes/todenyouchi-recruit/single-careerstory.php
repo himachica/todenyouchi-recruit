@@ -16,6 +16,7 @@ if ( $careerstory_img_sp ) :
     $careerstory_img_sp_height = $careerstory_img_sp['height'];
 endif;
 $careerstory_year         = get_field( 'careerstory_year' );
+$careerstory_name         = get_field( 'careerstory_name' );
 $careerstory_position     = get_field( 'careerstory_position' );
 $careerstory_copy         = get_field( 'careerstory_copy' );
 
@@ -27,10 +28,10 @@ $careerstory_message_txt  = get_field( 'careerstory_message_txt' );
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Career Story</span>
                             <span class="main">キャリアストーリー</span>
                         </h1>
@@ -51,9 +52,9 @@ $careerstory_message_txt  = get_field( 'careerstory_message_txt' );
 
                     <div id="careerstory-single-head">
                         <div class="inner">
-                            <div class="inner-contents">
+                            <div class="inner-contents animation-contents">
                                 <div class="head">
-                                    <p class="head-img">
+                                    <p class="head-img animation -animation03">
                                         <?php if ( $careerstory_img_src && $careerstory_img_sp_src ) : ?>
                                         <picture>
                                             <source srcset="<?php echo esc_attr( $careerstory_img_sp_src ); ?>" width="<?php echo esc_attr( $careerstory_img_sp_width ); ?>" height="<?php echo esc_attr( $careerstory_img_sp_height ); ?>" media="(max-width: 768px)">
@@ -69,13 +70,15 @@ $careerstory_message_txt  = get_field( 'careerstory_message_txt' );
                                         <?php if ( $careerstory_year ) : ?>
                                         <p class="head-year"><?php echo esc_html( $careerstory_year ); ?>年入社</p>
                                         <?php endif; ?>
-                                        <p class="head-name"><?php the_title(); ?></p>
+                                        <?php if ( $careerstory_name ) : ?>
+                                        <p class="head-name"><?php echo esc_html( $careerstory_name ); ?></p>
+                                        <?php endif; ?>
                                         <?php if ( $careerstory_position ) : ?>
                                         <p class="head-position"><?php echo nl2br( esc_html( $careerstory_position ) ); ?></p>
                                         <?php endif; ?>
                                     </div>
                                 </div>
-                                <div class="contents">
+                                <div class="contents animation -animation01 -l">
                                     <p class="contents-tag"><span>Career Story.<?php printf('%02d', $index); ?></span></p>
                                     <?php if ( $careerstory_copy ) : ?>
                                     <h2 class="contents-ttl"><?php echo nl2br( esc_html( $careerstory_copy ) ); ?></h2>
@@ -104,7 +107,7 @@ $careerstory_message_txt  = get_field( 'careerstory_message_txt' );
                                             $careerstory_group_img_height = $careerstory_group_img[2];
                                         endif;
                                     ?>
-                                    <li>
+                                    <li class="animation-contents animation -animation01">
                                         <section class="list-section">
                                             <div class="list-section-block -contents">
                                                 <?php if ( $careerstory_group_year ) : ?>
@@ -135,7 +138,7 @@ $careerstory_message_txt  = get_field( 'careerstory_message_txt' );
                     <section id="careerstory-single-message">
                         <div class="inner">
                             <div class="inner-contents">
-                                <div class="box">
+                                <div class="box animation-contents animation -animation01">
                                     <h3 class="box-ttl">
                                         <span class="sub">Message</span>
                                         <span class="main">学生の皆さんへ</span>

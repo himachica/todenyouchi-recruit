@@ -263,6 +263,9 @@
                 color: $color01;
               }
             }
+            &.-animation {
+              transition-delay: 0.4s;
+            }
           }
         }
       }
@@ -383,6 +386,9 @@
                 margin: 6px 0 0 50px;
               }
             }
+          }
+          &.-animation {
+            transition-delay: 0.4s;
           }
         }
       }
@@ -720,13 +726,11 @@
         position: relative;
         .img {
           width: 70.18%;
+          border-radius: 5px;
           font-size: 0;
           line-height: 0;
           @media screen and (max-width: $VIEWPOINT01) {
             width: 91.67%;
-          }
-          img {
-            border-radius: 5px;
           }
         }
         .copy {
@@ -768,6 +772,9 @@
             > span {
               display: inline-block;
               color: $color01;
+            }
+            &.-animation {
+              transition-delay: 0.4s;
             }
           }
         }

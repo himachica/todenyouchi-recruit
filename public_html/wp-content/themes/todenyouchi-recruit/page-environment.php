@@ -2,9 +2,9 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl01">
+            <div class="page-ttl -page-ttl01 animation-contents">
                 <div class="page-ttl-inner">
-                    <h1 class="ttl">
+                    <h1 class="ttl animation -animation01 -l">
                         <span class="sub">Environment</span>
                         <span class="main">働く環境を知る</span>
                     </h1>
@@ -15,7 +15,7 @@
                         </ol>
                     </div>
                 </div>
-                <p class="page-ttl-img">
+                <p class="page-ttl-img animation -animation03">
                     <picture>
                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/environment/ttl-img01-sp.webp" width="780" height="360" media="(max-width: 768px)">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/environment/ttl-img01.webp" width="2880" height="640" alt="">
@@ -28,7 +28,7 @@
                 <section id="welfare">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="head">
+                            <div class="head animation-contents animation -animation01">
                                 <h2 class="ttl -ttl01">
                                     <span class="sub">Welfare</span>
                                     <span class="main">福利厚⽣ / 各種制度</span>
@@ -42,7 +42,7 @@
                             </div>
                             <div class="section-wrap">
 
-                                <section class="section">
+                                <section class="section animation-contents animation -animation01">
                                     <div class="section-block -head">
                                         <h3 class="section-ttl">
                                             <span class="sub">Vacation</span>
@@ -77,7 +77,7 @@
                                     </div>
                                 </section>
 
-                                <section class="section">
+                                <section class="section animation-contents animation -animation01">
                                     <div class="section-block -head">
                                         <h3 class="section-ttl">
                                             <span class="sub">Vacation</span>
@@ -111,7 +111,7 @@
                                     </div>
                                 </section>
 
-                                <section class="section">
+                                <section class="section animation-contents animation -animation01">
                                     <div class="section-block -head">
                                         <h3 class="section-ttl">
                                             <span class="sub">Cafeteria plan</span>
@@ -175,7 +175,7 @@
 
                 <section id="another-contents">
                     <div class="inner">
-                        <div class="inner-contents">
+                        <div class="inner-contents animation-contents animation -animation01">
                             <h2 class="ttl -ttl01">
                                 <span class="sub">Another contents</span>
                                 <span class="main">関連コンテンツ</span>

@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div id="kv">
+            <div id="kv" class="animation-contents">
                 <div class="contents">
                     <div class="contents-inner">
-                        <h1 class="copy">土地をつなぎ、<br class="dsp-sp">人をつなぎ、<br>未来をつなぐ</h1>
+                        <h1 class="copy animation -animation01 -l">土地をつなぎ、<br class="dsp-sp">人をつなぎ、<br>未来をつなぐ</h1>
                         <div class="entry">
                             <p class="entry-head">ENTRY</p>
                             <nav class="entry-nav">
@@ -17,7 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="loop-slider">
+                <div class="loop-slider animation -animation02">
                     <div class="slider">
                         <ul class="list">
                             <li>
@@ -106,7 +106,7 @@
                 <section id="message">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="layout -layout01">
+                            <div class="layout -layout01 animation-contents animation -animation01">
                                 <div class="block -head">
                                     <h2 class="ttl -ttl01">
                                         <span class="sub">Messege</span>
@@ -131,7 +131,7 @@
 
                 <section id="company">
                     <div class="inner">
-                        <div class="inner-contents">
+                        <div class="inner-contents animation-contents animation -animation01">
                             <div class="layout -layout01">
                                 <div class="block -head">
                                     <h2 class="ttl -ttl01">
@@ -170,7 +170,7 @@
                 </section>
 
                 <section id="people">
-                    <div class="people-contents">
+                    <div class="people-contents animation-contents animation -animation01">
                         <div class="inner">
                             <div class="inner-contents">
                                 <div class="head">
@@ -236,7 +236,7 @@
                     </div>
                     <div class="inner">
                         <div class="inner-contents">
-                            <section class="crosstalk">
+                            <section class="crosstalk animation-contents animation -animation01">
                                 <a href="<?php echo esc_url( home_url( '/people/crosstalk-secondyear/' ) ); ?>">
                                     <div class="block -img">
                                         <p class="img"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/people-crosstalk-img01.webp" width="1160" height="780" alt=""></p>
@@ -260,7 +260,7 @@
                 <section id="business">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="layout -layout02">
+                            <div class="layout -layout02 animation-contents animation -animation01">
                                 <div class="block -head">
                                     <h2 class="ttl -ttl01">
                                         <span class="sub">Business</span>
@@ -342,7 +342,7 @@
 
                 <section id="environment">
                     <div class="inner">
-                        <div class="inner-contents">
+                        <div class="inner-contents animation-contents animation -animation01">
                             <h2 class="ttl -ttl01">
                                 <span class="sub">Environment</span>
                                 <span class="main">働く環境を知る</span>

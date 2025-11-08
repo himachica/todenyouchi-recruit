@@ -2,9 +2,9 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl01">
+            <div class="page-ttl -page-ttl01 animation-contents">
                 <div class="page-ttl-inner">
-                    <h1 class="ttl">
+                    <h1 class="ttl animation -animation01 -l">
                         <span class="sub">Company</span>
                         <span class="main">会社を知る</span>
                     </h1>
@@ -15,7 +15,7 @@
                         </ol>
                     </div>
                 </div>
-                <p class="page-ttl-img">
+                <p class="page-ttl-img animation -animation03">
                     <picture>
                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/company/ttl-img01-sp.webp" width="780" height="360" media="(max-width: 768px)">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/ttl-img01.webp" width="2880" height="640" alt="">
@@ -28,7 +28,7 @@
                 <section id="movie">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="layout -layout02">
+                            <div class="layout -layout02 animation-contents animation -animation01">
                                 <div class="block -head">
                                     <h2 class="ttl -ttl01">
                                         <span class="sub">Movie</span>
@@ -50,7 +50,7 @@
                 <section id="about-company">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="layout -layout02">
+                            <div class="layout -layout02 animation-contents animation -animation01">
                                 <div class="block -head">
                                     <h2 class="ttl -ttl01">
                                         <span class="sub">Company</span>
@@ -67,7 +67,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <section class="service">
+                            <section class="service animation-contents animation -animation01">
                                 <h3 class="service-ttl">事業内容</h3>
                                 <nav class="nav -nav01">
                                     <ul class="nav-list">
@@ -99,24 +99,24 @@
                 <section id="about-message">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="head">
+                            <div class="head animation-contents">
                                 <div class="head-contents">
                                     <h2 class="ttl -ttl01">
                                         <span class="sub">Message</span>
                                         <span class="main">代表メッセージ</span>
                                     </h2>
-                                    <p class="head-img">
+                                    <p class="head-img animation -animation03">
                                         <picture>
                                             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/company/message-img01-sp.webp" width="720" height="480" media="(max-width: 768px)">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/message-img01.webp" width="2400" height="1230" alt="">
                                         </picture>
                                     </p>
-                                    <div class="head-txt">
+                                    <div class="head-txt animation -animation01 -l">
                                         <p class="marker">土地を扱うということは、<br>その地域に暮らす、<br class="dsp-sp">すべての人々と接すること。<br><span>人と誠実に向き合うこと</span>が、<br class="dsp-sp">当社の原点です。</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="contents">
+                            <div class="contents animation-contents animation -animation01">
                                 <div class="contents-message">
                                     <p>東電用地は2008年に設立され、現在16年目を迎えました。<br class="dsp-pc">そう聞くと、比較的若い会社かと思われるかもしれませんが、実は前身の会社も含めると、60年以上にわたって「土地」を扱ってきた用地取得・管理のプロフェッショナル企業です。</p>
                                     <p>当社は東京電カグループとして長年、電力の安定供給を支えてきました。近年ではそのノウハウを活かし、再生可能エネルギー、通信や公共事業など、さまざまな土地を必要とする社会インフラの整備にも取り組んでいます。</p>

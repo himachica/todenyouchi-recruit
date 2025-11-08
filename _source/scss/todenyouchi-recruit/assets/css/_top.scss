@@ -35,6 +35,9 @@
         @media screen and (max-width: $VIEWPOINT02) {
           font-size: sp(26);
         }
+        &.-animation {
+          transition-delay: 0.4s;
+        }
       }
       .entry {
         width: 240px;

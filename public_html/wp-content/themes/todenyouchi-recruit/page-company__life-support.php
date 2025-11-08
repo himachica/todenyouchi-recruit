@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Enterprize</span>
                             <span class="main">暮らしのサポート</span>
                         </h1>
@@ -25,15 +25,15 @@
                 <div id="service-intro">
                     <div class="inner">
                         <div class="inner-contents">
-                            <div class="contents">
-                                <p class="img">
+                            <div class="contents animation-contents">
+                                <p class="img animation -animation03">
                                     <picture>
                                         <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/company/life-support/intro-img01-sp.webp" width="660" height="366" media="(max-width: 768px)">
                                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/life-support/intro-img01.webp" width="1600" height="820" alt="">
                                     </picture>
                                 </p>
                                 <div class="copy">
-                                    <p class="copy-txt">暮らしに寄り添う、<span>安心と便利</span>をお届け。<span>あなたのライフスタイル</span>を支えます。</p>
+                                    <p class="copy-txt animation -animation01 -l">暮らしに寄り添う、<span>安心と便利</span>をお届け。<span>あなたのライフスタイル</span>を支えます。</p>
                                 </div>
                             </div>
                         </div>
@@ -44,7 +44,7 @@
                     <div class="inner">
                         <div class="inner-contents">
                             <ol class="list -work">
-                                <li>
+                                <li class="animation-contents animation -animation01">
                                     <section class="section">
                                         <div class="block -txt">
                                             <p class="section-number"></p>
@@ -58,7 +58,7 @@
                                         </div>
                                     </section>
                                 </li>
-                                <li>
+                                <li class="animation-contents animation -animation01">
                                     <section class="section">
                                         <div class="block -txt">
                                             <p class="section-number"></p>
@@ -72,7 +72,7 @@
                                         </div>
                                     </section>
                                 </li>
-                                <li>
+                                <li class="animation-contents animation -animation01">
                                     <section class="section">
                                         <div class="block -txt">
                                             <p class="section-number"></p>

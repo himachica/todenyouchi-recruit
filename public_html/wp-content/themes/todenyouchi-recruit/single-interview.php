@@ -18,6 +18,7 @@ if ( $interview_img01_sp ) :
 endif;
 $interview_copy         = get_field( 'interview_copy' );
 $interview_year         = get_field( 'interview_year' );
+$interview_name         = get_field( 'interview_name' );
 $interview_position     = get_field( 'interview_position' );
 
 $interview_myjob_img    = get_field( 'interview_myjob_img' );
@@ -81,10 +82,10 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Interview</span>
                             <span class="main">社員インタビュー</span>
                         </h1>
@@ -109,9 +110,9 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
 
                     <div id="interview-single-head">
                         <div class="inner">
-                            <div class="inner-contents">
+                            <div class="inner-contents animation-contents">
                                 <?php if ( $interview_img01 || $interview_img01_sp ) : ?>
-                                <p class="img">
+                                <p class="img animation -animation03">
                                     <?php if ( $interview_img01 && $interview_img01_sp ) : ?>
                                     <picture>
                                         <source srcset="<?php echo esc_attr( $interview_img01_sp_src ); ?>" width="<?php echo esc_attr( $interview_img01_sp_width ); ?>" height="<?php echo esc_attr( $interview_img01_sp_height ); ?>" media="(max-width: 768px)">
@@ -124,7 +125,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                     <?php endif; ?>
                                 </p>
                                 <?php endif; ?>
-                                <div class="contents">
+                                <div class="contents animation -animation01 -l">
                                     <?php if ( $index ) : ?>
                                     <p class="number"><span>Interview.<?php printf('%02d', $index); ?></span></p>
                                     <?php else : ?>
@@ -136,7 +137,9 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                     <?php if ( $interview_year ) : ?>
                                     <p class="year"><?php echo esc_html( $interview_year ); ?>年入社</p>
                                     <?php endif; ?>
-                                    <p class="name"><?php the_title(); ?></p>
+                                    <?php if ( $interview_name ) : ?>
+                                    <p class="name"><?php echo esc_html( $interview_name ); ?></p>
+                                    <?php endif; ?>
                                     <?php if ( $interview_position ) : ?>
                                     <p class="position"><?php echo nl2br( esc_html( $interview_position ) ); ?></p>
                                     <?php endif; ?>
@@ -149,7 +152,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                     <section id="interview-single-job">
                         <div class="inner">
                             <div class="inner-contents">
-                                <div class="contents">
+                                <div class="contents animation-contents animation -animation01">
                                     <div class="block -img">
                                         <?php if ( $interview_myjob_img ) : ?>
                                         <p class="img"><img src="<?php echo esc_attr( $interview_myjob_img_src ); ?>" width="<?php echo esc_attr( $interview_myjob_img_width ); ?>" height="<?php echo esc_attr( $interview_myjob_img_height ); ?>" alt=""></p>
@@ -176,7 +179,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                 <div class="section-wrapper">
 
                                     <?php if ( $interview_q01_img || $interview_q01_copy || $interview_q01_question || $interview_q01_txt ) : ?>
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <div class="section-block -head">
                                             <?php if ( $interview_q01_img ) : ?>
                                             <p class="section-img"><img src="<?php echo esc_attr( $interview_q01_img_src ); ?>" width="<?php echo esc_attr( $interview_q01_img_width ); ?>" height="<?php echo esc_attr( $interview_q01_img_height ); ?>" alt=""></p>
@@ -197,7 +200,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                     <?php endif; ?>
 
                                     <?php if ( $interview_q02_img || $interview_q02_copy || $interview_q02_question || $interview_q02_txt ) : ?>
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <div class="section-block -head">
                                             <?php if ( $interview_q02_img ) : ?>
                                             <p class="section-img"><img src="<?php echo esc_attr( $interview_q02_img_src ); ?>" width="<?php echo esc_attr( $interview_q02_img_width ); ?>" height="<?php echo esc_attr( $interview_q02_img_height ); ?>" alt=""></p>
@@ -218,7 +221,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                     <?php endif; ?>
 
                                     <?php if ( $interview_q03_copy || $interview_q03_question || $interview_q03_txt ) : ?>
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <div class="section-block -head">
                                             <?php if ( $interview_q03_copy ) : ?>
                                             <h3 class="section-copy"><?php echo nl2br( esc_html( $interview_q03_copy ) ); ?></h3>
@@ -236,7 +239,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                     <?php endif; ?>
 
                                     <?php if ( $interview_q04_img || $interview_q04_copy || $interview_q04_question || $interview_q04_txt ) : ?>
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <div class="section-block -head">
                                             <?php if ( $interview_q04_img ) : ?>
                                             <p class="section-img"><img src="<?php echo esc_attr( $interview_q04_img_src ); ?>" width="<?php echo esc_attr( $interview_q04_img_width ); ?>" height="<?php echo esc_attr( $interview_q04_img_height ); ?>" alt=""></p>
@@ -259,7 +262,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                                 </div>
 
                                 <?php if ( $interview_last_img ) : ?>
-                                <p class="bottom-img"><img src="<?php echo esc_attr( $interview_last_img_src ); ?>" width="<?php echo esc_attr( $interview_last_img_src ); ?>" height="<?php echo esc_attr( $interview_last_img_src ); ?>" alt=""></p>
+                                <p class="bottom-img animation-contents animation -animation01"><img src="<?php echo esc_attr( $interview_last_img_src ); ?>" width="<?php echo esc_attr( $interview_last_img_src ); ?>" height="<?php echo esc_attr( $interview_last_img_src ); ?>" alt=""></p>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -269,7 +272,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                     <section id="interview-single-message">
                         <div class="inner">
                             <div class="inner-contents">
-                                <div class="box">
+                                <div class="box animation-contents animation -animation01">
                                     <h3 class="box-ttl">
                                         <span class="sub">Message</span>
                                         <span class="main">学生の皆さんへ</span>
@@ -308,7 +311,7 @@ $interview_message_txt  = get_field( 'interview_message_txt' );
                 $posts = get_posts( $args );
                 if ( $posts ) :
                 ?>
-                <section id="other-interview">
+                <section id="other-interview" class="animation-contents animation -animation01">
                     <div class="inner">
                         <div class="inner-contents">
                             <h2 class="ttl -ttl01 -yel">

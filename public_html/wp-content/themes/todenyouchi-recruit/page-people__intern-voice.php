@@ -2,10 +2,10 @@
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Voice</span>
                             <span class="main">内定者VOICE</span>
                         </h1>
@@ -26,15 +26,15 @@
 
                     <div id="voice-head">
                         <div class="inner">
-                            <div class="inner-contents">
+                            <div class="inner-contents animation-contents">
                                 <div class="head">
-                                    <p class="head-img">
+                                    <p class="head-img animation -animation03">
                                         <picture>
                                             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/people/intern-voice/img01-sp.webp" width="660" height="370" media="(max-width: 768px)">
                                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/people/intern-voice/img01.webp" width="1600" height="820" alt="">
                                         </picture>
                                     </p>
-                                    <div class="head-contents">
+                                    <div class="head-contents animation -animation01 -l">
                                         <p class="head-number"><span>Voice</span></p>
                                         <h2 class="head-copy"><span>東電用地株式会社<span>内定者</span>に聞く、<br><span>就職活動</span>で気になるポイント</span></h2>
                                     </div>
@@ -48,7 +48,7 @@
                             <div class="inner-contents">
                                 <div class="section-wrap">
 
-                                    <section class="section -col2">
+                                    <section class="section -col2 animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">就職活動を始めた時期はいつですか？</span>
@@ -63,7 +63,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2">
+                                    <section class="section -col2 animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">本選考にエントリーした企業数を教えてください</span>
@@ -78,7 +78,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2">
+                                    <section class="section -col2 animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">インフラ業界以外に志望していた業界は？</span>
@@ -93,7 +93,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2">
+                                    <section class="section -col2 animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">就職活動時の企業選びの基準を教えてください。</span>
@@ -108,7 +108,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">就職活動時の企業選びの基準を教えてください。</span>
@@ -143,7 +143,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">就職活動前後で当社のイメージに変化はありましたか。</span>
@@ -172,7 +172,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2">
+                                    <section class="section -col2 animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">東電用地を一言で表すとどんな会社ですか。</span>
@@ -187,7 +187,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2">
+                                    <section class="section -col2 animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">選考を通してアピールしていたこと (強みや個性)は何ですか。</span>
@@ -202,7 +202,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2 -contents-flex">
+                                    <section class="section -col2 -contents-flex animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">就職活動時に接した東電用地社員の印象は？</span>
@@ -229,7 +229,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section -col2 -contents-flex">
+                                    <section class="section -col2 -contents-flex animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">入社後に挑戦したいことは何ですか。</span>
@@ -252,7 +252,7 @@
                                         </div>
                                     </section>
 
-                                    <section class="section">
+                                    <section class="section animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
                                             <span class="main">東電用地を志望する就活生へ一言メッセージをお願いします!</span>

@@ -6,10 +6,10 @@ $requirements_group = SCF::get( 'requirements_group' );
 
         <div id="contents">
 
-            <div class="page-ttl -page-ttl02">
+            <div class="page-ttl -page-ttl02 animation-contents">
                 <div class="inner">
                     <div class="inner-contents">
-                        <h1 class="ttl">
+                        <h1 class="ttl animation -animation01 -l">
                             <span class="sub">Newgraduate</span>
                             <span class="main">新卒採用</span>
                         </h1>
