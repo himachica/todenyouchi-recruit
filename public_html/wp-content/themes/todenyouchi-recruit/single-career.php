@@ -148,7 +148,20 @@ $requirements_group = SCF::get( 'requirements_group' );
                     </div>
                 </div>
 
-                <?php get_template_part('parts-recruit'); ?>
+                <div id="recruitment-entry">
+                    <div class="inner">
+                        <div class="inner-contents">
+                            <div class="layout">
+                                <div class="block -copy">
+                                    <p class="copy"><span>皆様のご応募、<br>心よりお待ちしております。</span></p>
+                                </div>
+                                <div class="block -btn">
+                                    <p class="btn -btn06"><a href="<?php echo esc_url( home_url( '/entry/' ) ); ?>">エントリーする</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </main>
 

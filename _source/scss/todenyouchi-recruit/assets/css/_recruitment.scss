@@ -123,10 +123,10 @@
 /* ====================================== recruitment-list */
 #recruitment-list {
   margin-top: 50px;
-  padding-top: 50px;
+  padding: 50px 0 100px;
   @media screen and (max-width: $VIEWPOINT01) {
     margin-top: 0;
-    padding-top: 20px;
+    padding: 20px 0 50px;
   }
   .inner {
     .inner-contents {
@@ -225,10 +225,10 @@
 
 /* ====================================== recruitment-page */
 #recruitment-page {
-  padding-top: 50px;
+  padding: 50px 0 100px;
   @media screen and (max-width: $VIEWPOINT01) {
     margin-top: -20px;
-    padding-top: 0;
+    padding: 0 0 50px;
   }
   .inner {
     .inner-contents {
@@ -449,6 +449,54 @@
                   margin-top: 20px;
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== recruitment-entry */
+#recruitment-entry {
+  padding: 120px 0;
+  background: $gradation01;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding: 60px 0;
+  }
+  .inner {
+    .inner-contents {
+      .layout {
+        display: flex;
+        align-items: flex-end;
+        gap: 30px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          display: block;
+        }
+        .block {
+          &.-copy {
+            flex: 1;
+            .copy {
+              font-size: 40px;
+              font-weight: 700;
+              line-height: 1.9;
+              letter-spacing: 0.04em;
+              @media screen and (max-width: $VIEWPOINT01) {
+                font-size: 24px;
+              }
+              > span {
+                padding: 0.05em 0.3em;
+                background: $wh;
+                box-decoration-break: clone;
+                display: inline;
+              }
+            }
+          }
+          &.-btn {
+            width: 400px;
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 100%;
+              margin-top: 30px;
             }
           }
         }

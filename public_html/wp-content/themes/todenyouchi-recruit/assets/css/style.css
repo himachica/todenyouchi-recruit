@@ -1790,7 +1790,7 @@ ul.notes li .mark {
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
-#form-page .inner .inner-contents .form .submit input[type=submit], #recruit .inner .inner-contents .nav .nav-list > li > a, .btn.-btn01 > a, .btn.-btn03 > a, .btn.-btn04 > a, .btn.-btn05 > a, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a, .article.-article01 a, .form.-form01 input[type=file]::file-selector-button {
+#form-page .inner .inner-contents .form .submit input[type=submit], #recruit .inner .inner-contents .nav .nav-list > li > a, .btn.-btn01 > a, .btn.-btn03 > a, .btn.-btn04 > a, .btn.-btn05 > a, .btn.-btn06 > a, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a, .article.-article01 a, .form.-form01 input[type=file]::file-selector-button {
   opacity: 1;
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1798,7 +1798,7 @@ ul.notes li .mark {
 .form.-form01 input[type=file]:hover::-webkit-file-upload-button {
   opacity: 0.7;
 }
-#form-page .inner .inner-contents .form .submit input[type=submit]:hover, #recruit .inner .inner-contents .nav .nav-list > li > a:hover, .btn.-btn01 > a:hover, .btn.-btn03 > a:hover, .btn.-btn04 > a:hover, .btn.-btn05 > a:hover, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a:hover, .article.-article01 a:hover, .form.-form01 input[type=file]:hover::file-selector-button {
+#form-page .inner .inner-contents .form .submit input[type=submit]:hover, #recruit .inner .inner-contents .nav .nav-list > li > a:hover, .btn.-btn01 > a:hover, .btn.-btn03 > a:hover, .btn.-btn04 > a:hover, .btn.-btn05 > a:hover, .btn.-btn06 > a:hover, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a:hover, .article.-article01 a:hover, .form.-form01 input[type=file]:hover::file-selector-button {
   opacity: 0.7;
 }
 
@@ -2215,6 +2215,7 @@ ul.notes li .mark {
   /* ------------------------------ 03 */
   /* ------------------------------ 04 */
   /* ------------------------------ 05 */
+  /* ------------------------------ 06 */
 }
 .btn.-btn01 > a, .btn.-btn01 > span {
   max-width: 100%;
@@ -2519,6 +2520,69 @@ ul.notes li .mark {
 }
 .btn.-btn05 > a:hover:after {
   right: 35px;
+}
+.btn.-btn06 > a {
+  width: 100%;
+  max-width: 400px;
+  min-height: 96px;
+  padding: 20px 84px 20px 40px;
+  background: #59BFBF;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .btn.-btn06 > a {
+    min-height: 70px;
+    padding: 15px 74px 15px 30px;
+  }
+}
+.btn.-btn06 > a:after {
+  content: "";
+  width: 34px;
+  height: 34px;
+  margin: auto;
+  background-color: #ffffff;
+  background-image: url(../img/arw01-r.svg);
+  background-repeat: no-repeat;
+  background-size: 18px auto;
+  background-position: center center;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  bottom: 0;
+  -webkit-transition: right 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: right 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media screen and (max-width: 768px) {
+  .btn.-btn06 > a:after {
+    right: 30px;
+  }
+}
+.btn.-btn06 > a:hover:after {
+  right: 35px;
+}
+@media screen and (max-width: 768px) {
+  .btn.-btn06 > a:hover:after {
+    right: 30px;
+  }
 }
 
 /* ====================================== breadcrumbs */
@@ -8775,12 +8839,12 @@ body.fixed {
 /* ====================================== recruitment-list */
 #recruitment-list {
   margin-top: 50px;
-  padding-top: 50px;
+  padding: 50px 0 100px;
 }
 @media screen and (max-width: 768px) {
   #recruitment-list {
     margin-top: 0;
-    padding-top: 20px;
+    padding: 20px 0 50px;
   }
 }
 #recruitment-list .inner .inner-contents .nav {
@@ -8896,12 +8960,12 @@ body.fixed {
 
 /* ====================================== recruitment-page */
 #recruitment-page {
-  padding-top: 50px;
+  padding: 50px 0 100px;
 }
 @media screen and (max-width: 768px) {
   #recruitment-page {
     margin-top: -20px;
-    padding-top: 0;
+    padding: 0 0 50px;
   }
 }
 #recruitment-page .inner .inner-contents .layout {
@@ -9187,6 +9251,68 @@ body.fixed {
 @media screen and (max-width: 768px) {
   #recruitment-page .inner .inner-contents .layout .block.-main .entry .btn {
     margin-top: 20px;
+  }
+}
+
+/* ====================================== recruitment-entry */
+#recruitment-entry {
+  padding: 120px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(23, 185, 251, 0.18)), to(rgba(45, 213, 185, 0.18)));
+  background: -webkit-linear-gradient(top, rgba(23, 185, 251, 0.18), rgba(45, 213, 185, 0.18));
+  background: linear-gradient(to bottom, rgba(23, 185, 251, 0.18), rgba(45, 213, 185, 0.18));
+}
+@media screen and (max-width: 768px) {
+  #recruitment-entry {
+    padding: 60px 0;
+  }
+}
+#recruitment-entry .inner .inner-contents .layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  #recruitment-entry .inner .inner-contents .layout {
+    display: block;
+  }
+}
+#recruitment-entry .inner .inner-contents .layout .block.-copy {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+#recruitment-entry .inner .inner-contents .layout .block.-copy .copy {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.04em;
+}
+@media screen and (max-width: 768px) {
+  #recruitment-entry .inner .inner-contents .layout .block.-copy .copy {
+    font-size: 24px;
+  }
+}
+#recruitment-entry .inner .inner-contents .layout .block.-copy .copy > span {
+  padding: 0.05em 0.3em;
+  background: #ffffff;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  display: inline;
+}
+#recruitment-entry .inner .inner-contents .layout .block.-btn {
+  width: 400px;
+}
+@media screen and (max-width: 768px) {
+  #recruitment-entry .inner .inner-contents .layout .block.-btn {
+    width: 100%;
+    margin-top: 30px;
   }
 }
 

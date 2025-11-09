@@ -60,8 +60,6 @@
                     </div>
                 </div>
 
-                <?php get_template_part('parts-recruit'); ?>
-
             </main>
 
         </div>

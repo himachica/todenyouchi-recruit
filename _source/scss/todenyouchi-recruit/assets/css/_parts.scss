@@ -515,6 +515,63 @@
       }
     }
   }
+
+  /* ------------------------------ 06 */
+  &.-btn06 {
+    > a {
+      @extend %fade;
+      width: 100%;
+      max-width: 400px;
+      min-height: 96px;
+      padding: 20px 84px 20px 40px;
+      background: $color01;
+      border-radius: 5px;
+      box-sizing: border-box;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      position: relative;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.5;
+      color: $wh;
+      @media screen and (max-width: $VIEWPOINT01) {
+        min-height: 70px;
+        padding: 15px 74px 15px 30px;
+      }
+      &:after {
+        content: "";
+        width: 34px;
+        height: 34px;
+        margin: auto;
+        background: {
+          color: $wh;
+          image: url(#{$IMGPATH}arw01-r.svg);
+          repeat: no-repeat;
+          size: 18px auto;
+          position: center center;
+        }
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        bottom: 0;
+        transition: right $speed01 $easing01;
+        @media screen and (max-width: $VIEWPOINT01) {
+          right: 30px;
+        }
+      }
+      &:hover {
+        &:after {
+          right: 35px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            right: 30px;
+          }
+        }
+      }
+    }
+  }
 }
 
 /* ====================================== breadcrumbs */

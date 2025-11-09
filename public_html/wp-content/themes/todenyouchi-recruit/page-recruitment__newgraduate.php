@@ -125,8 +125,6 @@ $requirements_group = SCF::get( 'requirements_group' );
                     </div>
                 </div>
 
-                <?php get_template_part('parts-recruit'); ?>
-
             </main>
 
         </div>
