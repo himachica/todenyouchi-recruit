@@ -10,13 +10,13 @@ const cssDest      = 'public_html/wp-content/themes/';
 gulp.task('sass', function () {
   return gulp
     .src(scssEntry)                 // ★ パーシャルは入れない
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(
       dartSass.sync({ outputStyle: 'expanded' })
         .on('error', dartSass.logError)
     )                               // ★ 1回だけコンパイル
     .pipe(autoprefixer({ cascade: false, grid: true }))
-    .pipe(sourcemaps.write('.'))
+    // .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream());
 });

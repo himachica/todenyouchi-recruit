@@ -260,7 +260,7 @@
                 padding: 0.15em 0.3em 0.15em 0;
               }
               > span {
-                color: $color01;
+                color: $color02;
               }
             }
             &.-animation {
@@ -375,7 +375,7 @@
               padding: 0.05em 0.2em 0.1em;
             }
             > span {
-              color: $color01;
+              color: $color02;
             }
             &:nth-child(2) {
               margin-left: 50px;
@@ -557,7 +557,7 @@
                     > dt {
                       > span {
                         text-decoration: underline;
-                        text-decoration-color: $color01;
+                        text-decoration-color: $color02;
                         text-decoration-thickness: 1px;
                         text-underline-offset: 0.5em;
                         font-size: 18px;
@@ -585,7 +585,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        color: $color01;
+                        color: $color02;
                         @media screen and (max-width: $MIN-WIDTH) {
                           min-height: pc(105);
                           padding: pc(20) 0 pc(10);
@@ -771,7 +771,7 @@
             }
             > span {
               display: inline-block;
-              color: $color01;
+              color: $color02;
             }
             &.-animation {
               transition-delay: 0.4s;
@@ -818,7 +818,7 @@
                   position: relative;
                   font-size: 16px;
                   font-weight: 500;
-                  color: $color01;
+                  color: $color02;
                   &:before {
                     content: "";
                     width: 10px;

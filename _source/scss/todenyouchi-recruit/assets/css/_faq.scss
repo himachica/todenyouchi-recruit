@@ -64,7 +64,7 @@
                       bottom: 0;
                       font-size: 22px;
                       font-weight: 500;
-                      color: $color01;
+                      color: $color02;
                       @media screen and (max-width: $MIN-WIDTH) {
                         left: pc(50);
                       }
@@ -139,7 +139,7 @@
                         left: 0;
                         font-size: 22px;
                         font-weight: 500;
-                        color: $color01;
+                        color: $color02;
                         @media screen and (max-width: $VIEWPOINT01) {
                           font-size: 18px;
                         }

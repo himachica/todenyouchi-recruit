@@ -96,7 +96,7 @@
       max-width: 100px;
       height: 10px;
       margin: 0;
-      background: $color07;
+      background: $color08;
       border-radius: 9999px;
       flex: 1;
       opacity: 0.2;
@@ -253,7 +253,7 @@
                   font-size: 14px;
                   font-weight: 500;
                   line-height: 1.5;
-                  color: $color16;
+                  color: $color17;
                 }
               }
               &:hover {
@@ -266,7 +266,7 @@
                 }
                 .article-info {
                   .article-name {
-                    color: $color07;
+                    color: $color08;
                   }
                 }
               }
@@ -320,7 +320,7 @@
         .number {
           > span {
             @extend %tag01;
-            background: $color07;
+            background: $color08;
           }
         }
         .copy {
@@ -341,7 +341,7 @@
             content: "";
             width: 10px;
             height: 10px;
-            background: $color07;
+            background: $color08;
             border-radius: 50%;
             display: block;
             position: absolute;
@@ -360,7 +360,7 @@
           font-size: 14px;
           font-weight: 700;
           line-height: 1.5;
-          color: $color07;
+          color: $color08;
         }
       }
     }
@@ -423,12 +423,12 @@
                   position: relative;
                   font-size: 16px;
                   font-weight: 500;
-                  color: $color07;
+                  color: $color08;
                   &:before {
                     content: "";
                     width: 10px;
                     height: 10px;
-                    background: $color07;
+                    background: $color08;
                     border-radius: 50%;
                     display: block;
                     position: absolute;
@@ -513,14 +513,14 @@
               font-size: 16px;
               font-weight: 700;
               line-height: 1.5;
-              color: $color07;
+              color: $color08;
               &:before {
                 @extend %font01;
                 content: "Q.";
                 width: 58px;
                 height: 29px;
                 margin: auto;
-                background: $color07;
+                background: $color08;
                 border-radius: 9999px;
                 display: flex;
                 justify-content: center;
@@ -617,7 +617,7 @@
               @extend %font01;
               font-size: 16px;
               font-weight: 500;
-              color: $color07;
+              color: $color08;
             }
             &.main {
               margin-top: 10px;
@@ -751,7 +751,7 @@
             }
             > span {
               > span {
-                color: $color01;
+                color: $color02;
               }
             }
           }
@@ -804,7 +804,7 @@
           text-align: center;
           font-size: 32px;
           font-weight: 500;
-          color: $color01;
+          color: $color02;
         }
         .box-list {
           max-width: 800px;
@@ -866,7 +866,7 @@
                   font-size: 16px;
                   font-weight: 700;
                   line-height: 1.5;
-                  color: $color01;
+                  color: $color02;
                 }
               }
               .box-list-position {
@@ -955,7 +955,7 @@
             }
             .intro {
               padding: 30px;
-              background: $color19;
+              background: $color20;
               border-radius: 5px;
               text-align: center;
               @media screen and (max-width: $VIEWPOINT02) {
@@ -965,7 +965,7 @@
                 font-size: 22px;
                 font-weight: 700;
                 line-height: 1.5;
-                color: $color01;
+                color: $color02;
               }
               .intro-txt {
                 margin-top: 10px;
@@ -1110,7 +1110,7 @@
             }
             > span {
               > span {
-                color: $color01;
+                color: $color02;
               }
             }
           }
@@ -1286,7 +1286,7 @@
                   margin-top: 10px;
                   .comment-txt {
                     padding: 10px 20px;
-                    background: $color10;
+                    background: $color11;
                     border-radius: 10px;
                     font-size: 16px;
                     font-weight: 500;

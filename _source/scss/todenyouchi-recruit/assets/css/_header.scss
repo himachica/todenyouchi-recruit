@@ -99,7 +99,7 @@
             > li {
               @media screen and (max-width: $VIEWPOINT01) {
                 border: {
-                  bottom: 1px solid $color14;
+                  bottom: 1px solid $color15;
                 }
               }
               .nav-head {
@@ -124,7 +124,7 @@
                     transition: none;
                   }
                   &:hover {
-                    color: $color01;
+                    color: $color02;
                   }
                 }
                 .nav-head-acod {
@@ -271,7 +271,7 @@
                 }
               }
               &:hover {
-                background: $color02;
+                background: $color03;
                 color: $color01;
               }
             }
@@ -347,7 +347,7 @@
           .sp-menu-bar {
             width: 40px;
             height: 2px;
-            background: $color13;
+            background: $color14;
             display: block;
             will-change: transform, opacity;
             -webkit-transform: translateZ(0);

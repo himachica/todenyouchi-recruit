@@ -67,7 +67,7 @@
                         @extend %font01;
                         font-size: 18px;
                         font-weight: 600;
-                        color: $color01;
+                        color: $color02;
                         @media screen and (max-width: $VIEWPOINT01) {
                           font-size: 16px;
                         }
@@ -257,7 +257,7 @@
                 @extend %font01;
                 font-size: 16px;
                 font-weight: 600;
-                color: $color01;
+                color: $color02;
               }
               .nav-list {
                 margin-top: 20px;
@@ -266,7 +266,7 @@
                   font-weight: 700;
                   line-height: 1.5;
                   > a {
-                    color: $color20;
+                    color: $color21;
                     transition: color $speed01 $easing01;
                   }
                   &:not(:first-child) {
@@ -280,7 +280,7 @@
                   &:not(.-current) {
                     > a {
                       &:hover {
-                        color: $color01;
+                        color: $color02;
                       }
                     }
                   }

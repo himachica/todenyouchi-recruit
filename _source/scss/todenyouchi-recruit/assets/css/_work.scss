@@ -67,7 +67,7 @@
                   @extend %font01;
                   font-size: 18px;
                   font-weight: 600;
-                  color: $color01;
+                  color: $color02;
                   @media screen and (max-width: $VIEWPOINT01) {
                     font-size: 16px;
                   }
@@ -179,7 +179,7 @@
             font-size: 16px;
             font-weight: 700;
             line-height: 1.5;
-            color: $color01;
+            color: $color02;
           }
         }
       }
@@ -259,7 +259,7 @@
                     @extend %font01;
                     content: "Career";
                     display: inline-block;
-                    color: $color01;
+                    color: $color02;
                   }
                   &:after {
                     content: "";
@@ -283,10 +283,10 @@
                   > span {
                     padding: 0 20px 0.1em;
                     border-radius: 5px;
-                    background: $color19;
+                    background: $color20;
                     font-size: 22px;
                     font-weight: 700;
-                    color: $color01;
+                    color: $color02;
                   }
                 }
                 .list-copy {

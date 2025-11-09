@@ -49,7 +49,7 @@
       > span {
         &.sub {
           &:before {
-            background: $color07;
+            background: $color08;
           }
         }
       }
@@ -85,7 +85,7 @@
             position: relative;
             font-size: 16px;
             font-weight: 500;
-            color: $color01;
+            color: $color02;
             &:before {
               content: "";
               width: 10px;
@@ -156,7 +156,7 @@
               position: relative;
               font-size: 16px;
               font-weight: 500;
-              color: $color01;
+              color: $color02;
               &:before {
                 content: "";
                 width: 10px;
@@ -238,7 +238,7 @@
     > a, > span {
       max-width: 100%;
       padding: 10px 52px 10px 28px;
-      background: $color07;
+      background: $color08;
       border-radius: 9999px;
       box-sizing: border-box;
       display: inline-block;
@@ -317,7 +317,7 @@
       font-size: 16px;
       font-weight: 500;
       line-height: 1.5;
-      color: $color01;
+      color: $color02;
       transition: background-color $speed01 $easing01, color $speed01 $easing01;
       @media screen and (max-width: $MIN-WIDTH) {
         padding-left: pc(40);
@@ -488,7 +488,7 @@
       font-size: 20px;
       font-weight: 700;
       line-height: 1.5;
-      color: $color01;
+      color: $color02;
       &:after {
         content: "";
         width: 34px;
@@ -524,7 +524,7 @@
       max-width: 400px;
       min-height: 96px;
       padding: 20px 84px 20px 40px;
-      background: $color01;
+      background: $color02;
       border-radius: 5px;
       box-sizing: border-box;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -604,10 +604,10 @@
           font-weight: 500;
           line-height: 1.5;
           > a {
-            color: $color15;
+            color: $color16;
             transition: color $speed01 $easing01;
             &:hover {
-              color: $color01;
+              color: $color02;
             }
           }
         }
@@ -692,7 +692,7 @@
               }
             }
             .nav-name {
-              color: $color01;
+              color: $color02;
             }
           }
         }
@@ -765,7 +765,7 @@
                 @extend %font01;
                 font-size: 14px;
                 font-weight: 500;
-                color: $color01;
+                color: $color02;
               }
               &.main {
                 font-size: 24px;
@@ -786,7 +786,7 @@
               > span {
                 display: block;
                 &.main {
-                  color: $color01;
+                  color: $color02;
                 }
               }
             }
@@ -874,7 +874,7 @@
                 }
               }
               .section-ttl {
-                color: $color01;
+                color: $color02;
               }
             }
           }
@@ -1058,7 +1058,7 @@
         font-size: 16px;
       }
       &::placeholder {
-        color: $color03;
+        color: $color04;
       }
     }
     input[type="text"], input[type="tel"], input[type="email"], select {
@@ -1088,7 +1088,7 @@
         }
       }
       &.select-change {
-        color: $color03;
+        color: $color04;
         &.-active {
           color: $base-color;
         }
@@ -1172,7 +1172,7 @@
         font-size: 18px;
         font-weight: 700;
         line-height: 1.5;
-        color: $color01;
+        color: $color02;
         cursor: pointer;
         @media screen and (max-width: $VIEWPOINT01) {
           width: 200px;

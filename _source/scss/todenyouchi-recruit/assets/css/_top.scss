@@ -64,7 +64,7 @@
           font-size: 14px;
           font-weight: 500;
           writing-mode: vertical-rl;
-          color: $color01;
+          color: $color02;
           @media screen and (max-width: $VIEWPOINT01) {
             font-size: 20px;
           }
@@ -80,7 +80,7 @@
                 padding-right: 21px;
                 display: block;
                 position: relative;
-                color: $color03;
+                color: $color04;
                 transition: color $speed01 $easing01;
                 @media screen and (max-width: $VIEWPOINT01) {
                   width: 180px;
@@ -124,7 +124,7 @@
                   opacity: 0;
                 }
                 &:hover {
-                  color: $color01;
+                  color: $color02;
                   &:before, &:after {
                     right: -5px;
                     @media screen and (max-width: $VIEWPOINT01) {
@@ -442,7 +442,7 @@
 #business {
   margin-top: 100px;
   padding: 100px 0;
-  background: $color10;
+  background: $color11;
   @media screen and (max-width: $VIEWPOINT01) {
     margin-top: 70px;
     padding: 50px 0;
@@ -543,7 +543,7 @@
                             .article-ttl {
                               > span {
                                 &.main {
-                                  color: $color01;
+                                  color: $color02;
                                 }
                               }
                             }
