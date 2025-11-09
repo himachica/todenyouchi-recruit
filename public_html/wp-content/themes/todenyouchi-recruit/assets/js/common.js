@@ -248,7 +248,6 @@ $(function() {
     function kvSwiperStart() {
         if($kvSwiper.length) {
             const kvSwiper = new Swiper('.kv-swiper', {
-                direction: 'vertical',
                 autoplay: {
                     delay: 5000,
                     disableOnInteraction: false,
