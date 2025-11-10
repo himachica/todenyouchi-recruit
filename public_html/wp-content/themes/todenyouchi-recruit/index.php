@@ -32,11 +32,11 @@
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-top-img02.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-top-img03.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-top-img04.webp" width="640" height="640" alt=""></p>
-                                                    <p class="kv-swiper-img -type02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-top-img05.webp" width="640" height="640" alt=""></p>
+                                                    <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-top-img05.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-top-img06.webp" width="640" height="640" alt=""></p>
                                                 </div>
                                                 <div class="kv-swiper-block -bottom">
-                                                    <p class="kv-swiper-img -type02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-bottom-img01.webp" width="640" height="640" alt=""></p>
+                                                    <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-bottom-img01.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-bottom-img02.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-bottom-img03.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide01-bottom-img04.webp" width="640" height="640" alt=""></p>
@@ -55,11 +55,11 @@
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-top-img02.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-top-img03.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-top-img04.webp" width="640" height="640" alt=""></p>
-                                                    <p class="kv-swiper-img -type02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-top-img05.webp" width="640" height="640" alt=""></p>
+                                                    <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-top-img05.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-top-img06.webp" width="640" height="640" alt=""></p>
                                                 </div>
                                                 <div class="kv-swiper-block -bottom">
-                                                    <p class="kv-swiper-img -type02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-bottom-img01.webp" width="640" height="640" alt=""></p>
+                                                    <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-bottom-img01.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-bottom-img02.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-bottom-img03.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide02-bottom-img04.webp" width="640" height="640" alt=""></p>
@@ -78,11 +78,11 @@
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-top-img02.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-top-img03.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-top-img04.webp" width="640" height="640" alt=""></p>
-                                                    <p class="kv-swiper-img -type02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-top-img05.webp" width="640" height="640" alt=""></p>
+                                                    <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-top-img05.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-top-img06.webp" width="640" height="640" alt=""></p>
                                                 </div>
                                                 <div class="kv-swiper-block -bottom">
-                                                    <p class="kv-swiper-img -type02"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-bottom-img01.webp" width="640" height="640" alt=""></p>
+                                                    <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-bottom-img01.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-bottom-img02.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-bottom-img03.webp" width="640" height="640" alt=""></p>
                                                     <p class="kv-swiper-img -type01"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/top/kv-slider-slide03-bottom-img04.webp" width="640" height="640" alt=""></p>

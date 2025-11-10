@@ -64,6 +64,7 @@ $gradation04  : linear-gradient(to bottom, $color18, $color19);
 $easing01: cubic-bezier(0.19, 1, 0.22, 1);
 $speed01 : 1.75s;
 $speed02 : 0.6s;
+$speed03 : 10s;
 
 @keyframes bar-t {
   0% {
@@ -132,6 +133,11 @@ $speed02 : 0.6s;
 @-webkit-keyframes bar-t-r { 0%{transform:translate(0,8px) rotate(20deg)} 50%{transform:translate(0,8px) rotate(0)} 100%{transform:translate(0,0) rotate(0)} }
 @-webkit-keyframes bar-c-r { 0%{opacity:0} 50%{opacity:0} 50.0001%{opacity:1} 100%{opacity:1} } /* ← 小数で境界ズラす */
 @-webkit-keyframes bar-b-r { 0%{transform:translate(0,-8px) rotate(-20deg)} 50%{transform:translate(0,-8px) rotate(0)} 100%{transform:translate(0,0) rotate(0)} }
+
+@keyframes wave01 {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-66.66%); } // 300%幅 → -66.66%%でループ
+}
 
 @keyframes loop01 {
   0% {
@@ -460,7 +466,7 @@ $speed02 : 0.6s;
     }
     display: block;
     position: absolute;
-    top: 0;
+    top: -1px;
     left: 0;
     z-index: 1;
     @media screen and (max-width: $VIEWPOINT01) {
@@ -485,7 +491,7 @@ $speed02 : 0.6s;
     }
     display: block;
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     z-index: 1;
     @media screen and (max-width: $VIEWPOINT01) {

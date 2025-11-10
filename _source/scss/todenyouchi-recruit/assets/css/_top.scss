@@ -163,14 +163,14 @@
     .slider {
       .list {
         > li {
-          width: 1800px;
+          width: 1960px;
           height: 648px;
           margin: 0 4px;
           position: relative;
           @media screen and (max-width: $VIEWPOINT01) {
-            width: 795px;
-            height: 285px;
-            margin: 0 2.5px;
+            width: 870px;
+            height: 286px;
+            margin: 0 3px;
           }
           .kv-swiper {
             width: 100%;
@@ -180,7 +180,13 @@
             left: 0;
             .swiper-wrapper {
               .swiper-slide {
+                width: 1960px;
+                height: 648px;
                 background: $wh;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  width: 870px;
+                  height: 286px;
+                }
                 .kv-swiper-contents {
                   .kv-swiper-block {
                     display: flex;
@@ -215,8 +221,10 @@
                     }
                     &.-bottom {
                       margin-top: 8px;
+                      transform: translate(-164px, 0);
                       @media screen and (max-width: $VIEWPOINT01) {
-                        margin-top: 5px;
+                        margin-top: 6px;
+                        transform: translate(-73px, 0);
                       }
                     }
                   }

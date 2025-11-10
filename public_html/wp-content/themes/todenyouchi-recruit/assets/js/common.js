@@ -251,11 +251,13 @@ $(function() {
                 autoplay: {
                     delay: 5000,
                     disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
                 },
                 effect: 'fade',
                 fadeEffect: {
                     crossFade: true,
                 },
+                slidesPerView: 1,
                 loop: true,
                 simulateTouch: false,
                 slidesPerView: 'auto',
