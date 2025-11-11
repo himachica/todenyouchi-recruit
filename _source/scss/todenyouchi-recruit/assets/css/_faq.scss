@@ -56,12 +56,10 @@
                       @extend %font01;
                       content: "Q.";
                       height: 1em;
-                      margin: auto;
                       display: inline;
                       position: absolute;
-                      top: 0;
+                      top: calc(20px + 0.14em);
                       left: 50px;
-                      bottom: 0;
                       font-size: 22px;
                       font-weight: 500;
                       color: $color02;
@@ -70,6 +68,7 @@
                       }
                       @media screen and (max-width: $VIEWPOINT01) {
                         padding-top: 5px;
+                        top: calc(20px - 0.07em);
                         left: 15px;
                         font-size: 18px;
                       }
@@ -142,6 +141,11 @@
                         color: $color02;
                         @media screen and (max-width: $VIEWPOINT01) {
                           font-size: 18px;
+                        }
+                      }
+                      > p {
+                        &:not(:first-child) {
+                          margin-top: 10px;
                         }
                       }
                     }

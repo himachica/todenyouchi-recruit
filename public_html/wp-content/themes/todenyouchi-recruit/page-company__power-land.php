@@ -13,7 +13,7 @@
                             <ol class="breadcrumbs-list">
                                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/ico-home01.svg" width="20" height="20" alt=""></a></li>
                                 <li><a href="<?php echo esc_url( home_url( '/company/' ) ); ?>">会社を知る</a></li>
-                                <li>電⼒⽤地事業</li>
+                                <li>電力用地事業</li>
                             </ol>
                         </div>
                     </div>

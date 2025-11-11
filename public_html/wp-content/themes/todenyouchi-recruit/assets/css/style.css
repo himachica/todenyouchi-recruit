@@ -9464,12 +9464,10 @@ body.fixed {
 #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before {
   content: "Q.";
   height: 1em;
-  margin: auto;
   display: inline;
   position: absolute;
-  top: 0;
+  top: calc(20px + 0.14em);
   left: 50px;
-  bottom: 0;
   font-size: 22px;
   font-weight: 500;
   color: #28B7B7;
@@ -9482,6 +9480,7 @@ body.fixed {
 @media screen and (max-width: 768px) {
   #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before {
     padding-top: 5px;
+    top: calc(20px - 0.07em);
     left: 15px;
     font-size: 18px;
   }
@@ -9565,6 +9564,9 @@ body.fixed {
   #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before {
     font-size: 18px;
   }
+}
+#faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents > p:not(:first-child) {
+  margin-top: 10px;
 }
 #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item:not(:first-child) {
   margin-top: 25px;

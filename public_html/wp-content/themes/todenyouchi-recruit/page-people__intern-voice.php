@@ -111,7 +111,7 @@
                                     <section class="section animation-contents animation -animation01">
                                         <h3 class="section-ttl">
                                             <span class="number"></span>
-                                            <span class="main">就職活動時の企業選びの基準を教えてください。</span>
+                                            <span class="main">東電用地に入社を決めた理由は何ですか。</span>
                                         </h3>
                                         <div class="section-contents">
                                             <div class="voice">
