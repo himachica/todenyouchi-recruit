@@ -16,7 +16,7 @@
         </li>
         <li>
             <section class="section">
-                <a href="#" target="_blank">
+                <a href="https://tepco-youchi.co.jp/company/#bk40161619" target="_blank">
                     <p class="section-img">
                         <picture>
                             <source srcset="<?php echo get_template_directory_uri(); ?>/assets/img/nav-img05-sp.webp" width="720" height="460" media="(max-width: 768px)">

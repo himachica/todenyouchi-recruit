@@ -19,7 +19,7 @@
                                         <p class="nav-head"><a href="<?php echo esc_url( home_url( '/company/' ) ); ?>">会社を知る</a></p>
                                         <ul class="nav-sub-list">
                                             <li><a href="<?php echo esc_url( home_url( '/company/data/' ) ); ?>">３分で知る東電⽤地</a></li>
-                                            <li><a href="<?php echo esc_url( home_url( '/company/power-land/' ) ); ?>">電⼒⽤地</a></li>
+                                            <li><a href="<?php echo esc_url( home_url( '/company/power-land/' ) ); ?>">電力用地事業</a></li>
                                             <li><a href="<?php echo esc_url( home_url( '/company/infrastructure-support/' ) ); ?>">社会インフラサポート</a></li>
                                             <li><a href="<?php echo esc_url( home_url( '/company/life-support/' ) ); ?>">暮らしのサポート</a></li>
                                         </ul>
@@ -27,7 +27,7 @@
                                     <li>
                                         <p class="nav-head"><a href="<?php echo esc_url( home_url( '/people/' ) ); ?>">⼈を知る</a></p>
                                         <ul class="nav-sub-list">
-                                            <li><a href="<?php echo esc_url( home_url( '/people/crosstalk-secondyear/' ) ); ?>">⼊社1年⽬の座談会</a></li>
+                                            <li><a href="<?php echo esc_url( home_url( '/people/crosstalk-secondyear/' ) ); ?>">⼊社2年⽬の座談会</a></li>
                                             <li><a href="<?php echo esc_url( home_url( '/people/crosstalk-team/' ) ); ?>">チーム座談会</a></li>
                                             <li><a href="<?php echo esc_url( home_url( '/people/intern-voice/' ) ); ?>">内定者VOICE</a></li>
                                         </ul>
@@ -39,7 +39,6 @@
                                         <p class="nav-head"><a href="<?php echo esc_url( home_url( '/environment/' ) ); ?>">働く環境を知る</a></p>
                                         <ul class="nav-sub-list">
                                             <li><a href="<?php echo esc_url( home_url( '/environment/educational-system/' ) ); ?>">研修制度 / 教育体制</a></li>
-                                            <li><a href="<?php echo esc_url( home_url( '/environment/women-active/' ) ); ?>">⼥性活躍促進</a></li>
                                         </ul>
                                     </li>
                                     <li>
