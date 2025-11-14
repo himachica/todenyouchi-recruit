@@ -783,8 +783,8 @@
   }
 }
 
-/* ====================================== service-point */
-#service-point {
+/* ====================================== service-contents */
+#service-contents {
   margin-top: 40px;
   padding-top: 60px;
   @media screen and (max-width: $VIEWPOINT01) {
@@ -793,6 +793,46 @@
   }
   .inner {
     .inner-contents {
+      .movie {
+        .movie-ttl {
+          text-align: center;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 1.5;
+        }
+        .movie-contents {
+          margin-top: 30px;
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          @media screen and (max-width: $MIN-WIDTH) {
+            gap: pc(40);
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 20px;
+            display: block;
+          }
+          .movie-block {
+            width: calc((100% - 40px) / 2);
+            @media screen and (max-width: $MIN-WIDTH) {
+              width: calc((100% - pc(40)) / 2);
+            }
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 100%;
+            }
+            .movie-item {
+              @extend %img01;
+              border-radius: 5px;
+              aspect-ratio: 16 / 9;
+            }
+            &:not(:first-child) {
+              @media screen and (max-width: $VIEWPOINT01) {
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
       .list {
         counter-reset: number 0;
         > li {
@@ -903,6 +943,12 @@
                 }
               }
             }
+          }
+        }
+        &:not(:first-child) {
+          margin-top: 70px;
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 50px;
           }
         }
       }

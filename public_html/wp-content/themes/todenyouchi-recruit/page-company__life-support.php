@@ -40,7 +40,7 @@
                     </div>
                 </div>
 
-                <div id="service-point">
+                <div id="service-contents">
                     <div class="inner">
                         <div class="inner-contents">
                             <ol class="list -work">

@@ -40,9 +40,19 @@
                     </div>
                 </div>
 
-                <div id="service-point">
+                <div id="service-contents">
                     <div class="inner">
                         <div class="inner-contents">
+                            <section class="movie animation-contents animation -animation01">
+                                <h2 class="movie-ttl">紹介動画</h2>
+                                <div class="movie-contents">
+                                    <div class="movie-block">
+                                        <div class="movie-item">
+                                            <video src="<?php echo get_template_directory_uri(); ?>/assets/movie/company/infrastructure-support/infrastructure-support-movie01.mp4" poster="<?php echo get_template_directory_uri(); ?>/assets/img/company/infrastructure-support/infrastructure-support-movie01-poster.webp" controls playsinline></video>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
                             <ol class="list">
                                 <li class="animation-contents animation -animation01">
                                     <section class="section">

@@ -1177,7 +1177,7 @@ ul.notes li .mark {
 /* ====================================== $ */
 /* ====================================== function */
 /* ====================================== font */
-#news-archive .inner .inner-contents .list > li .article > a .article-date, #news-single .inner .inner-contents .news-single-article .article-date, #thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-point .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub, .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
+#news-archive .inner .inner-contents .list > li .article > a .article-date, #news-single .inner .inner-contents .news-single-article .article-date, #thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-contents .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub, .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   line-height: 1;
@@ -1823,7 +1823,7 @@ ul.notes li .mark {
   opacity: 0.7;
 }
 
-#recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-img, #educational-system .inner .inner-contents .section-wrap .section .section-block.-img .section-img, #careerstory-archive .inner .inner-contents .list > li .article > a .article-img, #careerstory-single-head .inner .inner-contents .head .head-img, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img, #interview-single-head .inner .inner-contents .img, #interview-single-article .inner .inner-contents .bottom-img, #crosstalk-single-head .inner .inner-contents .head .head-img, #crosstalk-single-member .inner .inner-contents .box .box-list > li .box-list-img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .baloon .baloon-item > dt .baloon-thumb, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .gallery .gallery-img, #voice-head .inner .inner-contents .head .head-img, .three-min > a .bg, #about-message .inner .inner-contents .head .head-contents .head-img, #philosophy .inner .inner-contents .head .head-img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img, .nav.-nav01 .nav-list > li > a .nav-img, .nav.-nav02 .nav-list > li > a .nav-img, .nav.-nav03 .nav-list > li .section > a .section-img {
+#recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-img, #educational-system .inner .inner-contents .section-wrap .section .section-block.-img .section-img, #careerstory-archive .inner .inner-contents .list > li .article > a .article-img, #careerstory-single-head .inner .inner-contents .head .head-img, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img, #interview-single-head .inner .inner-contents .img, #interview-single-article .inner .inner-contents .bottom-img, #crosstalk-single-head .inner .inner-contents .head .head-img, #crosstalk-single-member .inner .inner-contents .box .box-list > li .box-list-img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .baloon .baloon-item > dt .baloon-thumb, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .gallery .gallery-img, #voice-head .inner .inner-contents .head .head-img, .three-min > a .bg, #about-message .inner .inner-contents .head .head-contents .head-img, #philosophy .inner .inner-contents .head .head-img, #service-contents .inner .inner-contents .movie .movie-contents .movie-block .movie-item, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img, .nav.-nav01 .nav-list > li > a .nav-img, .nav.-nav02 .nav-list > li > a .nav-img, .nav.-nav03 .nav-list > li .section > a .section-img {
   position: relative;
   overflow: hidden;
   font-size: 0;
@@ -1831,7 +1831,7 @@ ul.notes li .mark {
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
 }
-#recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-img img, #educational-system .inner .inner-contents .section-wrap .section .section-block.-img .section-img img, #careerstory-archive .inner .inner-contents .list > li .article > a .article-img img, #careerstory-single-head .inner .inner-contents .head .head-img img, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img img, #interview-single-head .inner .inner-contents .img img, #interview-single-article .inner .inner-contents .bottom-img img, #crosstalk-single-head .inner .inner-contents .head .head-img img, #crosstalk-single-member .inner .inner-contents .box .box-list > li .box-list-img img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-img img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .baloon .baloon-item > dt .baloon-thumb img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .gallery .gallery-img img, #voice-head .inner .inner-contents .head .head-img img, .three-min > a .bg img, #about-message .inner .inner-contents .head .head-contents .head-img img, #philosophy .inner .inner-contents .head .head-img img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img img, .nav.-nav01 .nav-list > li > a .nav-img img, .nav.-nav02 .nav-list > li > a .nav-img img, .nav.-nav03 .nav-list > li .section > a .section-img img {
+#recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-img img, #educational-system .inner .inner-contents .section-wrap .section .section-block.-img .section-img img, #careerstory-archive .inner .inner-contents .list > li .article > a .article-img img, #careerstory-single-head .inner .inner-contents .head .head-img img, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img img, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img img, #interview-single-head .inner .inner-contents .img img, #interview-single-article .inner .inner-contents .bottom-img img, #crosstalk-single-head .inner .inner-contents .head .head-img img, #crosstalk-single-member .inner .inner-contents .box .box-list > li .box-list-img img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-img img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .baloon .baloon-item > dt .baloon-thumb img, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .gallery .gallery-img img, #voice-head .inner .inner-contents .head .head-img img, .three-min > a .bg img, #about-message .inner .inner-contents .head .head-contents .head-img img, #philosophy .inner .inner-contents .head .head-img img, #service-contents .inner .inner-contents .movie .movie-contents .movie-block .movie-item img, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img img, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img img, .nav.-nav01 .nav-list > li > a .nav-img img, .nav.-nav02 .nav-list > li > a .nav-img img, .nav.-nav03 .nav-list > li .section > a .section-img img, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-img video, #educational-system .inner .inner-contents .section-wrap .section .section-block.-img .section-img video, #careerstory-archive .inner .inner-contents .list > li .article > a .article-img video, #careerstory-single-head .inner .inner-contents .head .head-img video, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-img video, #interview-archive .inner .inner-contents .list > li .article > a .article-head .article-img video, #interview-single-head .inner .inner-contents .img video, #interview-single-article .inner .inner-contents .bottom-img video, #crosstalk-single-head .inner .inner-contents .head .head-img video, #crosstalk-single-member .inner .inner-contents .box .box-list > li .box-list-img video, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-img video, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .baloon .baloon-item > dt .baloon-thumb video, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-contents .gallery .gallery-img video, #voice-head .inner .inner-contents .head .head-img video, .three-min > a .bg video, #about-message .inner .inner-contents .head .head-contents .head-img video, #philosophy .inner .inner-contents .head .head-img video, #service-contents .inner .inner-contents .movie .movie-contents .movie-block .movie-item video, #kv .loop-slider .slider .list > li .kv-swiper .swiper-wrapper .swiper-slide .kv-swiper-contents .kv-swiper-block .kv-swiper-img video, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-img video, .nav.-nav01 .nav-list > li > a .nav-img video, .nav.-nav02 .nav-list > li > a .nav-img video, .nav.-nav03 .nav-list > li .section > a .section-img video {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -6436,24 +6436,75 @@ body.fixed {
   transition-delay: 0.4s;
 }
 
-/* ====================================== service-point */
-#service-point {
+/* ====================================== service-contents */
+#service-contents {
   margin-top: 40px;
   padding-top: 60px;
 }
 @media screen and (max-width: 768px) {
-  #service-point {
+  #service-contents {
     margin-top: 0;
     padding-top: 50px;
   }
 }
-#service-point .inner .inner-contents .list {
+#service-contents .inner .inner-contents .movie .movie-ttl {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+#service-contents .inner .inner-contents .movie .movie-contents {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 40px;
+}
+@media screen and (max-width: 1240px) {
+  #service-contents .inner .inner-contents .movie .movie-contents {
+    gap: 3.2258064516vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #service-contents .inner .inner-contents .movie .movie-contents {
+    margin-top: 20px;
+    display: block;
+  }
+}
+#service-contents .inner .inner-contents .movie .movie-contents .movie-block {
+  width: calc((100% - 40px) / 2);
+}
+@media screen and (max-width: 1240px) {
+  #service-contents .inner .inner-contents .movie .movie-contents .movie-block {
+    width: calc((100% - 3.2258064516vw) / 2);
+  }
+}
+@media screen and (max-width: 768px) {
+  #service-contents .inner .inner-contents .movie .movie-contents .movie-block {
+    width: 100%;
+  }
+}
+#service-contents .inner .inner-contents .movie .movie-contents .movie-block .movie-item {
+  border-radius: 5px;
+  aspect-ratio: 16/9;
+}
+@media screen and (max-width: 768px) {
+  #service-contents .inner .inner-contents .movie .movie-contents .movie-block:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+#service-contents .inner .inner-contents .list {
   counter-reset: number 0;
 }
-#service-point .inner .inner-contents .list > li {
+#service-contents .inner .inner-contents .list > li {
   counter-increment: number 1;
 }
-#service-point .inner .inner-contents .list > li .section {
+#service-contents .inner .inner-contents .list > li .section {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6465,31 +6516,31 @@ body.fixed {
   gap: 40px;
 }
 @media screen and (max-width: 1240px) {
-  #service-point .inner .inner-contents .list > li .section {
+  #service-contents .inner .inner-contents .list > li .section {
     gap: 3.2258064516vw;
   }
 }
 @media screen and (max-width: 768px) {
-  #service-point .inner .inner-contents .list > li .section {
+  #service-contents .inner .inner-contents .list > li .section {
     display: block;
   }
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt {
+#service-contents .inner .inner-contents .list > li .section .block.-txt {
   width: 46.49%;
 }
 @media screen and (max-width: 768px) {
-  #service-point .inner .inner-contents .list > li .section .block.-txt {
+  #service-contents .inner .inner-contents .list > li .section .block.-txt {
     width: 100%;
   }
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-number {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-number {
   padding-left: 18px;
   position: relative;
   font-size: 16px;
   font-weight: 500;
   color: #28B7B7;
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-number:before {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-number:before {
   content: "";
   width: 10px;
   height: 10px;
@@ -6500,71 +6551,79 @@ body.fixed {
   top: 0.28em;
   left: 0;
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-number:after {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-number:after {
   content: "Point " counter(number, decimal-leading-zero);
   display: inline-block;
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-ttl {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-ttl {
   margin-top: 10px;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
-  #service-point .inner .inner-contents .list > li .section .block.-txt .section-ttl {
+  #service-contents .inner .inner-contents .list > li .section .block.-txt .section-ttl {
     font-size: 28px;
   }
 }
 @media screen and (max-width: 374px) {
-  #service-point .inner .inner-contents .list > li .section .block.-txt .section-ttl {
+  #service-contents .inner .inner-contents .list > li .section .block.-txt .section-ttl {
     font-size: 26px;
   }
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-txt {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-txt {
   margin-top: 30px;
   font-size: 16px;
   line-height: 1.8;
 }
 @media screen and (max-width: 768px) {
-  #service-point .inner .inner-contents .list > li .section .block.-txt .section-txt {
+  #service-contents .inner .inner-contents .list > li .section .block.-txt .section-txt {
     margin-top: 20px;
   }
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-txt .section-txt-item > dt {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-txt .section-txt-item > dt {
   margin-left: 1em;
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-txt .section-txt-item > dt:before {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-txt .section-txt-item > dt:before {
   content: "・";
   width: 1em;
   margin-left: -1em;
   display: inline-block;
 }
-#service-point .inner .inner-contents .list > li .section .block.-txt .section-txt .section-txt-item > dd {
+#service-contents .inner .inner-contents .list > li .section .block.-txt .section-txt .section-txt-item > dd {
   padding-left: 1em;
 }
-#service-point .inner .inner-contents .list > li .section .block.-img {
+#service-contents .inner .inner-contents .list > li .section .block.-img {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
 }
 @media screen and (max-width: 768px) {
-  #service-point .inner .inner-contents .list > li .section .block.-img {
+  #service-contents .inner .inner-contents .list > li .section .block.-img {
     margin-top: 25px;
   }
 }
-#service-point .inner .inner-contents .list > li .section .block.-img .section-img {
+#service-contents .inner .inner-contents .list > li .section .block.-img .section-img {
   font-size: 0;
   line-height: 0;
 }
-#service-point .inner .inner-contents .list > li .section .block.-img .section-img img {
+#service-contents .inner .inner-contents .list > li .section .block.-img .section-img img {
   border-radius: 5px;
 }
-#service-point .inner .inner-contents .list > li:not(:first-child) {
+#service-contents .inner .inner-contents .list > li:not(:first-child) {
   margin-top: 70px;
 }
-#service-point .inner .inner-contents .list.-work > li .section .block.-txt .section-number:after {
+#service-contents .inner .inner-contents .list.-work > li .section .block.-txt .section-number:after {
   content: "Work " counter(number, decimal-leading-zero);
+}
+#service-contents .inner .inner-contents .list:not(:first-child) {
+  margin-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  #service-contents .inner .inner-contents .list:not(:first-child) {
+    margin-top: 50px;
+  }
 }
 
 /* ====================================== people-embla-wrap */
