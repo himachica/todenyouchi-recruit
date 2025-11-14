@@ -447,6 +447,42 @@
         }
       }
     }
+    &.-l {
+      > a, > span {
+        padding: 10px 28px 10px 52px;
+        @media screen and (max-width: $VIEWPOINT01) {
+          padding: 10px 18px 10px 42px;
+        }
+        &:before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          margin: auto;
+          background: {
+            image: url(#{$IMGPATH}arw02-l-wh.svg);
+            repeat: no-repeat;
+            size: contain;
+            position: center center;
+          }
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 20px;
+          bottom: 0;
+          transition: left $speed01 $easing01;
+        }
+        &:after {
+          content: none;
+        }
+      }
+      > a {
+        &:hover {
+          &:before {
+            left: 15px;
+          }
+        }
+      }
+    }
     &.-border {
       > a, > span {
         background: $wh;
@@ -455,6 +491,15 @@
         &:after {
           background: {
             image: url(#{$IMGPATH}arw02-r-grn.svg);
+          }
+        }
+      }
+      &.-l {
+        > a, > span {
+          &:before {
+            background: {
+              image: url(#{$IMGPATH}arw02-l-grn.svg);
+            }
           }
         }
       }
@@ -901,6 +946,123 @@
   }
 }
 
+/* ====================================== pagination */
+.pagination {
+
+  /* ------------------------------ 01 */
+  &.-pagination01 {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: $VIEWPOINT01) {
+      margin-top: 35px;
+    }
+    .pagination-contents {
+      padding: 0 50px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      @media screen and (max-width: $VIEWPOINT01) {
+        padding: 0 30px;
+        gap: 10px;
+      }
+      @media screen and (max-width: $VIEWPOINT02) {
+        padding: 0 sp(30);
+        gap: sp(10);
+      }
+      > span.page-numbers, > a.page-numbers {
+        @extend %font01;
+        width: 50px;
+        height: 50px;
+        border: 1px solid $color01;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 500;
+        color: $color02;
+        @media screen and (max-width: $VIEWPOINT01) {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+        @media screen and (max-width: $VIEWPOINT02) {
+          width: sp(40);
+          height: sp(40);
+          font-size: sp(16);
+        }
+        &.current {
+          background: $color01;
+          color: $wh;
+        }
+        &.dots, &.prev, &.next {
+          border: none;
+          font-size: 0;
+          line-height: 0;
+        }
+        &.dots {
+          margin: 0 -20px;
+          background: {
+            image: url(#{$IMGPATH}ico-dots01.svg);
+            repeat: no-repeat;
+            size: 10px auto;
+            position: center center;
+          }
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 30px;
+            margin: 0 -10px;
+          }
+          @media screen and (max-width: $VIEWPOINT02) {
+            width: sp(25);
+            margin: 0 sp(-10);
+          }
+        }
+        &.prev, &.next {
+          margin: auto;
+          background: {
+            repeat: no-repeat;
+            size: 8px auto;
+            position: center center;
+          }
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          @media screen and (max-width: $VIEWPOINT01) {
+            width: 30px;
+          }
+          @media screen and (max-width: $VIEWPOINT02) {
+            width: sp(30);
+            background: {
+              size: sp(8) auto;
+            }
+          }
+        }
+        &.prev {
+          background: {
+            image: url(#{$IMGPATH}arw07-l.svg);
+          }
+          left: 0;
+        }
+        &.next {
+          background: {
+            image: url(#{$IMGPATH}arw07-r.svg);
+          }
+          right: 0;
+        }
+      }
+      > a.page-numbers {
+        @extend %fade;
+      }
+    }
+  }
+}
+
 /* ====================================== article */
 .article {
 
@@ -909,21 +1071,14 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
-    @media screen and (max-width: $VIEWPOINT01) {
-      font-size: 14px;
-      line-height: 1.9;
-    }
     > * {
-      margin-top: 40px;
-      @media screen and (max-width: $VIEWPOINT01) {
-        margin-top: 20px;
-      }
+      margin-top: 30px;
     }
     h1, h2 {
       margin-top: 80px;
       font-size: 200%;
       font-weight: 700;
-      line-height: 1.6;
+      line-height: 1.5;
       @media screen and (max-width: $VIEWPOINT01) {
         margin-top: 60px;
         font-size: 160%;
@@ -933,7 +1088,7 @@
       margin-top: 60px;
       font-size: 175%;
       font-weight: 700;
-      line-height: 1.6;
+      line-height: 1.5;
       @media screen and (max-width: $VIEWPOINT01) {
         margin-top: 60px;
         font-size: 147%;
@@ -943,7 +1098,7 @@
       margin-top: 60px;
       font-size: 150%;
       font-weight: 700;
-      line-height: 1.6;
+      line-height: 1.5;
       @media screen and (max-width: $VIEWPOINT01) {
         margin-top: 60px;
         font-size: 133%;
@@ -953,7 +1108,7 @@
       margin-top: 60px;
       font-size: 137.5%;
       font-weight: 700;
-      line-height: 1.6;
+      line-height: 1.5;
       @media screen and (max-width: $VIEWPOINT01) {
         margin-top: 60px;
         font-size: 120%;
@@ -963,7 +1118,7 @@
       margin-top: 60px;
       font-size: 125%;
       font-weight: 700;
-      line-height: 1.6;
+      line-height: 1.5;
       @media screen and (max-width: $VIEWPOINT01) {
         margin-top: 60px;
         font-size: 107%;

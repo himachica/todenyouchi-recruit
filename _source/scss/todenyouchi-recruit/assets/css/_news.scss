@@ -1,0 +1,108 @@
+@use "setting" as *;
+
+/* ====================================== news-archive */
+#news-archive {
+  padding: 40px 0 80px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding: 10px 0 60px;
+  }
+  .inner {
+    .inner-contents {
+      .list {
+        max-width: 1000px;
+        margin: 0 auto;
+        > li {
+          border: {
+            bottom: 1px solid $border-color;
+          }
+          .article {
+            > a {
+              padding: 20px 70px 20px 0;
+              display: flex;
+              align-items: center;
+              gap: 20px;
+              position: relative;
+              @media screen and (max-width: $VIEWPOINT01) {
+                padding: 20px 0;
+                display: block;
+              }
+              &:after {
+                @extend %arw01-border;
+                content: "";
+                margin: auto;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  content: none;
+                }
+              }
+              .article-date {
+                @extend %font01;
+                width: 76px;
+                font-size: 14px;
+                font-weight: 500;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  width: 100%;
+                }
+              }
+              .article-ttl {
+                flex: 1;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 1.5;
+                transition: color $speed01 $easing01;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  margin-top: 7px;
+                }
+              }
+              &:hover {
+                .article-ttl {
+                  color: $color02;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ====================================== news-single */
+#news-single {
+  padding: 40px 0 80px;
+  @media screen and (max-width: $VIEWPOINT01) {
+    padding: 10px 0 50px;
+  }
+  .inner {
+    .inner-contents {
+      .news-single-article {
+        max-width: 1000px;
+        margin: 0 auto;
+        .article-date {
+          @extend %font01;
+          font-size: 16px;
+          font-weight: 600;
+        }
+        .article-ttl {
+          margin-top: 30px;
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 1.5;
+          @media screen and (max-width: $VIEWPOINT01) {
+            margin-top: 20px;
+            font-size: 24px;
+          }
+        }
+        .article {
+          margin-top: 30px;
+        }
+        .btn {
+          margin-top: 50px;
+        }
+      }
+    }
+  }
+}

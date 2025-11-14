@@ -1177,7 +1177,7 @@ ul.notes li .mark {
 /* ====================================== $ */
 /* ====================================== function */
 /* ====================================== font */
-#thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-point .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub {
+#news-archive .inner .inner-contents .list > li .article > a .article-date, #news-single .inner .inner-contents .news-single-article .article-date, #thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-point .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub, .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   line-height: 1;
@@ -1811,7 +1811,7 @@ ul.notes li .mark {
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
-#form-page .inner .inner-contents .form .submit input[type=submit], #recruit .inner .inner-contents .nav .nav-list > li > a, .btn.-btn01 > a, .btn.-btn03 > a, .btn.-btn04 > a, .btn.-btn05 > a, .btn.-btn06 > a, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a, .article.-article01 a, .form.-form01 input[type=file]::file-selector-button {
+#form-page .inner .inner-contents .form .submit input[type=submit], #recruit .inner .inner-contents .nav .nav-list > li > a, .btn.-btn01 > a, .btn.-btn03 > a, .btn.-btn04 > a, .btn.-btn05 > a, .btn.-btn06 > a, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a, .pagination.-pagination01 .pagination-contents > a.page-numbers, .article.-article01 a, .form.-form01 input[type=file]::file-selector-button {
   opacity: 1;
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1819,7 +1819,7 @@ ul.notes li .mark {
 .form.-form01 input[type=file]:hover::-webkit-file-upload-button {
   opacity: 0.7;
 }
-#form-page .inner .inner-contents .form .submit input[type=submit]:hover, #recruit .inner .inner-contents .nav .nav-list > li > a:hover, .btn.-btn01 > a:hover, .btn.-btn03 > a:hover, .btn.-btn04 > a:hover, .btn.-btn05 > a:hover, .btn.-btn06 > a:hover, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a:hover, .article.-article01 a:hover, .form.-form01 input[type=file]:hover::file-selector-button {
+#form-page .inner .inner-contents .form .submit input[type=submit]:hover, #recruit .inner .inner-contents .nav .nav-list > li > a:hover, .btn.-btn01 > a:hover, .btn.-btn03 > a:hover, .btn.-btn04 > a:hover, .btn.-btn05 > a:hover, .btn.-btn06 > a:hover, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a:hover, .pagination.-pagination01 .pagination-contents > a.page-numbers:hover, .article.-article01 a:hover, .form.-form01 input[type=file]:hover::file-selector-button {
   opacity: 0.7;
 }
 
@@ -1896,7 +1896,7 @@ ul.notes li .mark {
   }
 }
 
-#recruitment-list .inner .inner-contents .nav .nav-list > li .nav-section > a:after, .nav.-nav01 .nav-list > li > a .nav-name:after, .nav.-nav02 .nav-list > li > a .nav-name:after, .nav.-nav03 .nav-list > li .section > a:not([target=_blank]) .section-ttl:after, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
+#recruitment-list .inner .inner-contents .nav .nav-list > li .nav-section > a:after, .nav.-nav01 .nav-list > li > a .nav-name:after, .nav.-nav02 .nav-list > li > a .nav-name:after, .nav.-nav03 .nav-list > li .section > a:not([target=_blank]) .section-ttl:after, #news-archive .inner .inner-contents .list > li .article > a:after, .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
   width: 60px;
   height: 30px;
   background-color: #59BFBF;
@@ -1905,11 +1905,19 @@ ul.notes li .mark {
   background-size: 16px auto;
   background-position: center center;
   border-radius: 9999px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   display: block;
 }
 
 .people-embla-wrap .people-embla .embla__container .people-embla-slide > a .slide-contents:after, #interview-archive .inner .inner-contents .list > li .article > a .article-info:after {
   background-color: #E5C43D;
+}
+
+#news-archive .inner .inner-contents .list > li .article > a:after {
+  background-color: #ffffff;
+  background-image: url(../img/arw02-r-grn.svg);
+  border: 1px solid #59BFBF;
 }
 
 .nav.-nav03 .nav-list > li .section > a[target=_blank] .section-ttl:after {
@@ -2470,6 +2478,37 @@ ul.notes li .mark {
 .btn.-btn03 > a:hover:after {
   right: 15px;
 }
+.btn.-btn03.-l > a, .btn.-btn03.-l > span {
+  padding: 10px 28px 10px 52px;
+}
+@media screen and (max-width: 768px) {
+  .btn.-btn03.-l > a, .btn.-btn03.-l > span {
+    padding: 10px 18px 10px 42px;
+  }
+}
+.btn.-btn03.-l > a:before, .btn.-btn03.-l > span:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin: auto;
+  background-image: url(../img/arw02-l-wh.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  bottom: 0;
+  -webkit-transition: left 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: left 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.btn.-btn03.-l > a:after, .btn.-btn03.-l > span:after {
+  content: none;
+}
+.btn.-btn03.-l > a:hover:before {
+  left: 15px;
+}
 .btn.-btn03.-border > a, .btn.-btn03.-border > span {
   background: #ffffff;
   border: 1px solid #59BFBF;
@@ -2477,6 +2516,9 @@ ul.notes li .mark {
 }
 .btn.-btn03.-border > a:after, .btn.-btn03.-border > span:after {
   background-image: url(../img/arw02-r-grn.svg);
+}
+.btn.-btn03.-border.-l > a:before, .btn.-btn03.-border.-l > span:before {
+  background-image: url(../img/arw02-l-grn.svg);
 }
 .btn.-btn04 > a {
   width: 100%;
@@ -2980,6 +3022,152 @@ ul.notes li .mark {
   }
 }
 
+/* ====================================== pagination */
+.pagination {
+  /* ------------------------------ 01 */
+}
+.pagination.-pagination01 {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .pagination.-pagination01 {
+    margin-top: 35px;
+  }
+}
+.pagination.-pagination01 .pagination-contents {
+  padding: 0 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .pagination.-pagination01 .pagination-contents {
+    padding: 0 30px;
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .pagination.-pagination01 .pagination-contents {
+    padding: 0 8vw;
+    gap: 2.6666666667vw;
+  }
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #59BFBF;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  color: #28B7B7;
+}
+@media screen and (max-width: 768px) {
+  .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
+    width: 10.6666666667vw;
+    height: 10.6666666667vw;
+    font-size: 4.2666666667vw;
+  }
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers.current, .pagination.-pagination01 .pagination-contents > a.page-numbers.current {
+  background: #59BFBF;
+  color: #ffffff;
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers.dots, .pagination.-pagination01 .pagination-contents > span.page-numbers.prev, .pagination.-pagination01 .pagination-contents > span.page-numbers.next, .pagination.-pagination01 .pagination-contents > a.page-numbers.dots, .pagination.-pagination01 .pagination-contents > a.page-numbers.prev, .pagination.-pagination01 .pagination-contents > a.page-numbers.next {
+  border: none;
+  font-size: 0;
+  line-height: 0;
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers.dots, .pagination.-pagination01 .pagination-contents > a.page-numbers.dots {
+  margin: 0 -20px;
+  background-image: url(../img/ico-dots01.svg);
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  background-position: center center;
+}
+@media screen and (max-width: 768px) {
+  .pagination.-pagination01 .pagination-contents > span.page-numbers.dots, .pagination.-pagination01 .pagination-contents > a.page-numbers.dots {
+    width: 30px;
+    margin: 0 -10px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .pagination.-pagination01 .pagination-contents > span.page-numbers.dots, .pagination.-pagination01 .pagination-contents > a.page-numbers.dots {
+    width: 6.6666666667vw;
+    margin: 0 -2.6666666667vw;
+  }
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers.prev, .pagination.-pagination01 .pagination-contents > span.page-numbers.next, .pagination.-pagination01 .pagination-contents > a.page-numbers.prev, .pagination.-pagination01 .pagination-contents > a.page-numbers.next {
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: 8px auto;
+  background-position: center center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .pagination.-pagination01 .pagination-contents > span.page-numbers.prev, .pagination.-pagination01 .pagination-contents > span.page-numbers.next, .pagination.-pagination01 .pagination-contents > a.page-numbers.prev, .pagination.-pagination01 .pagination-contents > a.page-numbers.next {
+    width: 30px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .pagination.-pagination01 .pagination-contents > span.page-numbers.prev, .pagination.-pagination01 .pagination-contents > span.page-numbers.next, .pagination.-pagination01 .pagination-contents > a.page-numbers.prev, .pagination.-pagination01 .pagination-contents > a.page-numbers.next {
+    width: 8vw;
+    background-size: 2.1333333333vw auto;
+  }
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers.prev, .pagination.-pagination01 .pagination-contents > a.page-numbers.prev {
+  background-image: url(../img/arw07-l.svg);
+  left: 0;
+}
+.pagination.-pagination01 .pagination-contents > span.page-numbers.next, .pagination.-pagination01 .pagination-contents > a.page-numbers.next {
+  background-image: url(../img/arw07-r.svg);
+  right: 0;
+}
 /* ====================================== article */
 .article {
   /* ------------------------------ 01 */
@@ -2989,25 +3177,14 @@ ul.notes li .mark {
   font-weight: 400;
   line-height: 2;
 }
-@media screen and (max-width: 768px) {
-  .article.-article01 {
-    font-size: 14px;
-    line-height: 1.9;
-  }
-}
 .article.-article01 > * {
-  margin-top: 40px;
-}
-@media screen and (max-width: 768px) {
-  .article.-article01 > * {
-    margin-top: 20px;
-  }
+  margin-top: 30px;
 }
 .article.-article01 h1, .article.-article01 h2 {
   margin-top: 80px;
   font-size: 200%;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .article.-article01 h1, .article.-article01 h2 {
@@ -3019,7 +3196,7 @@ ul.notes li .mark {
   margin-top: 60px;
   font-size: 175%;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .article.-article01 h3 {
@@ -3031,7 +3208,7 @@ ul.notes li .mark {
   margin-top: 60px;
   font-size: 150%;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .article.-article01 h4 {
@@ -3043,7 +3220,7 @@ ul.notes li .mark {
   margin-top: 60px;
   font-size: 137.5%;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .article.-article01 h5 {
@@ -3055,7 +3232,7 @@ ul.notes li .mark {
   margin-top: 60px;
   font-size: 125%;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 @media screen and (max-width: 768px) {
   .article.-article01 h6 {
@@ -5272,13 +5449,13 @@ body.fixed {
   flex: 1;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.4;
+  line-height: 1.5;
   -webkit-transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 @media screen and (max-width: 768px) {
   #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-ttl {
-    margin-top: 4px;
+    margin-top: 7px;
   }
 }
 #news .inner .inner-contents .layout .block.-main .list > li .article > a:hover .article-ttl {
@@ -10076,4 +10253,118 @@ body.fixed {
 }
 #thanks-page .inner .inner-contents .btn > a {
   margin: 0 auto;
+}
+
+/* ====================================== news-archive */
+#news-archive {
+  padding: 40px 0 80px;
+}
+@media screen and (max-width: 768px) {
+  #news-archive {
+    padding: 10px 0 60px;
+  }
+}
+#news-archive .inner .inner-contents .list {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#news-archive .inner .inner-contents .list > li {
+  border-bottom: 1px solid #e5e5e5;
+}
+#news-archive .inner .inner-contents .list > li .article > a {
+  padding: 20px 70px 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #news-archive .inner .inner-contents .list > li .article > a {
+    padding: 20px 0;
+    display: block;
+  }
+}
+#news-archive .inner .inner-contents .list > li .article > a:after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  #news-archive .inner .inner-contents .list > li .article > a:after {
+    content: none;
+  }
+}
+#news-archive .inner .inner-contents .list > li .article > a .article-date {
+  width: 76px;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  #news-archive .inner .inner-contents .list > li .article > a .article-date {
+    width: 100%;
+  }
+}
+#news-archive .inner .inner-contents .list > li .article > a .article-ttl {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  -webkit-transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media screen and (max-width: 768px) {
+  #news-archive .inner .inner-contents .list > li .article > a .article-ttl {
+    margin-top: 7px;
+  }
+}
+#news-archive .inner .inner-contents .list > li .article > a:hover .article-ttl {
+  color: #28B7B7;
+}
+
+/* ====================================== news-single */
+#news-single {
+  padding: 40px 0 80px;
+}
+@media screen and (max-width: 768px) {
+  #news-single {
+    padding: 10px 0 50px;
+  }
+}
+#news-single .inner .inner-contents .news-single-article {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+#news-single .inner .inner-contents .news-single-article .article-date {
+  font-size: 16px;
+  font-weight: 600;
+}
+#news-single .inner .inner-contents .news-single-article .article-ttl {
+  margin-top: 30px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  #news-single .inner .inner-contents .news-single-article .article-ttl {
+    margin-top: 20px;
+    font-size: 24px;
+  }
+}
+#news-single .inner .inner-contents .news-single-article .article {
+  margin-top: 30px;
+}
+#news-single .inner .inner-contents .news-single-article .btn {
+  margin-top: 50px;
 }
