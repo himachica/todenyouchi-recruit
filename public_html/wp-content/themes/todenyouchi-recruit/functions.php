@@ -101,44 +101,44 @@ remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
 /** -----------------------------------------------------------
  * 投稿のアーカイブページを作成
  * -----------------------------------------------------------*/
-// function post_has_archive( $args, $post_type ) {
-//     if ( 'post' === $post_type ) {
-//         $args['rewrite']     = true;
-//         $args['has_archive'] = 'news';
-//     }
-//     return $args;
-// }
-// add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+function post_has_archive( $args, $post_type ) {
+    if ( 'post' === $post_type ) {
+        $args['rewrite']     = true;
+        $args['has_archive'] = 'news';
+    }
+    return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
 
-// function add_article_post_permalink( $permalink ) {
-//     $permalink = '/news' . $permalink;
-//     return $permalink;
-// }
-// add_filter( 'pre_post_link', 'add_article_post_permalink' );
+function add_article_post_permalink( $permalink ) {
+    $permalink = '/news' . $permalink;
+    return $permalink;
+}
+add_filter( 'pre_post_link', 'add_article_post_permalink' );
 
 
-// function add_article_post_rewrite_rules( $post_rewrite ) {
-//     $return_rule = array();
-//     foreach ( $post_rewrite as $regex => $rewrite ) {
-//         $return_rule[ 'news/' . $regex ] = $rewrite;
-//     }
-//     return $return_rule;
-// }
-// add_filter( 'post_rewrite_rules', 'add_article_post_rewrite_rules' );
+function add_article_post_rewrite_rules( $post_rewrite ) {
+    $return_rule = array();
+    foreach ( $post_rewrite as $regex => $rewrite ) {
+        $return_rule[ 'news/' . $regex ] = $rewrite;
+    }
+    return $return_rule;
+}
+add_filter( 'post_rewrite_rules', 'add_article_post_rewrite_rules' );
 
 
 /** -----------------------------------------------------------
  * 記事一覧ページの2ページ目以降を作成
  * -----------------------------------------------------------*/
-// function change_pre_get_posts($query){
-//   if(!is_admin() && $query->is_main_query()){
-//     if( is_post_type_archive( 'post' ) || is_category() || is_post_type_archive( 'project' ) ){
-//       $query->set('posts_per_page', 1);
-//     }
-//   }
-// }
-// add_action('pre_get_posts', 'change_pre_get_posts');
+function change_pre_get_posts($query){
+  if(!is_admin() && $query->is_main_query()){
+    if( is_post_type_archive( 'post' ) ){
+      $query->set('posts_per_page', 1);
+    }
+  }
+}
+add_action('pre_get_posts', 'change_pre_get_posts');
 
 
 /** -----------------------------------------------------------

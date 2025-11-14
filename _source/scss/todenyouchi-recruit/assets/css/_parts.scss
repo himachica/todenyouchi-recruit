@@ -447,6 +447,18 @@
         }
       }
     }
+    &.-border {
+      > a, > span {
+        background: $wh;
+        border: 1px solid $color01;
+        color: $color02;
+        &:after {
+          background: {
+            image: url(#{$IMGPATH}arw02-r-grn.svg);
+          }
+        }
+      }
+    }
   }
 
   /* ------------------------------ 04 */

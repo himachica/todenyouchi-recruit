@@ -354,6 +354,47 @@
                     </div>
                 </section>
 
+                <?php
+                $args = array(
+                    'post_type'      => 'post',
+                    'posts_per_page' => 3,
+                    'orderby'        => 'date',
+                    'order'          => 'DESC'
+                );
+                $posts = get_posts( $args );
+                if ( $posts ) :
+                ?>
+                <section id="news">
+                    <div class="inner">
+                        <div class="inner-contents">
+                            <div class="layout">
+                                <div class="block -sub">
+                                    <h2 class="ttl -ttl01">
+                                        <span class="sub">News</span>
+                                        <span class="main">お知らせ</span>
+                                    </h2>
+                                    <p class="btn -btn03 -border"><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">お知らせ一覧をみる</a></p>
+                                </div>
+                                <div class="block -main">
+                                    <ul class="list">
+                                        <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
+                                        <li>
+                                            <article class="article">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <p class="article-date"><?php echo get_the_date('Y.m.d'); ?></p>
+                                                    <h3 class="article-ttl"><?php echo esc_html( get_the_title() ); ?></h3>
+                                                </a>
+                                            </article>
+                                        </li>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <?php endif; wp_reset_postdata(); ?>
+
                 <?php get_template_part('parts-recruit'); ?>
 
             </main>

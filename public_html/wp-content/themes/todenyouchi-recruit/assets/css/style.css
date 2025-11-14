@@ -1177,7 +1177,7 @@ ul.notes li .mark {
 /* ====================================== $ */
 /* ====================================== function */
 /* ====================================== font */
-#thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-point .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub {
+#thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-point .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   line-height: 1;
@@ -2469,6 +2469,14 @@ ul.notes li .mark {
 }
 .btn.-btn03 > a:hover:after {
   right: 15px;
+}
+.btn.-btn03.-border > a, .btn.-btn03.-border > span {
+  background: #ffffff;
+  border: 1px solid #59BFBF;
+  color: #28B7B7;
+}
+.btn.-btn03.-border > a:after, .btn.-btn03.-border > span:after {
+  background-image: url(../img/arw02-r-grn.svg);
 }
 .btn.-btn04 > a {
   width: 100%;
@@ -5168,6 +5176,113 @@ body.fixed {
   #environment .inner .inner-contents .nav {
     margin-top: 30px;
   }
+}
+
+/* ====================================== news */
+#news {
+  margin-top: 150px;
+  padding-top: 50px;
+}
+@media screen and (max-width: 768px) {
+  #news {
+    margin-top: 60px;
+    padding-top: 40px;
+  }
+}
+#news .inner .inner-contents .layout {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout {
+    padding-bottom: 71px;
+    display: block;
+    position: relative;
+  }
+}
+#news .inner .inner-contents .layout .block.-sub {
+  width: 270px;
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout .block.-sub {
+    width: 100%;
+  }
+}
+#news .inner .inner-contents .layout .block.-sub .btn {
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout .block.-sub .btn {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+#news .inner .inner-contents .layout .block.-main {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout .block.-main {
+    margin-top: 10px;
+  }
+}
+#news .inner .inner-contents .layout .block.-main .list > li {
+  border-bottom: 1px solid #e5e5e5;
+}
+#news .inner .inner-contents .layout .block.-main .list > li .article > a {
+  padding: 20px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout .block.-main .list > li .article > a {
+    display: block;
+  }
+}
+#news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date {
+  width: 76px;
+  font-size: 14px;
+  font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date {
+    width: 100%;
+  }
+}
+#news .inner .inner-contents .layout .block.-main .list > li .article > a .article-ttl {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.4;
+  -webkit-transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media screen and (max-width: 768px) {
+  #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-ttl {
+    margin-top: 4px;
+  }
+}
+#news .inner .inner-contents .layout .block.-main .list > li .article > a:hover .article-ttl {
+  color: #28B7B7;
 }
 
 /* ====================================== three-min */
