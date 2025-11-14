@@ -37,7 +37,11 @@
                                     <p class="txt -txt01">動画についての説明が入ります。<br>動画についての説明が入ります。動画についての説明が入ります。動画についての説明が入ります。動画についての説明が入ります。</p>
                                 </div>
                                 <div class="block -contents">
-                                    <p class="movie"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/company/movie-movie01.webp" width="1600" height="820" alt=""></p>
+                                    <div class="movie-wrap">
+                                        <p class="movie">
+                                            <video src="<?php echo get_template_directory_uri(); ?>/assets/movie/company/data-movie01.mp4" poster="<?php echo get_template_directory_uri(); ?>/assets/img/company/data-movie01-poster.webp" controls playsinline></video>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 

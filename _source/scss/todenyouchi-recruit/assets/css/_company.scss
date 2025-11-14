@@ -131,9 +131,11 @@
             }
           }
           &.-contents {
-            .movie {
-              font-size: 0;
-              line-height: 0;
+            .movie-wrap {
+              .movie {
+                @extend %img01;
+                aspect-ratio: 16 / 9;
+              }
             }
           }
         }
