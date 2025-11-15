@@ -78,7 +78,7 @@
                                     </p>
                                     <ul class="nav-sub-list">
                                         <li><a href="<?php echo esc_url( home_url( '/environment/educational-system/' ) ); ?>">研修制度 / 教育体制</a></li>
-                                        <li><a href="https://tepco-youchi.co.jp/company/#bk40161619" target="_blank">女性活躍促進</a></li>
+                                        <li><a href="https://tepco-youchi.co.jp/company/#bk40161617" target="_blank">女性活躍促進</a></li>
                                     </ul>
                                 </li>
                                 <li>
