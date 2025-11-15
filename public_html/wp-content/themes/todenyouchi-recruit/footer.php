@@ -50,7 +50,7 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <p class="nav-head"><a href="https://recruit.tepco-youchi.co.jp/info/" target="_blank">お知らせ</a></p>
+                                        <p class="nav-head"><a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">お知らせ</a></p>
                                     </li>
                                     <li>
                                         <p class="nav-link"><a href="https://tepco-youchi.co.jp/privacy.html" target="_blank">個人情報保護方針</a></p>
