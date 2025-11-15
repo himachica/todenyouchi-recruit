@@ -356,7 +356,7 @@
 
                 <?php
                 $args = array(
-                    'post_type'      => 'post',
+                    'post_type'      => 'news',
                     'posts_per_page' => 3,
                     'orderby'        => 'date',
                     'order'          => 'DESC'
