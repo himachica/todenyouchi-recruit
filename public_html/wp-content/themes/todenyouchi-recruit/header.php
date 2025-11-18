@@ -15,7 +15,7 @@
 
 <!-- css -->
 <!-- swiper -->
-<link href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" rel="stylesheet" type="text/css">
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/plugin/swiper-bundle.min.css" rel="stylesheet" type="text/css">
 <!-- /swiper -->
 <link href="<?php echo get_template_directory_uri(); ?>/assets/css/style.css" rel="stylesheet" type="text/css">
 <!-- /css -->

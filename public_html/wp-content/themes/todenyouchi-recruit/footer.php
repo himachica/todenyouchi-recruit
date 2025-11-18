@@ -75,9 +75,9 @@
 <?php wp_footer(); ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/jquery.easing.1.3.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
-<script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
-<script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugin/swiper-bundle.min.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugin/embla-carousel.umd.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugin/embla-carousel-autoplay.umd.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/common.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/plugin/desvg.js"></script>
 <?php if ( is_page( 'entry' ) ) : ?>
