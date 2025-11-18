@@ -30,7 +30,6 @@
                             $query = new WP_Query(
                                 array(
                                     'post_type'      => 'news',
-                                    'lang'           => $lang,
                                     'posts_per_page' => 10,
                                     'orderby'        => 'date',
                                     'order'          => 'DESC',
