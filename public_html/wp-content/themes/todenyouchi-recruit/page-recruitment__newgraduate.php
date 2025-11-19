@@ -73,7 +73,7 @@ $requirements_group = SCF::get( 'requirements_group' );
                                                     </dl>
                                                     <dl class="section-tbl-item">
                                                         <dt>提出書類</dt>
-                                                        <dd>履歴書（写真添付）<br>卒業見込証明書<br>成績証明書</dd>
+                                                        <dd>エントリーシート</dd>
                                                     </dl>
                                                     <dl class="section-tbl-item">
                                                         <dt>お問い合わせ先</dt>
@@ -103,8 +103,8 @@ $requirements_group = SCF::get( 'requirements_group' );
                                             <div class="section-contents">
                                                 <div class="section-flow">
                                                     <ol class="section-flow-list">
-                                                        <li>マイナビより<br class="dsp-pc">エントリー</li>
                                                         <li>会社説明会<br class="dsp-pc">（対面/WEB）</li>
+                                                        <li>マイナビより<br class="dsp-pc">エントリー<br class="dsp-pc">（書類選考）</li>
                                                         <li>一次選考<br class="dsp-pc">面接・適性検査</li>
                                                         <li>二次面接<br class="dsp-pc">（個別）</li>
                                                         <li>最終選考</li>
@@ -117,7 +117,7 @@ $requirements_group = SCF::get( 'requirements_group' );
                                     </div>
                                     <div class="entry">
                                         <p class="entry-copy">地域と未来をつなぐ仕事に、<br class="dsp-sp">踏み出そう。</p>
-                                        <p class="btn -btn05"><a href="<?php echo esc_url( home_url( '/entry/' ) ); ?>">エントリーする</a></p>
+                                        <p class="btn -btn05"><a href="https://job.mynavi.jp/27/pc/search/corp110497/outline.html">エントリーする</a></p>
                                     </div>
                                 </div>
                             </div>

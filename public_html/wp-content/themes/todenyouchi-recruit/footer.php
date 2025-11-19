@@ -5,7 +5,7 @@
                         <div class="block -head">
                             <p class="logo"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.webp" width="631" height="125" alt="東電用地株式会社 TODEN YOCHI TEPCO LAND MANAGEMENT CORPORATION"></a></p>
                             <div class="btn-wrap">
-                                <p class="btn -btn02"><a href="https://tepco-youchi.co.jp/" target="_blank">コーポレートサイト</a></p>
+                                <p class="btn -btn02"><a href="https://tepco-youchi.co.jp/" target="_blank">東電用地会社ホームページ</a></p>
                                 <p class="btn -btn02"><a href="https://intetour.jp/media/recruit-know-how/36131/" target="_blank">インタツアー</a></p>
                             </div>
                         </div>

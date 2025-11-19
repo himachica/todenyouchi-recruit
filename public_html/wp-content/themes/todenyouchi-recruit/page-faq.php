@@ -29,7 +29,6 @@
                                 <section class="section">
                                     <div class="section-block -head">
                                         <h2 class="ttl -ttl01">
-                                            <span class="sub">English</span>
                                             <span class="main">採用について</span>
                                         </h2>
                                     </div>
@@ -75,7 +74,6 @@
                                 <section class="section">
                                     <div class="section-block -head">
                                         <h2 class="ttl -ttl01">
-                                            <span class="sub">English</span>
                                             <span class="main">入社後について</span>
                                         </h2>
                                     </div>
@@ -120,7 +118,6 @@
                                 <section class="section">
                                     <div class="section-block -head">
                                         <h2 class="ttl -ttl01">
-                                            <span class="sub">English</span>
                                             <span class="main">福利厚生について</span>
                                         </h2>
                                     </div>
