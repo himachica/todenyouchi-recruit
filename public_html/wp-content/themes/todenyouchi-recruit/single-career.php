@@ -138,9 +138,9 @@ $requirements_group = SCF::get('requirements_group');
                                         <div class="section-flow">
                                             <ol class="section-flow-list">
                                                 <li>フォームから<br class="dsp-pc">エントリー</li>
-                                                <li>応募書類提出</li>
-                                                <li>適性検査SPI3受験</li>
-                                                <li>一次・二次面接<br class="dsp-pc">（面接）</li>
+                                                <li>書類選考</li>
+                                                <li>二次選考</li>
+                                                <li>最終選考</li>
                                                 <li>内定</li>
                                             </ol>
                                         </div>

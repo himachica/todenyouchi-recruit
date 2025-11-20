@@ -55,6 +55,9 @@
                                     <li>
                                         <p class="nav-link"><a href="https://tepco-youchi.co.jp/privacy.html" target="_blank">個人情報保護方針</a></p>
                                     </li>
+                                    <li>
+                                        <p class="nav-link"><a href="https://www.onecareer.jp/companies/5941" target="_blank">ワンキャリア</a></p>
+                                    </li>
                                 </ul>
                             </nav>
                         </div>

@@ -117,7 +117,7 @@ $requirements_group = SCF::get( 'requirements_group' );
                                     </div>
                                     <div class="entry">
                                         <p class="entry-copy">地域と未来をつなぐ仕事に、<br class="dsp-sp">踏み出そう。</p>
-                                        <p class="btn -btn05"><a href="https://job.mynavi.jp/27/pc/search/corp110497/outline.html">エントリーする</a></p>
+                                        <p class="btn -btn05"><a href="https://job.mynavi.jp/27/pc/search/corp110497/outline.html"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/recruitment/mynavi.webp" width="200" height="41" alt=""></a></p>
                                     </div>
                                 </div>
                             </div>
