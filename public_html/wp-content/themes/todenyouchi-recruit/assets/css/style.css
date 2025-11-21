@@ -2018,7 +2018,6 @@ ul.notes li .mark {
   left: 0;
 }
 .ttl.-ttl01 > span.main {
-  margin-top: 10px;
   font-size: 32px;
   font-weight: 700;
   line-height: 1.5;
@@ -2027,6 +2026,9 @@ ul.notes li .mark {
   .ttl.-ttl01 > span.main {
     font-size: 28px;
   }
+}
+.ttl.-ttl01 > span.main:not(:first-child) {
+  margin-top: 10px;
 }
 .ttl.-ttl01.-small > span.main {
   font-size: 24px;

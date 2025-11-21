@@ -26,12 +26,14 @@
         }
       }
       &.main {
-        margin-top: 10px;
         font-size: 32px;
         font-weight: 700;
         line-height: 1.5;
         @media screen and (max-width: $VIEWPOINT01) {
           font-size: 28px;
+        }
+        &:not(:first-child) {
+          margin-top: 10px;
         }
       }
     }
