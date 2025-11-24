@@ -68,6 +68,28 @@
                   }
                 }
               }
+              .bnr {
+                font-size: 0;
+                line-height: 0;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  flex: 1;
+                }
+                &:not(:first-child) {
+                  margin-top: 15px;
+                  @media screen and (max-width: $VIEWPOINT01) {
+                    margin-top: 0;
+                  }
+                }
+                > a {
+                  @extend %fade;
+                  img {
+                    max-width: 240px;
+                    @media screen and (max-width: $VIEWPOINT01) {
+                      max-width: none;
+                    }
+                  }
+                }
+              }
             }
           }
           &.-contents {

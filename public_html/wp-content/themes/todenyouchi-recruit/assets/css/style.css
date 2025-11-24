@@ -1811,7 +1811,7 @@ ul.notes li .mark {
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
-#form-page .inner .inner-contents .form .submit input[type=submit], #recruit .inner .inner-contents .nav .nav-list > li > a, .btn.-btn01 > a, .btn.-btn03 > a, .btn.-btn04 > a, .btn.-btn05 > a, .btn.-btn06 > a, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a, .pagination.-pagination01 .pagination-contents > a.page-numbers, .article.-article01 a, .form.-form01 input[type=file]::file-selector-button {
+#form-page .inner .inner-contents .form .submit input[type=submit], #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr > a, #recruit .inner .inner-contents .nav .nav-list > li > a, .btn.-btn01 > a, .btn.-btn03 > a, .btn.-btn04 > a, .btn.-btn05 > a, .btn.-btn06 > a, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a, .pagination.-pagination01 .pagination-contents > a.page-numbers, .article.-article01 a, .form.-form01 input[type=file]::file-selector-button {
   opacity: 1;
   -webkit-transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
@@ -1819,7 +1819,7 @@ ul.notes li .mark {
 .form.-form01 input[type=file]:hover::-webkit-file-upload-button {
   opacity: 0.7;
 }
-#form-page .inner .inner-contents .form .submit input[type=submit]:hover, #recruit .inner .inner-contents .nav .nav-list > li > a:hover, .btn.-btn01 > a:hover, .btn.-btn03 > a:hover, .btn.-btn04 > a:hover, .btn.-btn05 > a:hover, .btn.-btn06 > a:hover, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a:hover, .pagination.-pagination01 .pagination-contents > a.page-numbers:hover, .article.-article01 a:hover, .form.-form01 input[type=file]:hover::file-selector-button {
+#form-page .inner .inner-contents .form .submit input[type=submit]:hover, #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr > a:hover, #recruit .inner .inner-contents .nav .nav-list > li > a:hover, .btn.-btn01 > a:hover, .btn.-btn03 > a:hover, .btn.-btn04 > a:hover, .btn.-btn05 > a:hover, .btn.-btn06 > a:hover, .breadcrumbs.-breadcrumbs01 .breadcrumbs-list > li:first-child > a:hover, .pagination.-pagination01 .pagination-contents > a.page-numbers:hover, .article.-article01 a:hover, .form.-form01 input[type=file]:hover::file-selector-button {
   opacity: 0.7;
 }
 
@@ -2333,7 +2333,7 @@ ul.notes li .mark {
 }
 .btn.-btn02 > a {
   width: 100%;
-  max-width: 260px;
+  max-width: 300px;
   min-height: 50px;
   padding: 10px 60px 10px 40px;
   border: 1px solid #59BFBF;
@@ -2351,7 +2351,7 @@ ul.notes li .mark {
   position: relative;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.4;
   color: #28B7B7;
   -webkit-transition: background-color 1.75s cubic-bezier(0.19, 1, 0.22, 1), color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: background-color 1.75s cubic-bezier(0.19, 1, 0.22, 1), color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
@@ -2363,15 +2363,16 @@ ul.notes li .mark {
 }
 @media screen and (max-width: 768px) {
   .btn.-btn02 > a {
+    max-width: none;
     min-height: 40px;
-    padding: 5px 30px 5px 15px;
+    padding: 8px 30px 7px 20px;
     font-size: 13px;
   }
 }
 @media screen and (max-width: 374px) {
   .btn.-btn02 > a {
     min-height: 10.6666666667vw;
-    padding: 1.3333333333vw 8vw 1.3333333333vw 4vw;
+    padding: 2.1333333333vw 8vw 1.8666666667vw 5.3333333333vw;
     font-size: 3.4666666667vw;
   }
 }
@@ -4518,6 +4519,34 @@ body.fixed {
 @media screen and (max-width: 768px) {
   #footer .inner .inner-contents .layout .block.-head .btn-wrap .btn > a {
     margin: 0 auto;
+  }
+}
+#footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr {
+  font-size: 0;
+  line-height: 0;
+}
+@media screen and (max-width: 768px) {
+  #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+#footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr:not(:first-child) {
+  margin-top: 15px;
+}
+@media screen and (max-width: 768px) {
+  #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr:not(:first-child) {
+    margin-top: 0;
+  }
+}
+#footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr > a img {
+  max-width: 240px;
+}
+@media screen and (max-width: 768px) {
+  #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr > a img {
+    max-width: none;
   }
 }
 #footer .inner .inner-contents .layout .block.-contents {

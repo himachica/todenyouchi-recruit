@@ -307,7 +307,7 @@
   &.-btn02 {
     > a {
       width: 100%;
-      max-width: 260px;
+      max-width: 300px;
       min-height: 50px;
       padding: 10px 60px 10px 40px;
       border: 1px solid $color01;
@@ -318,20 +318,21 @@
       position: relative;
       font-size: 16px;
       font-weight: 500;
-      line-height: 1.5;
+      line-height: 1.4;
       color: $color02;
       transition: background-color $speed01 $easing01, color $speed01 $easing01;
       @media screen and (max-width: $MIN-WIDTH) {
         padding-left: pc(40);
       }
       @media screen and (max-width: $VIEWPOINT01) {
+        max-width: none;
         min-height: 40px;
-        padding: 5px 30px 5px 15px;
+        padding: 8px 30px 7px 20px;
         font-size: 13px;
       }
       @media screen and (max-width: $VIEWPOINT02) {
         min-height: sp(40);
-        padding: sp(5) sp(30) sp(5) sp(15);
+        padding: sp(8) sp(30) sp(7) sp(20);
         font-size: sp(13);
       }
       &:before, &:after {
