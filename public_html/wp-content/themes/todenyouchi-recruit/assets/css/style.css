@@ -4534,7 +4534,7 @@ body.fixed {
   }
 }
 #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr:not(:first-child) {
-  margin-top: 15px;
+  margin-top: 20px;
 }
 @media screen and (max-width: 768px) {
   #footer .inner .inner-contents .layout .block.-head .btn-wrap .bnr:not(:first-child) {
