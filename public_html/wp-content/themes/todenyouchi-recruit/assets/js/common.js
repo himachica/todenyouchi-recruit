@@ -10,6 +10,11 @@ $(function() {
         $contents                      = $('#contents'),
         $footer                        = $('#footer');
 
+    var $loading                       = $('#loading'),
+        $loadingInner                  = $loading.find('.loading-inner'),
+        $loadingLogo                   = $loadingInner.find('.logo'),
+        $loadingLogoImg                = $loadingLogo.find('img');
+
     var $headerInner                   = $header.find('.header-inner'),
         $headerNav                     = $headerInner.find('.nav'),
         $headerNavContents             = $headerNav.find('.nav-contents'),
@@ -491,11 +496,45 @@ $(function() {
         kvSwiperStart();
         recruitmentPageScroll();
     }
-    $window.on('load', function() {
+    let isLoadActionDone = false;
+    function runLoadActionOnce() {
+        if (isLoadActionDone) return;
+        isLoadActionDone = true;
         loadAction();
+    }
+    function loadingCheck() {
+        if (!$loading.length) {
+            runLoadActionOnce();
+            return;
+        }
+        $loading.addClass('-active');
+
+        // transitionend待ち + タイムアウトフォールバック
+        let isTransitionHandled = false;
+        const delayAfterLogo = 400; // ★ ロゴアニメ後に少し置きたい時間（ms）
+
+        const transitionHandler = function() {
+            if (isTransitionHandled) return;
+            isTransitionHandled = true;
+            $loadingLogoImg.off(transitionEvent, transitionHandler);
+
+            // ★ ロゴアニメが終わってから少し置いて fadeOut
+            setTimeout(function() {
+                $loading.fadeOut(800, 'easeOutQuart', function() {
+                    runLoadActionOnce();
+                });
+            }, delayAfterLogo);
+        };
+        $loadingLogoImg.on(transitionEvent, transitionHandler);
+
+        //ローディング発火しなかった時のための保険
+        setTimeout(transitionHandler, 2500);
+    }
+    $window.on('load', function() {
+        loadingCheck();
     });
     if(loadStatus == true) {
-        loadAction();
+        loadingCheck();
     }
 
     // ====================================== resize

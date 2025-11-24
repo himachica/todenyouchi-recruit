@@ -401,4 +401,10 @@
 
         </div>
 
+        <div id="loading">
+            <div class="loading-inner">
+                <p class="logo"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.webp" width="631" height="125" alt="東電用地株式会社 TODEN YOCHI TEPCO LAND MANAGEMENT CORPORATION"></p>
+            </div>
+        </div>
+
 <?php get_footer(); ?>
