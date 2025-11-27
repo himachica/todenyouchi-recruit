@@ -125,7 +125,7 @@
                                                         <p class="section-box-number">
                                                             <span class="-wrap -bottom">
                                                                 <span class="-number">14.6</span>
-                                                                <span class="-unit">時間</span>
+                                                                <span class="-unit">日</span>
                                                             </span>
                                                         </p>
                                                         <div class="section-box-bottom">

@@ -93,6 +93,11 @@
                                 </li>
                                 <li>
                                     <p class="nav-head">
+                                        <a href="<?php echo esc_url( home_url( '/news/' ) ); ?>">お知らせ</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="nav-head">
                                         <a href="<?php echo esc_url( home_url( '/faq/' ) ); ?>">よくあるご質問</a>
                                     </p>
                                 </li>
