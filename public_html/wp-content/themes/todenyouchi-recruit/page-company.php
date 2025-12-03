@@ -107,7 +107,7 @@
                         <div class="head-contents">
                             <h2 class="ttl -ttl01">
                                 <span class="sub">Message</span>
-                                <span class="main">代表メッセージ</span>
+                                <span class="main">社長メッセージ</span>
                             </h2>
                             <p class="head-img animation -animation03">
                                 <picture>
