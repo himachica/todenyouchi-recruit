@@ -6,7 +6,7 @@
                 <div class="contents">
                     <div class="contents-inner">
                         <h1 class="copy animation -animation01 -l">土地をつなぎ、<br class="dsp-sp">人をつなぎ、<br>未来をつなぐ</h1>
-                        <div class="entry">
+                        <!-- <div class="entry">
                             <p class="entry-head">ENTRY</p>
                             <nav class="entry-nav">
                                 <ul class="entry-nav-list">
@@ -14,7 +14,7 @@
                                     <li><a href="<?php echo esc_url( home_url( '/recruitment/career/' ) ); ?>">キャリア採用</a></li>
                                 </ul>
                             </nav>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="loop-slider animation -animation02">

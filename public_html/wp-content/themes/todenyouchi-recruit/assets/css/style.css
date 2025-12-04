@@ -1177,7 +1177,7 @@ ul.notes li .mark {
 /* ====================================== $ */
 /* ====================================== function */
 /* ====================================== font */
-#news-archive .inner .inner-contents .list > li .article > a .article-date, #news-single .inner .inner-contents .news-single-article .article-date, #thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-contents .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > a > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub, .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
+#news-archive .inner .inner-contents .list > li .article > a .article-date, #news-single .inner .inner-contents .news-single-article .article-date, #thanks-page .inner .inner-contents .ttl > span.sub, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dt:before, #faq .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .dd-contents:before, #recruitment-nav .inner .inner-contents .nav .nav-list > li .nav-section > a .nav-contents .nav-ttl > span.sub, #recruitment-page .inner .inner-contents .layout .block.-sub .nav .nav-head, #welfare .inner .inner-contents .section-wrap .section .section-block.-head .section-ttl > span.sub, #welfare .inner .inner-contents .section-wrap .section .section-block.-contents .item-wrap .item > dd .item-number > span, #careerstory-archive .inner .inner-contents .list > li .article > a .article-contents .article-number, #careerstory-single-career .inner .inner-contents .list > li .list-section .list-section-block.-contents .list-ttl:before, #careerstory-single-message .inner .inner-contents .box .box-ttl > span.sub, #interview-single-job .inner .inner-contents .contents .block.-contents .ttl > span.sub, #interview-single-article .inner .inner-contents .section-wrapper .section .section-block .section-q:before, #interview-single-message .inner .inner-contents .box .box-ttl > span.sub, #crosstalk-single-member .inner .inner-contents .box .box-ttl, #crosstalk-single-article .inner .inner-contents .chapter-wrap .chapter .chapter-ttl > span.number:before, #voice-question .inner .inner-contents .section-wrap .section .section-ttl > span.number:before, #infographics .inner .inner-contents .layout .block.-contents .section-wrapper .section .section-contents .section-box > dd .section-box-number span.-number, #service-contents .inner .inner-contents .list > li .section .block.-txt .section-number:after, #kv .contents .contents-inner .entry .entry-head, #business .inner .inner-contents .layout .block.-contents .list > li .article > a .article-contents .article-contents-block.-info .article-ttl > span.sub, #news .inner .inner-contents .layout .block.-main .list > li .article > a .article-date, #footer .inner .inner-contents .bottom #pagetop .pagetop-txt, #header .header-inner .nav .nav-contents .nav-inner .entry > span > span, .ttl.-ttl01 > span.sub, .page-ttl.-page-ttl01 .page-ttl-inner .ttl > span.sub, .page-ttl.-page-ttl02 .inner .inner-contents .ttl > span.sub, .nav.-nav02 .nav-list > li > a .nav-name > span.sub, .pagination.-pagination01 .pagination-contents > span.page-numbers, .pagination.-pagination01 .pagination-contents > a.page-numbers {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   line-height: 1;
@@ -4219,7 +4219,7 @@ body.fixed {
     display: none;
   }
 }
-#header .header-inner .nav .nav-contents .nav-inner .entry > a {
+#header .header-inner .nav .nav-contents .nav-inner .entry > span {
   width: 156px;
   height: 44px;
   padding: 5px 44px 5px 15px;
@@ -4242,26 +4242,22 @@ body.fixed {
   position: relative;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
   -webkit-transition: background-color 1.75s cubic-bezier(0.19, 1, 0.22, 1), color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
   transition: background-color 1.75s cubic-bezier(0.19, 1, 0.22, 1), color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
 }
 @media screen and (max-width: 1240px) {
-  #header .header-inner .nav .nav-contents .nav-inner .entry > a {
+  #header .header-inner .nav .nav-contents .nav-inner .entry > span {
     width: 12.5806451613vw;
     height: 3.5483870968vw;
     padding: 0.4032258065vw 3.5483870968vw 0.4032258065vw 1.2096774194vw;
   }
 }
-#header .header-inner .nav .nav-contents .nav-inner .entry > a:after {
+#header .header-inner .nav .nav-contents .nav-inner .entry > span:before, #header .header-inner .nav .nav-contents .nav-inner .entry > span:after {
   content: "";
   width: 34px;
   height: 34px;
   margin: auto;
-  background-color: #ffffff;
-  background-image: url(../img/arw01-r.svg);
-  background-repeat: no-repeat;
-  background-size: 51.47% auto;
-  background-position: center center;
   border-radius: 50%;
   display: block;
   position: absolute;
@@ -4270,22 +4266,36 @@ body.fixed {
   bottom: 0;
 }
 @media screen and (max-width: 1240px) {
-  #header .header-inner .nav .nav-contents .nav-inner .entry > a:after {
+  #header .header-inner .nav .nav-contents .nav-inner .entry > span:before, #header .header-inner .nav .nav-contents .nav-inner .entry > span:after {
     width: 2.7419354839vw;
     height: 2.7419354839vw;
     right: 0.4032258065vw;
   }
 }
-#header .header-inner .nav .nav-contents .nav-inner .entry > a > span {
+#header .header-inner .nav .nav-contents .nav-inner .entry > span:before {
+  background-color: #ffffff;
+}
+#header .header-inner .nav .nav-contents .nav-inner .entry > span:after {
+  background-color: #ffffff;
+  background-image: url(../img/arw01-b.svg);
+  background-repeat: no-repeat;
+  background-size: auto 51.47%;
+  background-position: center center;
+  -webkit-transition: -webkit-transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: -webkit-transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: transform 1.75s cubic-bezier(0.19, 1, 0.22, 1), -webkit-transform 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+#header .header-inner .nav .nav-contents .nav-inner .entry > span > span {
   font-size: 20px;
   font-weight: 600;
 }
 @media screen and (max-width: 1240px) {
-  #header .header-inner .nav .nav-contents .nav-inner .entry > a > span {
+  #header .header-inner .nav .nav-contents .nav-inner .entry > span > span {
     font-size: 1.6129032258vw;
   }
 }
-#header .header-inner .nav .nav-contents .nav-inner .entry > a:hover {
+#header .header-inner .nav .nav-contents .nav-inner .entry > span:hover {
   background: #DEF2F2;
   color: #59BFBF;
 }
@@ -4403,6 +4413,125 @@ body.fixed {
 #header .header-inner .sp-menu .sp-menu-contents .sp-menu-bars .sp-menu-bar:nth-child(2) {
   width: 30px;
 }
+#header .pc-entry {
+  width: 240px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #59BFBF;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: none;
+  position: fixed;
+  top: 92px;
+  right: 30px;
+}
+@media screen and (max-width: 1240px) {
+  #header .pc-entry {
+    top: 7.4193548387vw;
+    right: 2.4193548387vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry {
+    display: none !important;
+  }
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a {
+  padding-right: 21px;
+  display: block;
+  position: relative;
+  color: #777777;
+  -webkit-transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: color 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a {
+    width: 180px;
+    min-height: 42px;
+    padding: 5px 50px 5px 30px;
+    border: 1px solid #59BFBF;
+    border-radius: 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:before, #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:after {
+  content: "";
+  width: 16px;
+  height: 11px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: right 1.75s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: right 1.75s cubic-bezier(0.19, 1, 0.22, 1), opacity 1.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:before, #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:after {
+    right: 30px;
+  }
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:before {
+  background-image: url(../img/arw02-r.svg);
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:after {
+  background-image: url(../img/arw02-r-grn.svg);
+  opacity: 0;
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover {
+  color: #28B7B7;
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:before, #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:after {
+  right: -5px;
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:before, #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:after {
+    right: 30px;
+  }
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:before {
+  opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:before {
+    opacity: 1;
+  }
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:after {
+  opacity: 1;
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li > a:hover:after {
+    opacity: 0;
+  }
+}
+#header .pc-entry .pc-entry-nav .pc-entry-nav-list > li:not(:first-child) {
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  #header .pc-entry .pc-entry-nav .pc-entry-nav-list > li:not(:first-child) {
+    margin-top: 10px;
+  }
+}
 #header.-active .header-inner .sp-menu .sp-menu-contents .sp-menu-bars .sp-menu-bar:nth-child(1) {
   -webkit-animation: bar-t 1.75s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 forwards;
   animation: bar-t 1.75s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 forwards;
@@ -4426,6 +4555,10 @@ body.fixed {
 #header.-inactive .header-inner .sp-menu .sp-menu-contents .sp-menu-bars .sp-menu-bar:nth-child(3) {
   -webkit-animation: bar-b-r 1.75s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 forwards;
   animation: bar-b-r 1.75s cubic-bezier(0.19, 1, 0.22, 1) 0s 1 forwards;
+}
+#header.-entry .header-inner .nav .nav-contents .nav-inner .entry > span:after {
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
 }
 
 /* ====================================== footer */

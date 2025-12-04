@@ -23,10 +23,12 @@ $(function() {
         $headerNavListLi               = $headerNavList.children('li'),
         $headerNavHead                 = $headerNavListLi.find('.nav-head'),
         $headerNavHeadAcod             = $headerNavHead.find('.nav-head-acod'),
+        $headerNavEntryBtn             = $headerNavInner.find('.entry > span'),
         $headerSpMenu                  = $header.find('.sp-menu'),
         $headerSpMenuContents          = $headerSpMenu.find('.sp-menu-contents'),
         $headerSpMenuBars              = $headerSpMenuContents.find('.sp-menu-bars'),
-        $headerSpMenuBar1              = $headerSpMenuBars.find('.sp-menu-bar:nth-child(1)');
+        $headerSpMenuBar1              = $headerSpMenuBars.find('.sp-menu-bar:nth-child(1)'),
+        $headerPcEntry                 = $header.find('.pc-entry');
 
     var $kv                            = $('#kv'),
         $kvLoopSlider                  = $kv.find('.loop-slider'),
@@ -248,6 +250,14 @@ $(function() {
             });
         }
     }
+    $headerNavEntryBtn.on('click', function() {
+        $header.toggleClass('-entry');
+        if($header.hasClass('-entry')) {
+            $headerPcEntry.fadeIn(600, 'easeOutQuart');
+        } else {
+            $headerPcEntry.fadeOut(600, 'easeOutQuart');
+        }
+    });
 
     // ====================================== kv
     function kvSwiperStart() {

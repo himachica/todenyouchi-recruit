@@ -219,7 +219,7 @@
             @media screen and (max-width: $VIEWPOINT01) {
               display: none;
             }
-            > a {
+            > span {
               width: 156px;
               height: 44px;
               padding: 5px 44px 5px 15px;
@@ -232,24 +232,18 @@
               position: relative;
               text-align: center;
               color: $wh;
+              cursor: pointer;
               transition: background-color $speed01 $easing01, color $speed01 $easing01;
               @media screen and (max-width: $MIN-WIDTH) {
                 width: pc(156);
                 height: pc(44);
                 padding: pc(5) pc(44) pc(5) pc(15);
               }
-              &:after {
+              &:before, &:after {
                 content: "";
                 width: 34px;
                 height: 34px;
                 margin: auto;
-                background: {
-                  color: $wh;
-                  image: url(#{$IMGPATH}arw01-r.svg);
-                  repeat: no-repeat;
-                  size: 51.47% auto;
-                  position: center center;
-                }
                 border-radius: 50%;
                 display: block;
                 position: absolute;
@@ -261,6 +255,21 @@
                   height: pc(34);
                   right: pc(5);
                 }
+              }
+              &:before {
+                background: {
+                  color: $wh;
+                }
+              }
+              &:after {
+                background: {
+                  color: $wh;
+                  image: url(#{$IMGPATH}arw01-b.svg);
+                  repeat: no-repeat;
+                  size: auto 51.47%;
+                  position: center center;
+                }
+                transition: transform $speed01 $easing01;
               }
               > span {
                 @extend %font01;
@@ -366,6 +375,109 @@
       }
     }
   }
+  .pc-entry {
+    width: 240px;
+    padding: 20px;
+    background: $wh;
+    border: 1px solid $color01;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: none;
+    position: fixed;
+    top: 92px;
+    right: 30px;
+    @media screen and (max-width: $MIN-WIDTH) {
+      top: pc(92);
+      right: pc(30);
+    }
+    @media screen and (max-width: $VIEWPOINT01) {
+      display: none !important;
+    }
+    .pc-entry-nav {
+      .pc-entry-nav-list {
+        > li {
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 1.5;
+          > a {
+            padding-right: 21px;
+            display: block;
+            position: relative;
+            color: $color04;
+            transition: color $speed01 $easing01;
+            @media screen and (max-width: $VIEWPOINT01) {
+              width: 180px;
+              min-height: 42px;
+              padding: 5px 50px 5px 30px;
+              border: 1px solid $color01;
+              border-radius: 5px;
+              box-sizing: border-box;
+              display: flex;
+              align-items: center;
+            }
+            &:before, &:after {
+              content: "";
+              width: 16px;
+              height: 11px;
+              margin: auto;
+              background: {
+                repeat: no-repeat;
+                size: contain;
+                position: center center;
+              }
+              display: block;
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              transition: right $speed01 $easing01, opacity $speed01 $easing01;
+              @media screen and (max-width: $VIEWPOINT01) {
+                right: 30px;
+              }
+            }
+            &:before {
+              background: {
+                image: url(#{$IMGPATH}arw02-r.svg);
+              }
+            }
+            &:after {
+              background: {
+                image: url(#{$IMGPATH}arw02-r-grn.svg);
+              }
+              opacity: 0;
+            }
+            &:hover {
+              color: $color02;
+              &:before, &:after {
+                right: -5px;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  right: 30px;
+                }
+              }
+              &:before {
+                opacity: 0;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  opacity: 1;
+                }
+              }
+              &:after {
+                opacity: 1;
+                @media screen and (max-width: $VIEWPOINT01) {
+                  opacity: 0;
+                }
+              }
+            }
+          }
+          &:not(:first-child) {
+            margin-top: 5px;
+            @media screen and (max-width: $VIEWPOINT01) {
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
   &.-active {
     .header-inner {
       .sp-menu {
@@ -401,6 +513,23 @@
               }
               &:nth-child(3) {
                 animation: bar-b-r $speed01 $easing01 0s 1 forwards;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.-entry {
+    .header-inner {
+      .nav {
+        .nav-contents {
+          .nav-inner {
+            .entry {
+              > span {
+                &:after {
+                  transform: rotateX(180deg);
+                }
               }
             }
           }

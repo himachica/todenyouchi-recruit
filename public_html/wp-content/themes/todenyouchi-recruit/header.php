@@ -102,7 +102,7 @@
                                     </p>
                                 </li>
                             </ul>
-                            <p class="entry"><a href="<?php echo esc_url( home_url( '/entry/' ) ); ?>"><span>ENTRY</span></a></p>
+                            <p class="entry"><span><span>ENTRY</span></span></p>
                             <div class="sp-entry">
                                 <div class="sp-entry-btn-wrap">
                                     <p class="sp-entry-btn"><a href="<?php echo esc_url( home_url( '/recruitment/newgraduate/' ) ); ?>">新卒採用</a></p>
@@ -121,5 +121,13 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="pc-entry">
+                <nav class="pc-entry-nav">
+                    <ul class="pc-entry-nav-list">
+                        <li><a href="<?php echo esc_url( home_url( '/recruitment/newgraduate/' ) ); ?>">新卒採用</a></li>
+                        <li><a href="<?php echo esc_url( home_url( '/recruitment/career/' ) ); ?>">キャリア採用</a></li>
+                    </ul>
+                </nav>
             </div>
         </header>
